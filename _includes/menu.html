@@ -1,0 +1,79 @@
+<div class="site-header-slice__fixer">
+    <div class="site-header-slice__background-2"></div>
+
+    <nav class="navigation-bar is-visible" data-nav-status="toggle">
+        <div class="container menu-content">
+            <a href=""><img draggable="false" class="logo logo-d" src="/images/logo_dark.svg" alt="Freshcode Logo"></a>
+
+            <a href="#CVForm" class="button float-right">Отправить резюме</a>
+
+            <ul class="main-nav-menu">
+                <li><a href="">Главная</a></li>
+                <li><a href="">О Нас</a></li>
+                <li><a href="">Вакансии</a></li>
+                <li><a href="">Отзывы сотрудников</a></li>
+                <li><a href="">Контакты</a></li>
+                <li></li>
+            </ul>
+
+
+        </div>
+    </nav>
+    <div id="CVForm" class="modal">
+        <a href="#!" class="modal-action modal-close btn-flat float-right button-square">
+            <img src="/images/close-icon.png">
+        </a>
+        <div class="m-content">
+            <h3>Напишите нам</h3>
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">Имя</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <input id="disabled" type="text" class="validate">
+                            <label for="disabled">Телефон/Skype</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <select>
+                                <option value="" disabled selected>Укажите вакансию</option>
+                                <option value="1">Вакансия 1</option>
+                                <option value="2">Вакансия 2</option>
+                                <option value="3">Вакансия 3</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea" data-length="250"></textarea>
+                            <label for="textarea1">Расскажите нам о себе</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <div class="file-field input-field">
+                                <input type="file">
+                                <div class="file-path-wrapper">
+                                    <img src="/images/file-icon.png"> <span>Добавить файл</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-field col s6">
+                            <a href="" class="button float-right">Отправить резюме</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
