@@ -28,7 +28,6 @@ $(function(){
     $('.modal').modal();
     $('select').material_select();
 
-
-    $('.image-parallax-1').parallax({imageSrc: '/images/main_pic_1.png'});
+    skrollr.init();
 
 });

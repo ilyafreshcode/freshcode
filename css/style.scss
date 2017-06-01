@@ -17,9 +17,6 @@ body { font-family: "Roboto", sans-serif; }
   float: right;
 }
 
-.container{
-
-}
 
 .button {
   background-color: #00e1a4;
@@ -53,14 +50,14 @@ body { font-family: "Roboto", sans-serif; }
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+.text-center{
   text-align: center;
 }
 
 .default-margin{
   margin-top: 35px;
 }
-
-
 
 /*----------- Navigation Menu -----------*/
 .navigation-bar {
@@ -163,8 +160,7 @@ body { font-family: "Roboto", sans-serif; }
 
 /*--------- Main content ----------*/
 .main-title{
-  height: calc(100% - 100px);
-
+  width: 100%;
   h3{
     text-transform: uppercase;
     font: {
@@ -181,13 +177,224 @@ body { font-family: "Roboto", sans-serif; }
   }
 }
 
-.parallax-window {
+.img-parallax{
+  position: relative;
+  z-index: -100;
+}
+
+.description{
+  position: relative;
+  margin:{
+    top: -100px;
+    bottom: 50px;
+  }
+  width: 620px;
+
+  h3{
+    font: {
+      size: 40px;
+      weight: 700;
+    }
+    margin-bottom: 50px;
+  }
+
+  span{
+    font: {
+      size: 22px;
+      weight: 400;
+    }
+  }
+
+}
+
+.content-parallax-1{
+  position: relative;
+  margin-top: -1100px;
   height: 950px;
-  background: transparent;
+}
+
+.content-parallax-2{
+  position: relative;
+  height: 250px;
+
+  .card-style{
+    font: {
+      size: 20px;
+      weight: 500;
+    }
+
+    .text{
+      font-size: 16px;
+    }
+
+    .name{
+      margin-top: 10px;
+    }
+
+    .job{
+      color: #c3c3c3;
+      font: {
+        size: 20px;
+        weight: 400;
+      }
+    }
+
+  }
+  .send-cv-position{
+    display: inline-block;
+    position: relative;
+    margin: {
+      left: 400px;
+      bottom: 150px;
+    }
+  }
+
+  .vertical-box{
+    position: relative;
+    width: 381px;
+    margin-top: -100px;
+  }
+
+  .horizontal-box{
+    position: relative;
+    width: 572px;
+
+    img {
+      max-width: none !important;
+      width: 286px;
+    }
+  }
+}
+
+.content-parallax-3{
+  margin-top: 900px;
+
+  .why-freshcode{
+
+    &:before {
+      content: ' ';
+      background: {
+        image: url("/images/Paterns/01_patern.jpg");
+        repeat: repeat;
+        position: 50% 0;
+      }
+      display: block;
+      position: relative;
+      margin-top: -200px;
+      width: 100%;
+      height: 500px;
+      z-index: -20;
+      opacity: 0.2;
+    }
+
+    .why-freshcode-slides{
+      background-color: #00e1a4;
+      height: 400px;
+      margin: {
+        top: -300px;
+        left: 150px;
+      };
+    }
+
+    &:after{
+      content: ' ';
+      display: block;
+      background-color: #f8f8f8;
+      position: relative;
+      margin-left: 150px;
+      height: 50px;
+      width: calc(100% - 150px);
+    }
+
+  }
+
+}
+
+.content-parallax-4{
+  margin-top: 100px;
+
+  .vac-description{
+    img{
+      float:left;
+      margin: 0 25px;
+    }
+
+    h3{
+      display: inline-block;
+      font: {
+        size: 40px;
+        weight: 700;
+      }
+      margin: 25px 0;
+    }
+
+    span{
+      display: inline-block;
+      font: {
+        size: 22px;
+        weight: 400;
+      }
+    }
+  }
+
+  .all-vacancy-position{
+    margin: 10px 0 0 250px;
+  }
+
+  .vacancy-img{
+    background: {
+      image: url("/images/Paterns/02_patern.jpg");
+      repeat: repeat;
+    };
+    height: 450px;
+    opacity: 0.2;
+    margin-left: 265px;
+    z-index: 1;
+  }
+
+  .vacancy-img-text{
+    margin: -200px 0 0 265px;
+    z-index: 20;
+
+    img{
+      height: auto;
+      width: 1000px;
+    }
+  }
+
+  .vacancy-img-lines{
+    margin: -240px 0 0 0;
+  }
+
 }
 
 
+/*---------------------- Footer -----------------------*/
+footer{
+  background-color: #00e1a4;
+  color: #fff;
+  font: {
+    size: 16px;
+    weight: 700;
+  }
+  height: 200px;
 
-.content {
-  min-height: 1200px;
+  .footer-col{
+    margin-top: 10px;
+    height: 170px;
+  }
+
+  ul {
+    list-style-image: url('/images/Rectangle.png');
+  }
+
+  .img-footer{
+    margin-top: 80px;
+  }
+
+  img{
+    margin-left: 15px;
+  }
+
+
 }
