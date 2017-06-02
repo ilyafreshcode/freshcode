@@ -2,8 +2,6 @@
 
 .card-panel {
   transition: box-shadow .25s;
-  padding: $card-padding;
-  margin: $element-top-margin 0 $element-bottom-margin 0;
   border-radius: 2px;
   @extend .z-depth-1;
   background-color: $card-bg-color;
@@ -11,7 +9,7 @@
 
 .card {
   position: relative;
-  margin: $element-top-margin 0 $element-bottom-margin 0;
+  margin: 0 0 $element-bottom-margin 0;
   background-color: $card-bg-color;
   transition: box-shadow .25s;
   border-radius: 2px;
@@ -35,7 +33,7 @@
       overflow: hidden;
     }
     .card-image + .card-content {
-      max-height: 40%;
+      max-height: 60%;
     }
     .card-content {
       max-height: 100%;

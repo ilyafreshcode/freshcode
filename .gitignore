@@ -1,0 +1,6 @@
+.idea/
+.sass-cache/
+*.iml
+_site/
+images/slices/.DS_Store
+images/slices/Paterns/.DS_Store

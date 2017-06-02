@@ -12,11 +12,10 @@ html, body {
 body { font-family: "Roboto", sans-serif; }
 
 
-/*------------ Helpfull styles -------------*/
+/*------------------ Helpfull styles -------------------*/
 .float-right{
   float: right;
 }
-
 
 .button {
   background-color: #00e1a4;
@@ -51,18 +50,17 @@ body { font-family: "Roboto", sans-serif; }
   justify-content: center;
   flex-direction: column;
 }
+
 .text-center{
   text-align: center;
 }
 
-.default-margin{
-  margin-top: 35px;
-}
-
-/*----------- Navigation Menu -----------*/
+/*----------------------------------------------------------------*/
+/*---------------------- Navigation Menu -------------------------*/
+/*----------------------------------------------------------------*/
 .navigation-bar {
   background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
   left: 0;
   position: fixed;
   right: 0;
@@ -128,7 +126,7 @@ body { font-family: "Roboto", sans-serif; }
 
 }
 
-/*----- Modal form -----*/
+/*--------------- Modal form ----------------*/
 .modal{
   border-radius: 0 !important;
   background-color: #00e1a4;
@@ -157,8 +155,18 @@ body { font-family: "Roboto", sans-serif; }
     background-color: #00da9f;
   }
 }
+/*-------------------------------------------------------------------------*/
+/*----------------------------- Main content ------------------------------*/
+/*-------------------------------------------------------------------------*/
+.vertical-lines{
+  position: absolute;
+  border: {
+    left: 1px solid rgb(230, 230, 230);
+    right: 1px solid rgb(230, 230, 230);
+  };
+  z-index: -1000;
+}
 
-/*--------- Main content ----------*/
 .main-title{
   width: 100%;
   h3{
@@ -177,9 +185,35 @@ body { font-family: "Roboto", sans-serif; }
   }
 }
 
-.img-parallax{
+.main-img{
   position: relative;
   z-index: -100;
+  img{
+    height: auto;
+    width: 1250px;
+  }
+}
+
+.team-img{
+  position: absolute;
+  margin: 150px 0 0 -70px;
+  z-index: -100;
+  img{
+    height: auto;
+    width: 1000px;
+  }
+}
+
+.quotes{
+  position: relative;
+  margin: 0 0 100px 0;
+  width: 100px;
+}
+
+.quotes-2{
+  position: relative;
+  margin: 0 -450px 100px 0;
+  width: 100px;
 }
 
 .description{
@@ -224,7 +258,10 @@ body { font-family: "Roboto", sans-serif; }
     }
 
     .text{
-      font-size: 16px;
+      font: {
+        size: 16px;
+        weight: 400;
+      }
     }
 
     .name{
@@ -245,31 +282,64 @@ body { font-family: "Roboto", sans-serif; }
     position: relative;
     margin: {
       left: 400px;
-      bottom: 150px;
     }
+  }
+
+  .card{
+    margin-top: 0 !important;
   }
 
   .vertical-box{
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
     position: relative;
     width: 381px;
-    margin-top: -100px;
+    margin-top: -200px;
+
+    .slide-num{
+      font-size: 16px;
+      margin: 0 0 15px 0;
+    }
+    .slidesjs-navigation{
+      padding: 5px;
+      display: inline-block;
+      margin: 15px 0 15px 20px;
+    }
   }
 
   .horizontal-box{
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
     position: relative;
     width: 572px;
-
+    .card-image{
+      float: left;
+    }
     img {
       max-width: none !important;
-      width: 286px;
     }
+
+    .slide-num{
+      font-size: 16px;
+      margin: 0 0 15px 0;
+    }
+
+    .slidesjs-navigation{
+      padding: 5px;
+      display: inline-block;
+      margin: 15px 0 0 20px;
+    }
+
+    .card-content-1{
+      margin-left: 290px;
+    }
+
   }
 }
 
 .content-parallax-3{
-  margin-top: 900px;
+  margin-top: 1000px;
 
   .why-freshcode{
+    position: relative;
 
     &:before {
       content: ' ';
@@ -288,6 +358,7 @@ body { font-family: "Roboto", sans-serif; }
     }
 
     .why-freshcode-slides{
+      position: relative;
       background-color: #00e1a4;
       height: 400px;
       margin: {
@@ -311,9 +382,9 @@ body { font-family: "Roboto", sans-serif; }
 }
 
 .content-parallax-4{
-  margin-top: 100px;
 
   .vac-description{
+    position: relative;
     img{
       float:left;
       margin: 0 25px;
@@ -342,34 +413,44 @@ body { font-family: "Roboto", sans-serif; }
   }
 
   .vacancy-img{
-    background: {
-      image: url("/images/Paterns/02_patern.jpg");
-      repeat: repeat;
-    };
-    height: 450px;
-    opacity: 0.2;
-    margin-left: 265px;
-    z-index: 1;
+    position: relative;
+    &:before{
+      content: '';
+      background: {
+        image: url("/images/Paterns/02_patern.jpg");
+        repeat: repeat;
+      };
+      display: block;
+      position: relative;
+      height: 450px;
+      opacity: 0.2;
+      margin: -150px 0 0 20%;
+      z-index: -100;
+    }
+
   }
 
   .vacancy-img-text{
-    margin: -200px 0 0 265px;
-    z-index: 20;
+    margin: -200px 0 0 20%;
+    position: relative;
+    z-index: -10;
 
     img{
       height: auto;
-      width: 1000px;
+      width: 110%;
     }
   }
 
   .vacancy-img-lines{
-    margin: -240px 0 0 0;
+    margin: -270px 0 -5px 0;
+    position: relative;
   }
 
 }
 
-
-/*---------------------- Footer -----------------------*/
+/*---------------------------------------------------------*/
+/*------------------------ Footer -------------------------*/
+/*---------------------------------------------------------*/
 footer{
   background-color: #00e1a4;
   color: #fff;
@@ -389,12 +470,10 @@ footer{
   }
 
   .img-footer{
-    margin-top: 80px;
+    height: 180px;
   }
 
   img{
     margin-left: 15px;
   }
-
-
 }

@@ -1,7 +1,5 @@
 .slider {
   position: relative;
-  height: 400px;
-  width: 100%;
 
   // Fullscreen slider
   &.fullscreen {
@@ -26,7 +24,6 @@
   .slides {
     background-color: $slider-bg-color;
     margin: 0;
-    height: 400px;
 
     li {
       opacity: 0;
@@ -61,32 +58,4 @@
       }
     }
   }
-
-
-  .indicators {
-    position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0;
-
-    .indicator-item {
-      display: inline-block;
-      position: relative;
-      cursor: pointer;
-      height: 16px;
-      width: 16px;
-      margin: 0 12px;
-      background-color: $slider-bg-color-light;
-
-      transition: background-color .3s;
-      border-radius: 50%;
-
-      &.active {
-        background-color: $slider-indicator-color;
-      }
-    }
-  }
-
 }

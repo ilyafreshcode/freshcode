@@ -23,11 +23,65 @@ $(function(){
         $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
     }
 
-
-
+    /**------ Modal window ------*/
     $('.modal').modal();
     $('select').material_select();
 
+
+    /**------- For parallax ------*/
     skrollr.init();
+
+
+    /**------------------------------
+     * Slideshow
+     * ----------------------------*/
+    $('#slides-vertical').slidesjs({
+        width: 381,
+        height: 579,
+        navigation: false,
+        pagination: false,
+        callback: {
+            loaded: function(number) {
+                $('.slider-number-vertical').text(number);
+            },
+            start: function(number) {
+
+            },
+            complete: function(number) {
+                $('.slider-number-vertical').text(number);
+            }
+        }
+    });
+
+    $('#slides-horizontal').slidesjs({
+        width: 572,
+        height: 381,
+        navigation: false,
+        pagination: false,
+        callback: {
+            loaded: function(number) {
+                $('.slider-number-horizontal').text(number);
+            },
+            start: function(number) {
+                $('#slides-horizontal .card-content').addClass("card-content-1");
+            },
+            complete: function(number) {
+                $('.slider-number-horizontal').text(number);
+            }
+        }
+    });
+
+    $('.all-vertical-num').text($('#slides-vertical .card').length);
+    $('.all-horizontal-num').text($('#slides-horizontal .card').length);
+    console.log($('body').height());
+
+
+
+    /**------- Draw lines --------*/
+    function onResize(){
+        $('.vertical-lines').height($('body').height() + 100).width($('.container').width());
+    }
+    onResize();
+    $(window).resize(onResize);
 
 });
