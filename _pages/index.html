@@ -3,13 +3,11 @@ permalink: /
 layout: default
 ---
 <div class="container">
-    <div class="vertical-lines"></div>
-
-    <div class="main-img" data-0="top: 0px" data-1000="top: 200px">
-        <img src="/images/main_pic_1.png" class="float-right"/>
+    <div class="articles-img" data-0="top: 0px" data-1000="top: 200px">
+        <img src="/images/articles_pic_1.png" class="float-right"/>
     </div>
 
-    <div class="vertical-middle main-title" data-0="top: 0px" data-1000="top: -100px">
+    <div class="vertical-middle articles-title" data-0="top: 0px" data-1000="top: -100px">
         <section class="content-parallax-1 vertical-middle text-center">
             <h3>Freshcode</h3>
             <span>Предлагаем интересную работу в IT компании</span>
@@ -20,8 +18,8 @@ layout: default
 
     <div class="content-parallax-2">
         <section class="description" data-0="top: 0px" data-1000="top: -100px">
-            <h3>{{ site.data.main.sections[0].title }}</h3>
-            <span>{{ site.data.main.sections[0].text }}</span>
+            <h3>{{ site.data.articles.sections.сolleagues.title }}</h3>
+            <span>{{ site.data.articles.sections.сolleagues.text }}</span>
         </section>
 
 
@@ -38,7 +36,7 @@ layout: default
 
 
         <section id="slides-vertical" class="vertical-box float-right" data-0="top: 0px" data-1200="top: -250px">
-            {% for c in site.data.main.vertical-cards %}
+            {% for c in site.data.articles.vertical-cards %}
             <div class="card">
                 <div class="card-image">
                     <img src={{ c.img }}>
@@ -59,7 +57,7 @@ layout: default
 
 
         <section id="slides-horizontal" class="horizontal-box" data-0="top: 0px" data-1000="top: -50px">
-            {% for c in site.data.main.horizontal-cards %}
+            {% for c in site.data.articles.horizontal-cards %}
             <div class="card horizontal">
                 <div class="card-image">
                     <img src={{ c.img }}>
@@ -88,8 +86,8 @@ layout: default
 
     <div class="content-parallax-3">
         <section class="description" data-500="top: 0px" data-2500="top: -150px">
-            <h3>{{ site.data.main.sections[1].title }}</h3>
-            <span>{{ site.data.main.sections[1].text }}</span>
+            <h3>{{ site.data.articles.sections.why.title }}</h3>
+            <span>{{ site.data.articles.sections.why.text }}</span>
         </section>
 
         <section class="why-freshcode" data-1000="top: 0px" data-2500="top: -250px">
@@ -103,8 +101,8 @@ layout: default
         <div data-0="top: -350px" data-2500="top: 0px" style="position: relative;">
             <section class="vac-description" >
                 <img src="/images/slices/icon_eye.svg">
-                <h3>{{ site.data.main.sections[2].title }}</h3>
-                <span>{{ site.data.main.sections[2].text }}</span>
+                <h3>{{ site.data.articles.sections.vacancies.title }}</h3>
+                <span>{{ site.data.articles.sections.vacancies.text }}</span>
             </section>
             <br>
             <a href="" class="button all-vacancy-position">Смотреть все вакансии</a>

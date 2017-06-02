@@ -1,0 +1,29 @@
+{
+  "images" : {
+    "menu-logo" : "/images/logo_dark.svg"
+  },
+  "menu" : {
+    "pages" : [
+      {
+        "page-link" : "",
+        "text" : "Главная"
+      },
+      {
+        "page-link" : "",
+        "text" : "О нас"
+      },
+      {
+        "page-link" : "",
+        "text" : "Вакансии"
+      },
+      {
+        "page-link" : "",
+        "text" : "Отзывы сотрудников"
+      },
+      {
+        "page-link" : "",
+        "text" : "Контакты"
+      }
+    ]
+  }
+}
