@@ -158,14 +158,6 @@ body { font-family: "Roboto", sans-serif; }
 /*-------------------------------------------------------------------------*/
 /*----------------------------- Main content ------------------------------*/
 /*-------------------------------------------------------------------------*/
-.vertical-lines{
-  position: absolute;
-  border: {
-    left: 1px solid rgb(230, 230, 230);
-    right: 1px solid rgb(230, 230, 230);
-  };
-  z-index: -1000;
-}
 
 .main-title{
   width: 100%;
@@ -325,7 +317,7 @@ body { font-family: "Roboto", sans-serif; }
     .slidesjs-navigation{
       padding: 5px;
       display: inline-block;
-      margin: 15px 0 0 20px;
+      margin: 15px 0 0 0;
     }
 
     .card-content-1{

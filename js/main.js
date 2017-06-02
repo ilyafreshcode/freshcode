@@ -77,11 +77,4 @@ $(function(){
 
 
 
-    /**------- Draw lines --------*/
-    function onResize(){
-        $('.vertical-lines').height($('body').height() + 100).width($('.container').width());
-    }
-    onResize();
-    $(window).resize(onResize);
-
 });

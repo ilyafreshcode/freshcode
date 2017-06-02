@@ -11,12 +11,9 @@
                 </ul>
             </div>
             <div class="col s4 img-footer valign-wrapper">
-                <img src="/images/slices/icon_linkedin.svg">
-                <img src="/images/slices/icon_facebook.svg">
-                <img src="/images/slices/icon_twitter.svg">
-                <img src="/images/slices/icon_google_plus.svg">
-                <img src="/images/slices/icon_git_hub.svg">
-                <img src="/images/slices/icon_bitbucket.svg">
+                {% for s in site.data.links.footer.social %}
+                <a href={{ s.lick }}><img src={{s.img}} /></a>
+                {% endfor %}
 
             </div>
         </div>

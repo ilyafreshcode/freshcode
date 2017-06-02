@@ -3,17 +3,14 @@
 
     <nav class="navigation-bar is-visible" data-nav-status="toggle">
         <div class="container menu-content">
-            <a href=""><img draggable="false" class="logo logo-d" src="/images/logo_dark.svg" alt="Freshcode Logo"></a>
+            <a href=""><img draggable="false" class="logo logo-d" src={{ site.data.links.images.menu-logo }} alt="Freshcode Logo"></a>
 
             <a href="#CVForm" class="button float-right">Отправить резюме</a>
 
             <ul class="main-nav-menu">
-                <li><a href="">Главная</a></li>
-                <li><a href="">О Нас</a></li>
-                <li><a href="">Вакансии</a></li>
-                <li><a href="">Отзывы сотрудников</a></li>
-                <li><a href="">Контакты</a></li>
-                <li></li>
+                {% for page in site.data.links.menu.pages %}
+                <li><a href={{ page.link }}>{{ page.text }}</a></li>
+                {% endfor %}
             </ul>
 
 
@@ -45,9 +42,9 @@
                         <div class="input-field col s6">
                             <select>
                                 <option value="" disabled selected>Укажите вакансию</option>
-                                <option value="1">Вакансия 1</option>
-                                <option value="2">Вакансия 2</option>
-                                <option value="3">Вакансия 3</option>
+                                {% for vacancy in site.data.links.menu.vacancies %}
+                                <option value={{ vacancy.value }}>{{ vacancy.text }}</option>
+                                {% endfor %}
                             </select>
                         </div>
 

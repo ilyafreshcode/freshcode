@@ -1,0 +1,78 @@
+{
+  "images": {
+    "menu-logo": "/images/logo_dark.svg",
+    "head-img" : "/images/main_pic_1.png",
+    "team" : "/images/Team.png",
+    "left-arrow" : "/images/slices/icon_arrow_left.svg",
+    "right-arrow" : "/images/slices/icon_arrow_right.svg",
+    "quotes-1" : "/images/slices/icon_quotes_1.svg",
+    "quotes-2" : "/images/slices/icon_quotes_2.svg",
+    "eye" : "/images/slices/icon_eye.svg"
+  },
+  "menu": {
+    "pages": [
+      {
+        "link": "",
+        "text": "Главная"
+      },
+      {
+        "link": "",
+        "text": "О нас"
+      },
+      {
+        "link": "",
+        "text": "Вакансии"
+      },
+      {
+        "link": "",
+        "text": "Отзывы сотрудников"
+      },
+      {
+        "link": "",
+        "text": "Контакты"
+      }
+    ],
+    "vacancies" : [
+      {
+        "value" : "1",
+        "text" : "Вакансия 1"
+      },
+      {
+        "value" : "2",
+        "text" : "Вакансия 2"
+      },
+      {
+        "value" : "3",
+        "text" : "Вакансия 3"
+      }
+    ]
+  },
+  "footer" : {
+    "social" : [
+      {
+        "img": "/images/slices/icon_linkedin.svg",
+        "link": ""
+      },
+      {
+        "img": "/images/slices/icon_facebook.svg",
+        "link": ""
+      },
+      {
+        "img": "/images/slices/icon_twitter.svg",
+        "link": ""
+      },
+      {
+        "img": "/images/slices/icon_google_plus.svg",
+        "link": ""
+      },
+      {
+        "img": "/images/slices/icon_git_hub.svg",
+        "link": ""
+      },
+      {
+        "img": "/images/slices/icon_bitbucket.svg",
+        "link": ""
+      }
+    ]
+  }
+}
