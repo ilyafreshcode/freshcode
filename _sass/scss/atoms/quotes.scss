@@ -1,0 +1,14 @@
+@import "../mixins";
+@import "../variables";
+
+.quotes {
+  position: relative;
+  margin: 0 0 100px 0;
+  width: 100px;
+}
+
+.quotes-2 {
+  position: relative;
+  margin: 0 -450px 100px 0;
+  width: 100px;
+}
