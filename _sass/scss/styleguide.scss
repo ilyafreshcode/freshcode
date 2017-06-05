@@ -1,6 +1,17 @@
 @charset "utf-8";
 
-@import "../materialize/materialize";
-@import "./atoms/menu";
+//import atoms
+@import "./atoms/buttons";
+
+//import molecules
 @import "./molecules/main";
-@import "./atoms/footer";
+
+//import organisms
+@import "./organisms/menu";
+@import "./organisms/footer";
+
+//import base styles
+@import "base";
+
+//import other
+@import "../materialize/materialize";

@@ -1,0 +1,31 @@
+@import "../mixins";
+@import "../variables";
+
+.modal{
+  border-radius: 0 !important;
+  background-color: $green;
+  overflow: visible !important;
+
+  .m-content{
+    background-color: $white;
+    margin: 50px 50px -50px -50px;
+    padding: 35px;
+  }
+  h3{
+    font-weight: 700;
+  }
+
+}
+.file-path-wrapper{
+  padding: 0 15px;
+  font: {
+    size: $font-size-big + 5px;
+  }
+}
+.modal-close{
+  background-color: $green;
+
+  &:hover{
+    background-color: $green-tint;
+  }
+}

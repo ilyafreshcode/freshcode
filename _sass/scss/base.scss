@@ -1,0 +1,18 @@
+html, body {
+  height: 100%;
+  width: 100%; }
+body { font-family: "Roboto", sans-serif; }
+
+.float-right{
+  float: right;
+}
+
+.vertical-middle{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text-center{
+  text-align: center;
+}
