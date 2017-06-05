@@ -1,0 +1,31 @@
+@import "../mixins";
+@import "../variables";
+
+.button {
+  background-color: $green;
+  border: none;
+  color: $white;
+  display: inline-block;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font: {
+    size: $font-size-base;
+    weight: 700;
+  }
+  -webkit-transition: all 0.5s;
+}
+
+.button:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: $white;
+  box-shadow: 0 5px 20px 0 rgba(0, 225, 164, 0.4);
+  -webkit-transition: all 0.5s;
+}
+
+.button-square {
+  padding: 27px 30px;
+  height: 80px;
+  width: 80px;
+}

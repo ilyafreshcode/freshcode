@@ -1,9 +1,10 @@
 @import "../mixins";
+@import "../variables";
 
-.main-title{
+.main-title {
   width: 100%;
 
-  h3{
+  h3 {
     text-transform: uppercase;
     font: {
       size: 100px;
@@ -11,99 +12,99 @@
     }
   }
 
-  span{
+  span {
     font: {
-      size: 20px;
+      size: $font-size-big;
       weight: 400;
     }
   }
 }
 
-.main-img{
+.main-img {
   position: relative;
   z-index: -100;
-  img{
+  img {
     height: auto;
     width: 1250px;
   }
 }
 
-.team-img{
+.team-img {
   position: absolute;
   margin: 150px 0 0 -70px;
   z-index: -100;
-  img{
+  img {
     height: auto;
     width: 1000px;
   }
 }
 
-.quotes{
+.quotes {
   position: relative;
   margin: 0 0 100px 0;
   width: 100px;
 }
 
-.quotes-2{
+.quotes-2 {
   position: relative;
   margin: 0 -450px 100px 0;
   width: 100px;
 }
 
-.description{
+.description {
   position: relative;
-  margin:{
+  margin: {
     top: -100px;
     bottom: 50px;
   }
   width: 620px;
 
-  h3{
+  h3 {
     font: {
-      size: 40px;
+      size:  $font-size-big * 2;
       weight: 700;
     }
     margin-bottom: 50px;
   }
 
-  span{
+  span {
     font: {
-      size: 22px;
+      size: $font-size-big + 2px;
       weight: 400;
     }
   }
 
 }
 
-.content-parallax-1{
+.content-parallax-1 {
   position: relative;
   margin-top: -1100px;
   height: 950px;
 }
 
-.content-parallax-2{
+.content-parallax-2 {
   position: relative;
   height: 250px;
 
-  .card-style{
+  .card-style {
     font: {
-      size: 20px;
+      size: $font-size-big;
       weight: 500;
     }
 
-    .text{
+    .text {
       font: {
-        size: 16px;
+        size:  $font-size-base;
         weight: 400;
       }
     }
 
-    .name{
+    .name {
       margin-top: 10px;
     }
 
-    .job{
-      color: #c3c3c3;
+    .job {
+      color: $grey;
       font: {
         size: 20px;
         weight: 400;
@@ -111,7 +112,7 @@
     }
 
   }
-  .send-cv-position{
+  .send-cv-position {
     display: inline-block;
     position: relative;
     margin: {
@@ -119,60 +120,60 @@
     }
   }
 
-  .card{
+  .card {
     margin-top: 0 !important;
   }
 
-  .vertical-box{
+  .vertical-box {
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
     position: relative;
     width: 381px;
     margin-top: -200px;
 
-    .slide-num{
-      font-size: 16px;
+    .slide-num {
+      font-size: $font-size-base;
       margin: 0 0 15px 0;
     }
-    .slidesjs-navigation{
+    .slidesjs-navigation {
       padding: 5px;
       display: inline-block;
       margin: 15px 0 15px 20px;
     }
   }
 
-  .horizontal-box{
+  .horizontal-box {
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
     position: relative;
     width: 572px;
-    .card-image{
+    .card-image {
       float: left;
     }
     img {
       max-width: none !important;
     }
 
-    .slide-num{
-      font-size: 16px;
+    .slide-num {
+      font-size: $font-size-base;
       margin: 0 0 15px 0;
     }
 
-    .slidesjs-navigation{
+    .slidesjs-navigation {
       padding: 5px;
       display: inline-block;
       margin: 15px 0 0 0;
     }
 
-    .card-content-1{
+    .card-content-1 {
       margin-left: 290px;
     }
 
   }
 }
 
-.content-parallax-3{
+.content-parallax-3 {
   margin-top: 1000px;
 
-  .why-freshcode{
+  .why-freshcode {
     position: relative;
 
     &:before {
@@ -191,20 +192,21 @@
       opacity: 0.2;
     }
 
-    .why-freshcode-slides{
+    .why-freshcode-slides {
       position: relative;
-      background-color: #00e1a4;
+      background-color: $green;
       height: 400px;
       margin: {
         top: -300px;
         left: 150px;
-      };
+      }
+    ;
     }
 
-    &:after{
+    &:after {
       content: ' ';
       display: block;
-      background-color: #f8f8f8;
+      background-color: $grey-light;
       position: relative;
       margin-left: 150px;
       height: 50px;
@@ -215,16 +217,16 @@
 
 }
 
-.content-parallax-4{
+.content-parallax-4 {
 
-  .vac-description{
+  .vac-description {
     position: relative;
-    img{
-      float:left;
+    img {
+      float: left;
       margin: 0 25px;
     }
 
-    h3{
+    h3 {
       display: inline-block;
       font: {
         size: 40px;
@@ -233,27 +235,28 @@
       margin: 25px 0;
     }
 
-    span{
+    span {
       display: inline-block;
       font: {
-        size: 22px;
+        size: $font-size-big + 2px;
         weight: 400;
       }
     }
   }
 
-  .all-vacancy-position{
+  .all-vacancy-position {
     margin: 10px 0 0 250px;
   }
 
-  .vacancy-img{
+  .vacancy-img {
     position: relative;
-    &:before{
+    &:before {
       content: '';
       background: {
         image: url("/images/Paterns/02_patern.jpg");
         repeat: repeat;
-      };
+      }
+    ;
       display: block;
       position: relative;
       height: 450px;
@@ -264,18 +267,18 @@
 
   }
 
-  .vacancy-img-text{
+  .vacancy-img-text {
     margin: -200px 0 0 20%;
     position: relative;
     z-index: -10;
 
-    img{
+    img {
       height: auto;
       width: 110%;
     }
   }
 
-  .vacancy-img-lines{
+  .vacancy-img-lines {
     margin: -270px 0 -5px 0;
     position: relative;
   }

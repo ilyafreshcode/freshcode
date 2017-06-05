@@ -1,10 +1,11 @@
 @import "../mixins";
+@import "../variables";
 
 footer {
-  background-color: #00e1a4;
-  color: #fff;
+  background-color: $green;
+  color: $white;
   font: {
-    size: 16px;
+    size: $font-size-base;
     weight: 700;
   }
   height: 200px;
