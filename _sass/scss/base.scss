@@ -1,9 +1,18 @@
-html, body {
-  height: 100%;
-  width: 100%; }
-body { font-family: "Roboto", sans-serif; }
+@import "./mixins";
+@import "./variables";
 
-.float-right{
+
+html, body {
+  height: 100vh !important;
+  width: 100%;
+}
+body {
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+.float-right {
   float: right;
 }
 
@@ -15,4 +24,10 @@ body { font-family: "Roboto", sans-serif; }
 
 .text-center{
   text-align: center;
+}
+
+@include breakpoint(1600px) {
+  .container {
+    width: 1440px;
+  }
 }
