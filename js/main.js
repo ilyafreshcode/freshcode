@@ -29,8 +29,14 @@ $(function(){
 
 
     /**------- For parallax ------*/
-    skrollr.init();
-
+    skrollr.init({
+        forceHeight: false,
+        smoothScrolling: true,
+        mobileCheck: function() {
+            return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
+            return false;
+        }
+    });
 
     /**------------------------------
      * Slideshow
@@ -74,6 +80,47 @@ $(function(){
     $('.all-vertical-num').text($('#slides-vertical .card').length);
     $('.all-horizontal-num').text($('#slides-horizontal .card').length);
     console.log($('body').height());
+
+
+
+    /**------------------------------------------------------------------------*/
+    /**------------------------ Submit Form -----------------------------------*/
+    /**------------------------------------------------------------------------*/
+
+    var form = $('form.cv_form'),
+        name = form.find("input[name='first_name']"),
+        email = form.find("input[name='email']"),
+        phone = form.find("input[name='phone']"),
+        vacancy = form.find("select[name=selector]"),
+        about = form.find("textarea[name='about']"),
+        file = form.find("input[name='file']");
+
+    form.parsley();
+    form.submit(function(e) {
+        e.preventDefault();
+        console.log(vacancy.val());
+        $.ajax({
+            method: "POST",
+            url: "http://localhost:3000/",
+            data: {
+                name: name.val(),
+                email: email.val(),
+                phone: phone.val(),
+                vacancy: vacancy.val(),
+                about: about.val(),
+                file: file.val()
+            },
+            crossDomain: true,
+            error: function (xhr){
+                console.log("error");
+            }
+        });
+        resetForm();
+    });
+
+    function resetForm() {
+        form[0].reset();
+    }
 
 
 
