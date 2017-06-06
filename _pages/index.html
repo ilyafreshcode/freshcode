@@ -1,115 +1,16 @@
 ---
 permalink: /
 layout: default
+
+title: Главная - Freshcode
 ---
 <div class="container">
-    <div class="main-img" data-0="top: 0px" data-1000="top: 200px">
-        <img src={{ site.data.links.images.head-img }} class="float-right"/>
-    </div>
+    {% include main/caption.html %}
 
-    <div class="vertical-middle main-title" data-0="top: 0px" data-1000="top: -100px">
-        <section class="content-parallax-1 vertical-middle text-center">
-            <h3>{{ site.data.main.head.main-text }}</h3>
-            <span>{{ site.data.main.head.subtext }}</span>
-            <span><a href="" class="button" style="margin-top: 35px;">Ищем таланты</a></span>
-        </section>
-    </div>
+    {% include main/team.html %}
 
+    {% include main/whysection.html %}
 
-    <div class="content-parallax-2">
-        <section class="description" data-0="top: 0px" data-1000="top: -100px">
-            <h3>{{ site.data.main.sections.team.title }}</h3>
-            <span>{{ site.data.main.sections.team.text }}</span>
-        </section>
-
-
-        <a href="#CVForm" class="button send-cv-position" data-0="top: 0px" data-100="top: -50px">Отправить резюме</a>
-
-
-        <div class="quotes" data-500="top: 0px" data-1000="top: -100px">
-            <img src={{ site.data.links.images.quotes-2 }} />
-        </div>
-
-        <div class="team-img" data-0="top: 0px" data-1000="top: 200px">
-            <img src={{ site.data.links.images.team }} />
-        </div>
-
-
-        <section id="slides-vertical" class="vertical-box float-right" data-0="top: 0px" data-1200="top: -250px">
-            {% for c in site.data.main.vertical-cards %}
-            <div class="card">
-                <div class="card-image">
-                    <img src={{ c.img }}>
-                </div>
-                <div class="card-style card-content">
-                    <p class="slide-num"><span class="slider-number-vertical"></span> /
-                        <span class="all-vertical-num"></span>
-                    </p>
-                    <p class="text">{{ c.text }}</p>
-                    <p class="name">{{ c.name }},</p>
-                    <p class="job">{{ c.job }}</p>
-                </div>
-            </div>
-            {% endfor %}
-            <a href="#" class="slidesjs-previous slidesjs-navigation"><img src={{ site.data.links.images.left-arrow }} /></a>
-            <a href="#" class="slidesjs-next slidesjs-navigation"><img src={{ site.data.links.images.right-arrow }} /></a>
-        </section>
-
-
-        <section id="slides-horizontal" class="horizontal-box" data-0="top: 0px" data-1000="top: -50px">
-            {% for c in site.data.main.horizontal-cards %}
-            <div class="card horizontal">
-                <div class="card-image">
-                    <img src={{ c.img }}>
-                </div>
-                <div class="card-style card-content">
-                    <p class="slide-num"><span class="slider-number-horizontal"></span> /
-                        <span class="all-horizontal-num"></span>
-                    </p>
-                    <p class="text">{{ c.text }}</p>
-                    <p class="name">{{ c.name }},</p>
-                    <p class="job">{{ c.job }}</p>
-
-                    <a href="#" class="slidesjs-previous slidesjs-navigation"><img src={{ site.data.links.images.left-arrow }} /></a>
-                    <a href="#" class="slidesjs-next slidesjs-navigation" style="margin-left: 20px;" ><img src={{ site.data.links.images.right-arrow }} /></a>
-                </div>
-
-            </div>
-            {% endfor %}
-        </section>
-
-
-        <div class="quotes-2 float-right" data-0="top: 100px" data-1300="top: -210px">
-            <img src={{ site.data.links.images.quotes-1 }}  />
-        </div>
-    </div>
-
-    <div class="content-parallax-3">
-        <section class="description" data-500="top: 0px" data-2500="top: -150px">
-            <h3>{{ site.data.main.sections.why.title }}</h3>
-            <span>{{ site.data.main.sections.why.text }}</span>
-        </section>
-
-        <section class="why-freshcode" data-1000="top: 0px" data-2500="top: -250px">
-            <div class="why-freshcode-slides">
-                <!----------------  Add slideshow here ------------------->
-            </div>
-        </section>
-    </div>
-
-    <div class="content-parallax-4">
-        <div data-0="top: -350px" data-2500="top: 0px" style="position: relative;">
-            <section class="vac-description" >
-                <img src={{ site.data.links.images.eye }}>
-                <h3>{{ site.data.main.sections.vacancies.title }}</h3>
-                <span>{{ site.data.main.sections.vacancies.text }}</span>
-            </section>
-            <br>
-            <a href="" class="button all-vacancy-position">Смотреть все вакансии</a>
-            </div>
-        <div class="vacancy-img" data-0="top: 50px" data-2500="top: 0px"></div>
-        <div class="vacancy-img-text" data-0="top: 500px" data-2500="top: -50px"><img src="/images/vac.png" /></div>
-        <div class="vacancy-img-lines"><img src="/images/triangle.png" /></div>
-    </div>
+    {% include main/vacancies.html %}
 </div>
 

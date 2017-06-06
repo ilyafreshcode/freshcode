@@ -41,6 +41,10 @@
         weight: 700;
       }
 
+      .active {
+        color: $green-tint;
+      }
+
       a {
         color: $black;
         -webkit-transition: all 0.2s;

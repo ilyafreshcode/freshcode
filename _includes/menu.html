@@ -8,69 +8,16 @@
             <a href="#CVForm" class="button float-right">Отправить резюме</a>
 
             <ul class="main-nav-menu">
-                {% for page in site.data.links.menu.pages %}
-                <li><a href={{ page.link }}>{{ page.text }}</a></li>
-                {% endfor %}
+                {% assign p = page.url | replace:'/','' %}
+                <li><a href="/" class="{% if p == '' %}active{% endif %}" >Главная</a></li>
+                <li><a href="" class="{% if p == 'about' %}active{% endif %}" >О нас</a></li>
+                <li><a href="/vacancies" class="{% if p == 'vacancies' %}active{% endif %}" >Вакансии</a></li>
+                <li><a href="" class="{% if p == 'review' %}active{% endif %}" >Отзывы сотрудников</a></li>
+                <li><a href="/contacts" class="{% if p == 'contacts' %}active{% endif %}" >Контакты</a></li>
             </ul>
-
-
         </div>
     </nav>
-    <div id="CVForm" class="modal">
-        <a href="#!" class="modal-action modal-close btn-flat float-right button-square">
-            <img src="/images/close-icon.png">
-        </a>
-        <div class="m-content">
-            <h3>Напишите нам</h3>
 
-            <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input id="first_name" type="text" class="validate">
-                            <label for="first_name">Имя</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Email</label>
-                        </div>
-
-                        <div class="input-field col s6">
-                            <input id="disabled" type="text" class="validate">
-                            <label for="disabled">Телефон/Skype</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <select>
-                                <option value="" disabled selected>Укажите вакансию</option>
-                                {% for vacancy in site.data.links.menu.vacancies %}
-                                <option value={{ vacancy.value }}>{{ vacancy.text }}</option>
-                                {% endfor %}
-                            </select>
-                        </div>
-
-                        <div class="input-field col s12">
-                            <textarea id="textarea1" class="materialize-textarea" data-length="250"></textarea>
-                            <label for="textarea1">Расскажите нам о себе</label>
-                        </div>
-
-                        <div class="input-field col s6">
-                            <div class="file-field input-field">
-                                <input type="file">
-                                <div class="file-path-wrapper">
-                                    <img src="/images/file-icon.png"> <span>Добавить файл</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-field col s6">
-                            <a href="" class="button float-right">Отправить резюме</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-
-        </div>
-
-    </div>
+    {% include modal.html %}
 
 </div>

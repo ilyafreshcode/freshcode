@@ -1,0 +1,70 @@
+.send-form{
+  background-color: $green;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  width: 80%;
+
+  .img-fly{
+    padding-right: 40px;
+  }
+
+  img{
+    height: auto;
+    width: 100px;
+  }
+
+}
+
+.form-content{
+  box-shadow: -5px 5px 25px 0 rgba(0, 0, 0, 0.15);
+  background-color: $white;
+  padding: 50px;
+  position: relative;
+  margin: -450px 0 150px 50px;
+  width: 70%;
+
+
+  h3{
+    font-weight: 700;
+  }
+
+}
+
+.contact-img{
+  margin-top: -100px;
+  position: relative;
+  z-index: -25;
+}
+
+.gray-block{
+  background-color: $grey-light;
+  margin: -350px 0 50px 0;
+  height: 700px;
+  width: 50%;
+  z-index: -30;
+}
+
+.lines-bg{
+  background: {
+    image: url("/images/Paterns/01_patern.jpg");
+    repeat: repeat;
+    position: 50% 0;
+  }
+  display: block;
+  position: relative;
+  float:right;
+  margin-top: -100px;
+  width: 50%;
+  height:1000px;
+  z-index: -20;
+  opacity: 0.2;
+}
+
+.line-bg-tr{
+  width: 0;
+  height: 0;
+  border-top: 580px solid $white;
+  border-right: 580px solid transparent;
+}
