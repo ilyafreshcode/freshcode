@@ -3,6 +3,95 @@ permalink: /vacancies
 layout: default
 ---
 <div class="container">
+  <div class="vacancy">
 
+    <div class="base-section">
+      <div class="text-block">
+        <p class="title">{{site.data.vacancies.title}}</p>
+        <hr class="line">
+        <div class="subtitle">{{site.data.vacancies.subtitle}}</div>
+        <div class="intro">{{site.data.vacancies.intro}}</div>
+        <div class="shadow"></div>
+      </div>
+      <div class="block-image">
+        <img src={{ site.data.links.vacancies_img.chair }} class="float-right"/>
+        <div class="dote">
+          <img src={{ site.data.links.vacancies_img.dote_small }} alt="">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="first-section">
+      <div class="subtext">{{site.data.vacancies.first_section.subtext}}</div>
+      <div class="card-section">
+        <div class="cards">
+          {% for card in site.data.vacancies.first_section.card_type %}
+          <div class="shadow-card">
+            <div class="card">
+              <div class="developer">{{ card.developer }}</div>
+              <div class="status-block">
+                <div class="status">{{ card.status }}</div>
+                <div class="link">
+                  <a href="{{ card.link }}">
+                    <span class="material-icons">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="second-section">
+      <hr class="line"/>
+      <div class="image-with-text">
+        <div class="text">
+          <p class="name">{{site.data.vacancies.second_section.name}}</p>
+          <p class="position">{{site.data.vacancies.second_section.position}}</p>
+        </div>
+        <div class="img">
+          <img src={{ site.data.links.vacancies_img.troyanova }}/>
+        </div>
+        <div class="block">
+          <div class="subtext">{{site.data.vacancies.second_section.subtext}}</div>
+          <div class="white-block">
+            <div class="info-block">
+              <div class="info">
+                {{site.data.vacancies.second_section.text}}
+              </div>
+              <div class="number">
+                <hr class="number-line"/>
+                <p>
+                {{site.data.vacancies.second_section.telephone}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="shadow"></div>
+          <div class="shadow-triangle"></div>
+        </div>
+      </div>
+
+      <div class="third-section">
+        <div class="subtext">{{site.data.vacancies.third_section.subtext}}</div>
+        <div class="image">
+          <img src={{site.data.links.vacancies_img.vector}} alt="Vector">
+        </div>
+        <div class="image-logo">
+          <img src={{site.data.links.vacancies_img.fresh}} alt="Logo">
+        </div>
+        <div class="dote">
+          <img src={{site.data.links.vacancies_img.dote_big}} alt="Dotes">
+        </div>
+        <div class="text-block">
+          <div class="title">{{site.data.vacancies.third_section.title}}</div>
+          <div class="subtitle">{{site.data.vacancies.third_section.subtitle}}</div>
+          <div class="button">{{site.data.vacancies.third_section.button}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-

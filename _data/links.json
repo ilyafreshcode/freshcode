@@ -74,5 +74,15 @@
         "link": ""
       }
     ]
+  },
+  "vacancies_img": {
+    "chair": "/images/vacancies/chair_fullsize.png",
+    "troyanova": "/images/vacancies/troyanova_big.svg",
+    "vector": "/images/vacancies/vector_smart.svg",
+    "shadow": "/images/vacancies/shadow.svg",
+    "dote_small": "/images/vacancies/dote_small.svg",
+    "rectangle": "/images/vacancies/rectangle.svg",
+    "dote_big": "/images/vacancies/dote_big.svg",
+    "fresh": "/images/vacancies/freshlogo_grey.png"
   }
 }

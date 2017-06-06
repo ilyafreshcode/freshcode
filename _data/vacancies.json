@@ -1,39 +1,41 @@
 {
   "title": "Вакансии",
   "subtitle": "Актуальные вакансии девелоперов и других IT-специалистов",
-  "intro": "работать в Freshcode интересно, комфортно и продуктивно",
+  "intro": "Работать в Freshcode интересно, комфортно и продуктивно!",
   "first_section": {
     "subtext": "Вакансии",
-    "c_plus": {
-      "developer": "С++ developer",
-      "status": "Приостановлена"
-    },
-    "it_sales": {
-      "developer": "IT Sales manager/Менеджер по продажам IT услуг",
-      "status": "12 мая"
-    },
-    "product_manager": {
-      "developer": "Product manager/Продакт менеджер",
-      "status": "Скоро откроется"
-    },
-    "project_manager": {
-      "developer": "Project manager/Business analyst",
-      "status": "10 мая"
-    },
-    "ppc_manager": {
-      "developer": "PPC manager/ Специалист по контекстной рекламе",
-      "status": "Приостановлена"
-    },
-    "seo_specialist": {
-      "developer": "SEO specialist",
-      "status": "Скоро откроется"
-    }
+    "card_type": [
+      {
+        "developer": "С++ developer",
+        "status": "Приостановлена"
+      },
+      {
+        "developer": "IT Sales manager/Менеджер по продажам IT услуг",
+        "status": "12 мая"
+      },
+      {
+        "developer": "Product manager/Продакт менеджер",
+        "status": "Скоро откроется"
+      },
+      {
+        "developer": "Project manager/Business analyst",
+        "status": "10 мая"
+      },
+      {
+        "developer": "PPC manager/ Специалист по контекстной рекламе",
+        "status": "Приостановлена"
+      },
+      {
+        "developer": "SEO specialist",
+        "status": "Скоро откроется"
+      }
+    ]
   },
   "second_section": {
     "subtext": "Кандидатам",
     "name": "Лиза Троянова",
     "position": "Project manager",
-    "text": "Уважаемые кандидаты, мы всегда готовы рассмотреть кандидатуры талантливых специалистов. И если Вы не нашли подъходящую Вам вакансию, но хотели бы стать частью команды Freshcode и развиватья вместе с нами, Вы можете отправить нам свое резюме на @alex@freshcodeit.com или связаться по телефону:",
+    "text": "Уважаемые кандидаты, мы всегда готовы рассмотреть кандидатуры талантливых специалистов. И если Вы не нашли подъходящую Вам вакансию, но хотели бы стать частью команды Freshcode и развиватья вместе с нами, Вы можете отправить нам свое резюме на alex@freshcodeit.com или связаться по телефону:",
     "telephone": "+380734036422"
   },
   "third_section": {
