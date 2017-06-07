@@ -28,7 +28,12 @@ layout: default
         <div class="cards">
           {% for card in site.data.vacancies.first_section.card_type %}
           <div class="shadow-card">
-            <div class="card">
+            <div class="single-card">
+              <hr class="top">
+              <hr class="right">
+              <hr class="left">
+              <hr class="bottom">
+              <hr class="angle">
               <div class="developer">{{ card.developer }}</div>
               <div class="status-block">
                 <div class="status">{{ card.status }}</div>
