@@ -1,0 +1,237 @@
+@import "../mixins";
+@import "../variables";
+
+.about {
+  margin-top: 95px;
+
+  .base-section {
+    position: relative;
+
+    .title {
+      margin-top: 128px;
+    }
+
+    .line {
+      width: 259px;
+    }
+
+    .subtitle {
+      width: 503px;
+    }
+
+    .dotes {
+      position: absolute;
+      top: 0;
+
+      img {
+        width: 535px;
+      }
+    }
+
+    .logo {
+      position: absolute;
+      top: -13rem;
+      left: 18.5rem;
+
+      img {
+        width: 655px;
+      }
+    }
+
+    .block-image {
+      .dote {
+        z-index: 0;
+        width: 934px;
+        bottom: -117px;
+        left: -215px;
+        height: 581px;
+        background-image: url("/images/Paterns/01_patern.jpg");
+      }
+    }
+  }
+
+  .intro {
+    font-size: $font-size-big;
+    font-weight: 400;
+    line-height: 26px;
+    transform: scaleX(1.002);
+  }
+
+  .first-section {
+    height: 38rem;
+    position: relative;
+    top: -24.4rem;
+    left: -3rem;
+
+    .line-vertical {
+      background-color: $grey;
+      width: 7px;
+      height: 76px;
+      margin: 0;
+      border: 0;
+      position: relative;
+      bottom: -82px;
+      left: -2rem;
+    }
+
+    .left-text {
+      color:  $black;
+      font-size: $font-size-big * 2;
+      line-height: 46px;
+      font-weight: 700;
+      width: 285px;
+      text-align: left;
+    }
+
+    .subtext {
+      font-size: 239.63px;
+      position: relative;
+      top: -28rem;
+    }
+
+    .absolute-img {
+      position: absolute;
+    }
+
+    .top {
+      left: 20rem;
+      z-index: 2;
+      top: 6rem;
+    }
+
+    .bottom {
+      left: 21.2rem;
+      z-index: 2;
+      bottom: -14rem;
+    }
+
+    .right-text {
+      position: relative;
+      z-index: 2;
+      left: 22.2rem;
+      top: 43px;
+
+      p {
+        color: $black;
+        font-size: 39.94px;
+        line-height: 36px;
+        font-weight: 700;
+        text-align: left;
+        transform: scaleX(1.002);
+      }
+
+      .about {
+        margin-top: 40px;
+        margin-bottom: 47px;
+        color:  $black;
+        font-size: 19.97px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: left;
+        transform: scaleX(1.002);
+        width: 495px;
+      }
+
+      .next {
+        margin-top: 215px;
+        color: $black;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: left;
+        left: -31px;
+        position: relative;
+      }
+
+      .button {
+        box-shadow: 0 5px 20px 0 rgba(0, 225, 164, 0.4);
+      }
+    }
+  }
+
+  .second-section {
+    margin-top: -2rem;
+    position: relative;
+
+    .single-block {
+      width: 380px;
+      height: 321px;
+      border: 2px solid $black;
+      border-right: 0;
+      position: relative;
+
+      &:last-child {
+        border-right: 2px solid $black;
+      }
+
+      .text-block {
+        padding: 59px 58px;
+      }
+
+      .mark {
+        border-radius: 50%;
+        background-color: $black;
+        color: $white;
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -25px;
+        left: -25px;
+      }
+
+      .step {
+        color: $black;
+        font-size: 16px;
+        margin-bottom: 36px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: left;
+      }
+
+      .about-step {
+        color: $black;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+      }
+    }
+
+    .block {
+      display: flex;
+      height: 321px;
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .reverse,
+    img {
+      position: absolute;
+    }
+
+    .reverse {
+      width: 284px;
+      height: 142px;
+      right: 285px;
+      background-color: $shadow;
+      top: -142px;
+    }
+
+    img {
+      right: 0;
+      top: -242px;
+    }
+  }
+
+  .third-section {
+    margin-top: 148px;
+
+  .card {
+    box-shadow: 0;
+  }
+  }
+
+}

@@ -16,7 +16,7 @@
         "text": "Главная"
       },
       {
-        "link": "",
+        "link": "/about",
         "text": "О нас"
       },
       {
@@ -84,5 +84,19 @@
     "rectangle": "/images/vacancies/rectangle.svg",
     "dote_big": "/images/vacancies/dote_big.svg",
     "fresh": "/images/vacancies/freshlogo_grey.png"
+  },
+  "about_img": {
+    "triangle": "/images/triangle.png",
+    "arrow": "/images/about/arrow_down.svg",
+    "rectangle": "/images/about/bckg_rectangle.svg",
+    "team": "/images/about/team.svg",
+    "big_triangle": "/images/about/big_triangle.svg",
+    "bigger": "/images/about/bigger_rectangle.svg",
+    "dote_line": "/images/about/dote_line.svg",
+    "dote_rectangle": "/images/about/dote_line.svg",
+    "small_rectangle": "/images/about/small_rectangle.svg",
+    "target": "/images/about/target.svg",
+    "troyanova": "/images/about/troyanova_small.svg",
+    "shape": "/images/about/shape.svg"
   }
 }

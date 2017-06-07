@@ -16,7 +16,7 @@
             <ul class="main-nav-menu">
                 {% assign p = page.url | replace:'/','' %}
                 <li><a href="/" class="{% if p == '' %}active{% endif %} link" >Главная</a></li>
-                <li><a href="" class="{% if p == 'about' %}active{% endif %} link" >О нас</a></li>
+                <li><a href="/about" class="{% if p == 'about' %}active{% endif %} link" >О нас</a></li>
                 <li><a href="/vacancies" class="{% if p == 'vacancies' %}active{% endif %} link" >Вакансии</a></li>
                 <li><a href="" class="{% if p == 'review' %}active{% endif %} link" >Отзывы сотрудников</a></li>
                 <li><a href="/contacts" class="{% if p == 'contacts' %}active{% endif %} link" >Контакты</a></li>
