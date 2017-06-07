@@ -1,0 +1,103 @@
+@import "../mixins";
+@import "../variables";
+
+.team-slider {
+  height: 500px;
+  width: 999px !important;
+  position: relative;
+
+  .card {
+    box-shadow: none;
+  }
+
+  .slidesjs-container,
+  .slidesjs-control {
+    height: 500px !important;
+  }
+
+  .top-navigation {
+    float: right;
+    background-color: $green;
+    border-bottom: 2px solid $white;
+    width: 286px;
+    height: 63px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .link {
+      width: 35px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a {
+      height: 18px;
+    }
+  }
+
+  .card.horizontal {
+    display: block;
+  }
+
+  .green-card {
+    background-color: transparent;
+    width: 999px !important;
+  }
+
+  .body-slide {
+    background-color: $green;
+    display: flex;
+    height: 401px;
+    width: 999px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .block-slide {
+    height: 305px;
+    width: 301px;
+    border: 2px solid $white;
+    position: relative;
+
+    &:last-child {
+      border-left: 0;
+    }
+
+    &:first-child {
+      border-right: 0;
+    }
+  }
+
+  .text {
+    height: 67px;
+    border-top: 2px solid $white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .card-image {
+    height: 238px;
+    width: 100%;
+    max-width: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide-num {
+    color:  $white !important;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+  }
+}

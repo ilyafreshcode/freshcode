@@ -5,6 +5,8 @@
     "team" : "/images/Team.png",
     "left-arrow" : "/images/slices/icon_arrow_left.svg",
     "right-arrow" : "/images/slices/icon_arrow_right.svg",
+    "left-arrow-white" : "/images/slices/icon_arrow_left_white.svg",
+    "right-arrow-white" : "/images/slices/icon_arrow_right_white.svg",
     "quotes-1" : "/images/slices/icon_quotes_1.svg",
     "quotes-2" : "/images/slices/icon_quotes_2.svg",
     "eye" : "/images/slices/icon_eye.svg"
@@ -90,13 +92,15 @@
     "arrow": "/images/about/arrow_down.svg",
     "rectangle": "/images/about/bckg_rectangle.svg",
     "team": "/images/about/team.svg",
-    "big_triangle": "/images/about/big_triangle.svg",
+    "big_triangle": "/images/about/big_triangle.jpg",
     "bigger": "/images/about/bigger_rectangle.svg",
     "dote_line": "/images/about/dote_line.svg",
-    "dote_rectangle": "/images/about/dote_line.svg",
+    "dote_rectangle": "/images/about/dote_rectangle.svg",
     "small_rectangle": "/images/about/small_rectangle.svg",
     "target": "/images/about/target.svg",
     "troyanova": "/images/about/troyanova_small.svg",
+    "rectangle_part_line": "/images/about/rectangle_part_line.svg",
+    "rectangle_part_dote": "/images/about/rectangle_part_dote.svg",
     "shape": "/images/about/shape.svg"
   }
 }

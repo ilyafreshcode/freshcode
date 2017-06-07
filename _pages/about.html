@@ -44,23 +44,80 @@ layout: default
       <img src={{site.data.links.about_img.small_rectangle}} alt="rectangle">
       <div class="block">
         {% for block in site.data.about.second_section %}
-          <div class="single-block">
-            <div class="mark">{{ block.count }}</div>
-            <div class="text-block">
-              <div class="step">{{ block.step }}</div>
-              <div class="about-step">{{ block.about }}</div>
-            </div>
+        <div class="single-block">
+          <div class="mark">{{ block.count }}</div>
+          <div class="text-block">
+            <div class="step">{{ block.step }}</div>
+            <div class="about-step">{{ block.about }}</div>
           </div>
+        </div>
         {% endfor %}
       </div>
     </div>
 
-      <div class="third-section">
-        <div class="text-block-description">
-          <div class="why-text">{{site.data.about.third_section.why}}</div>
-          <div class="why-about">{{site.data.about.third_section.because}}</div>
+    <div class="third-section">
+      <div class="text-block-description">
+        <div class="why-text">{{site.data.about.third_section.why}}</div>
+        <div class="why-about">{{site.data.about.third_section.because}}</div>
+        <div class="bckg-line"><img src={{site.data.links.about_img.rectangle}} alt=""></div>
+      </div>
+
+      <div class="slider-top">
+        {% include main/slider.html %}
+      </div>
+
+      <div class="line-rectangle"></div>
+    </div>
+
+    <div class="target-section">
+      <img class="absolute" src={{site.data.links.about_img.dote_rectangle}} alt="">
+      <div class="target">
+        <img class="target-img" src={{site.data.links.about_img.target}} alt="Target">
+        <div class="target-block">
+          <div class="title">{{site.data.about.fourth_section.title}}</div>
+          <div class="subtitle">{{site.data.about.fourth_section.subtitle}}</div>
         </div>
       </div>
+      <div class="small-rectangle"></div>
+      <div class="subtext">{{site.data.about.fourth_section.subtext}}</div>
+    </div>
+
+    <div class="progress-section">
+      <hr class="top">
+      <div class="block">
+        <div class="title">{{site.data.about.fifth_section.title}}</div>
+        <div class="subtitle">{{site.data.about.fifth_section.subtitle}}</div>
+      </div>
+      <div class="progress-img">
+        {% for progress in site.data.about.fifth_section.progress %}
+        <div class="image-cycle">
+          <img src={{progress.img}} alt="">
+          <div class="white-dote">
+            <hr class="before">
+            <hr class="after">
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="background">
+        <div class="small-rectangle"></div>
+        <img class="line-rectangle" src={{site.data.links.about_img.rectangle_part_line}} alt="line">
+        <img class="dote-rectangle" src={{site.data.links.about_img.rectangle_part_dote}} alt="dote">
+      </div>
+      <hr class="bottom">
+    </div>
+    
+    <div class="last-section">
+      <img class="absolute" src={{site.data.links.about_img.big_triangle}} alt="Triangle">
+      <div class="white-block">
+        <div class="text">
+          <div class="title">{{site.data.about.six_section.title}}</div>
+          <a class="button" href="#CVForm">{{site.data.about.six_section.button}}</a>
+        </div>
+        <img src={{site.data.links.about_img.troyanova}}  alt="Troyanova">
+      </div>
+      <div class="medium-rectangle"></div>
+    </div>
   </div>
-  </div>
+</div>
 </div>

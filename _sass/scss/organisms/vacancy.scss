@@ -114,24 +114,16 @@
     }
 
     .shadow-card {
-      box-shadow: -6px 5px 30px -10px rgba(0, 0, 0, 0.15);
       width: 356px;
       height: 300px;
       margin: 0 68px 7rem 0;
-    }
+      background: $white;
+      background: linear-gradient(-135deg, transparent 30px, $white 0) top right;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      color: $white;
 
-    .card {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 356px;
-      height: 300px;
-      position: relative;
-      clip-path: polygon(0% 0%, calc(100% - 40px) 0%, 100% 40px, 100% 100%, 0% 100%);
-      -webkit-filter: drop-shadow(0px 5px 30px rgba(0, 0, 0, 0.15));
-      filter: drop-shadow(0px 5px 30px rgba(0, 0, 0, 0.15));
-
-      &::before {
+      .single-card::before {
         content: "";
         position: absolute;
         top: 0;
@@ -139,6 +131,68 @@
         border-style: solid;
         border-width: 0 40px 40px 0;
         border-color: transparent transparent $subtext-color transparent;
+      }
+    }
+
+    .single-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 356px;
+      height: 300px;
+
+      .top {
+        z-index: -1;
+        margin: 0;
+        width: 314px;
+        color: white;
+        border: 0;
+        box-shadow: 0px -3px 15px 1.5px rgba(0, 0, 0, 0.15);
+      }
+
+      .right {
+        z-index: -1;
+        height: 253px;
+        position: absolute;
+        right: 0;
+        top: 37px;
+        color: white;
+        border: 0;
+        box-shadow: 0 -3px 15px 1.5px rgba(0,0,0,0.15);
+      }
+
+      .left {
+        z-index: -1;
+        height: 300px;
+        position: absolute;
+        left: 0;
+        top:-6px;
+        color: white;
+        border: 0;
+        box-shadow: 0 -3px 15px 1.5px rgba(0,0,0,0.15);
+      }
+
+      .angle {
+        z-index: -1;
+        width: 56px;
+        transform: rotate(45deg);
+        position: absolute;
+        right: -5px;
+        top: 10px;
+        color: transparent;
+        border: 0;
+        box-shadow: 3px -3px 15px 1.5px rgba(0,0,0,0.15);
+      }
+
+      .bottom {
+        z-index: -1;
+        position: absolute;
+        bottom: 0;
+        width: 356px;
+        color: white;
+        border: 0;
+        box-shadow: 0 5px 15px 1.5px rgba(0, 0, 0, 0.15);
       }
     }
 

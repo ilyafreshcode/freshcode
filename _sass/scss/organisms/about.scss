@@ -75,7 +75,7 @@
     }
 
     .left-text {
-      color:  $black;
+      color: $black;
       font-size: $font-size-big * 2;
       line-height: 46px;
       font-weight: 700;
@@ -114,7 +114,7 @@
       p {
         color: $black;
         font-size: 39.94px;
-        line-height: 36px;
+        line-height: 30px;
         font-weight: 700;
         text-align: left;
         transform: scaleX(1.002);
@@ -123,7 +123,7 @@
       .about {
         margin-top: 40px;
         margin-bottom: 47px;
-        color:  $black;
+        color: $black;
         font-size: 19.97px;
         font-weight: 400;
         line-height: 26px;
@@ -204,6 +204,8 @@
     .block {
       display: flex;
       height: 321px;
+      margin-left: 30px;
+      max-width: 1140px;
       box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
     }
 
@@ -229,9 +231,298 @@
   .third-section {
     margin-top: 148px;
 
-  .card {
-    box-shadow: 0;
-  }
+    .slider-top {
+      top: -27rem;
+      float: right;
+      margin-right: 29px;
+      position: relative;
+    }
+
+    .text-block-description {
+      height: 577px;
+    }
+
+    .why-text {
+      color: $black;
+      font-size: 40px;
+      font-weight: 700;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+
+    .why-about {
+      color: $black;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 26px;
+      text-align: left;
+      width: 558px;
+    }
+
+    .card {
+      box-shadow: 0;
+    }
+
+    .bckg-line {
+      position: relative;
+      z-index: -1;
+      top: -160px;
+      width: 1141px;
+      height: 532px;
+    }
+
+    .line-rectangle {
+      background-color: #f9f9f9;
+      width: 998px;
+      height: 51px;
+      margin-top: 59px;
+      margin-left: 143px;
+    }
   }
 
+  .target-section {
+    height: 445px;
+    position: relative;
+    top: -68px;
+
+    .absolute {
+      position: absolute;
+      top: 0;
+      right: 29px;
+    }
+
+    .target {
+      display: flex;
+      margin-left: 35px;
+      position: absolute;
+      top: 133px;
+      z-index: 2;
+
+      .target-img {
+        margin-right: 68px;
+      }
+
+      .title {
+        color: $black;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: left;
+        line-height: 40px;
+        margin-bottom: 49px;
+      }
+
+      .subtitle {
+        color: $black;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: left;
+        width: 568px;
+      }
+
+    }
+
+    .dots-rectangle {
+      width: 857px;
+      height: 401px;
+    }
+
+    .small-rectangle {
+      background-color: $shadow;
+      width: 249px;
+      height: 188px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .subtext {
+      bottom: 0;
+      right: -25px;
+      position: absolute;
+      font-size: 266.49px;
+      line-height: 182px;
+    }
+  }
+
+  .progress-section {
+    position: relative;
+    height: 369px;
+    margin-top: 80px;
+
+    .top {
+      background-color: $subtext-lite;
+      width: 572px;
+      height: 7px;
+      margin-left: 19.3rem;
+      border: 0;
+    }
+
+    .bottom {
+      background-color: $subtext-lite;
+      width: 287px;
+      height: 7px;
+      margin-left: 19.3rem;
+      border: 0;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .background {
+      display: flex;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      right: 23px;
+    }
+
+    .small-rectangle {
+      background-color: $shadow;
+      width: 286px;
+      height: 355px;
+    }
+
+    .dote-rectangle {
+      width: 286px;
+      height: 356px;
+    }
+
+    .line-rectangle {
+      width: 285px;
+      height: 357px;
+    }
+
+    .block {
+      .title {
+        color: $black;
+        font-size: 40px; /* Приближение из-за подстановки шрифтов */
+        font-weight: 700;
+        text-align: left;
+      }
+
+      .subtitle {
+        color: $black;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: left;
+        width: 305px;
+      }
+    }
+
+    .progress-img {
+      position: absolute;
+      top: 110px;
+      right: -30px;
+      background-color: $green;
+      width: 858px;
+      height: 155px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .image-cycle {
+        width: 287px;
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:nth-child(2) {
+          width: 270px;
+        }
+
+        &:last-child {
+          .white-dote {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .white-dote {
+      margin: 0;
+      height: 100%;
+    }
+
+    .before,
+    .after {
+      position: absolute;
+      background-color: $white;
+      width: 7px;
+      height: 10px;
+      border: 0;
+      margin: 0;
+      right: -7px;
+    }
+
+    .before {
+      top: 0;
+    }
+
+    .after {
+      bottom: 0;
+    }
+  }
+
+  .last-section {
+    position: relative;
+    background-color: transparent;
+    margin-top: 170px;
+    margin-bottom: 70px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .absolute {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: -160px;
+    }
+
+    .medium-rectangle {
+      position: absolute;
+      z-index: -2;
+      background-color: $shadow;
+      width: 286px;
+      height: 581px;
+      top: -274px;
+      right: 23px;
+    }
+
+    .white-block {
+      box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.15);
+      width: 857px;
+      height: 425px;
+      margin-right: 10px;
+      right: 0;
+      position: relative;
+      background-color: $white;
+
+      img {
+        position: absolute;
+        right: 0;
+        top: -85px;
+      }
+    }
+
+    .text {
+      width: 430px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title {
+      color: $black;
+      font-size: 40px;
+      width: 285px;
+      font-weight: 700;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+  }
 }

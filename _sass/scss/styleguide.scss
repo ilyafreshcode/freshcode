@@ -13,15 +13,13 @@
 @import "./atoms/hamburger";
 
 //import molecules
-@import "./molecules/main";
+@import "./molecules/menu";
+@import "./molecules/footer";
 @import "./molecules/modal";
-@import "./molecules/vacancy";
-@import "./molecules/about";
-
 
 //import organisms
-@import "./organisms/menu";
-@import "./organisms/footer";
+@import "./organisms/vacancy";
+@import "./organisms/about";
 @import "./organisms/contacts";
-
-
+@import "./organisms/main";
+@import "./organisms/slider";

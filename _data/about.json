@@ -30,37 +30,40 @@
     "why": "Почему Freshcode?",
     "because": "Мы заботимся о наших сотрудниках, создаем комфортные условия работы, даем возможность профессионально развиваться, изучать новые технологии и применять их на практике.",
     "slider": [
-      {
-        "img": "/images/about/about_slider/heads.svg",
-        "text": "Профессиональная команда"
-      },
-      {
-        "img": "/images/about/about_slider/builds.svg",
-        "text": "Проекты ведущих компаний"
-      },
-      {
-        "img": "/images/about/about_slider/сase.svg",
-        "text": "Успешная карьера и развитие"
-      },
-      {
-        "img": "/images/about/about_slider/builds.svg",
-        "text": "-//-"
-      },
-      {
-        "img": "/images/about/about_slider/сase.svg",
-        "text": "-//-"
-      },
-      {
-        "img": "/images/about/about_slider/heads.svg",
-        "text": "-//-"
-      }
+      [
+        {
+          "img": "/images/about/about_slider/heads.svg",
+          "text": "Профессиональная команда"
+        },
+        {
+          "img": "/images/about/about_slider/builds.svg",
+          "text": "Проекты ведущих компаний"
+        },
+        {
+          "img": "/images/about/about_slider/сase.svg",
+          "text": "Успешная карьера и развитие"
+        }
+      ],
+      [
+        {
+          "img": "/images/about/about_slider/builds.svg",
+          "text": "-//-"
+        },
+        {
+          "img": "/images/about/about_slider/сase.svg",
+          "text": "-//-"
+        },
+        {
+          "img": "/images/about/about_slider/heads.svg",
+          "text": "-//-"
+        }
+      ]
     ]
   },
   "fourth_section": {
     "subtext": "Миссия",
     "title": "Наша миссия",
-    "subtitle": "Freshcode помогает успепшным компаниям создавать программное обеспечение, предоставляя талантливых специалистов, преданных своему делу, и обеспечивая успешный опыт аутсорсинга и плодотворное, долгосрочное сотрудничество.",
-    "button": "Отправить резюме"
+    "subtitle": "Freshcode помогает успепшным компаниям создавать программное обеспечение, предоставляя талантливых специалистов, преданных своему делу, и обеспечивая успешный опыт аутсорсинга и плодотворное, долгосрочное сотрудничество."
   },
   "fifth_section": {
     "title": "Наши достижения",
@@ -79,7 +82,6 @@
   },
   "six_section": {
     "title": "Хочешь к нам?",
-    "img": "/images/about/troyanova_small.svg",
     "button": "Актуальные вакансии"
   }
 }

@@ -3,6 +3,10 @@ html, body {
   width: 100%; }
 body { font-family: "Roboto", sans-serif; }
 
+.overflow {
+  overflow-x: hidden;
+}
+
 .float-right{
   float: right;
 }
