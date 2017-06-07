@@ -8,7 +8,15 @@
   position: fixed;
   right: 0;
   top: 0;
+  overflow: hidden;
+  width: 100%;
   z-index: 1000;
+
+  .container{
+    @include breakpoint($screen-tab) {
+      width:100%;
+    }
+  }
 
   &.is-hidden {
     opacity: 0;
@@ -25,16 +33,32 @@
   .main-nav-menu {
     position: relative;
     float: right;
+    margin-top: -15px;
+    @include breakpoint($screen-tab) {
+      margin-top: 30px;
+    }
   }
+
+
 
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    @include breakpoint($screen-tab) {
+      text-align: center;
+      width: 100%;
+    }
 
     li {
       display: inline-block;
+      @include breakpoint($screen-tab) {
+        display: block;
+      }
       padding: 17px 12px;
+      @include breakpoint(1550px) {
+        padding: 17px 5px;
+      }
       text-transform: uppercase;
       font: {
         size: $font-size-base;
@@ -45,11 +69,12 @@
         color: $green-tint;
       }
 
-      a {
+      .link {
         color: $black;
         -webkit-transition: all 0.2s;
       }
-      a:hover {
+      .link:hover {
+        cursor: pointer;
         color: $green;
         text-decoration: none;
         -webkit-transition: all 0.2s;

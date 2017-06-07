@@ -1,70 +1,92 @@
-.send-form{
-  background-color: $green;
-  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
-  height: 500px;
-  margin: 0 auto;
-  position: relative;
-  width: 80%;
+.contacts {
+  margin-top: 250px;
 
-  .img-fly{
-    padding-right: 40px;
+  .send-form {
+    background-color: $green;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+
+    .img-fly {
+      padding-right: 40px;
+    }
+
+    img {
+      height: auto;
+      width: 100px;
+    }
   }
 
-  img{
-    height: auto;
-    width: 100px;
+  .form-content {
+    box-shadow: -5px 5px 25px 0 rgba(0, 0, 0, 0.15);
+    background-color: $white;
+    padding: 50px;
+    position: relative;
+    margin: -450px 0 150px 50px;
+    width: 70%;
+
+    h3 {
+      font-weight: 700;
+    }
+
   }
 
-}
+  .contact-img {
+    margin-top: -100px;
+    position: relative;
+    z-index: -25;
+  }
 
-.form-content{
-  box-shadow: -5px 5px 25px 0 rgba(0, 0, 0, 0.15);
-  background-color: $white;
-  padding: 50px;
-  position: relative;
-  margin: -450px 0 150px 50px;
-  width: 70%;
+  .gray-block {
+    background-color: $grey-light;
+    margin: -350px 0 50px 0;
+    height: 700px;
+    width: 50%;
+    z-index: -30;
+  }
 
+  .lines-bg {
+    background: {
+      image: url("/images/Paterns/01_patern.jpg");
+      repeat: repeat;
+      position: 50% 0;
+    }
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: -1200px;
+    width: 50%;
+    height: 1150px;
+    z-index: -20;
+    opacity: 0.2;
+  }
 
-  h3{
+  .line-bg-tr {
+    width: 0;
+    height: 0;
+    border-top: 650px solid $white;
+    border-right: 650px solid transparent;
+  }
+
+  .subtext {
+    color: $subtext-color;
+    font-size: $font-size-title + 100px;
+    line-height: 150px;
     font-weight: 700;
+    text-align: right;
+    width: 120%;
+    z-index: 10;
   }
 
-}
-
-.contact-img{
-  margin-top: -100px;
-  position: relative;
-  z-index: -25;
-}
-
-.gray-block{
-  background-color: $grey-light;
-  margin: -350px 0 50px 0;
-  height: 700px;
-  width: 50%;
-  z-index: -30;
-}
-
-.lines-bg{
-  background: {
-    image: url("/images/Paterns/01_patern.jpg");
-    repeat: repeat;
-    position: 50% 0;
+  .title {
+    margin: 250px 0 0 -28px;
+    width: 510px;
+    line-height: .9;
+    font-size: $font-size-title - 4px;
+    font-weight: 300;
+    height: 76px;
+    text-transform: uppercase;
   }
-  display: block;
-  position: relative;
-  float:right;
-  margin-top: -100px;
-  width: 50%;
-  height:1000px;
-  z-index: -20;
-  opacity: 0.2;
-}
-
-.line-bg-tr{
-  width: 0;
-  height: 0;
-  border-top: 580px solid $white;
-  border-right: 580px solid transparent;
 }

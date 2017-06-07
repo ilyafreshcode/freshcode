@@ -9,23 +9,85 @@ footer {
     weight: 700;
   }
   height: 200px;
-  position: relative;
   width: 100%;
+
+  .footer-col{
+    float: right;
+    height: 200px;
+    width: 33%;
+
+    .copyright{
+      display: inline-block;
+      width: 45%;
+    }
+
+    .links-block{
+      width: 100%;
+      li{
+        float: right;
+        margin-left: 25px;
+      }
+    }
+
+  }
+
+
+
+
+
+  /*@include breakpoint($screen-tab) {
+    height: 350px;
+    .row .col{
+      float:none;
+      .l4{
+      width: 100%;
+      }
+    }
+
+
+  .mobile-text{
+    @include breakpoint($screen-tab) {
+      float: none;
+      text-align: center;
+      margin-left: -25px;
+    }
+  }
 
   .footer-col {
     margin-top: 10px;
     height: 170px;
+    @include breakpoint($screen-tab) {
+      height: 100px;
+    }
   }
 
   ul {
     list-style-image: url('/images/Rectangle.png');
+    @include breakpoint($screen-tab) {
+      width: 21rem;
+      margin: auto;
+    }
   }
 
   .img-footer {
-    height: 180px;
+    height: 170px;
+    @include breakpoint($screen-tab) {
+      height: 100px;
+      width: 21rem;
+      margin: auto;
+    }
   }
 
-  img {
-    margin-left: 15px;
-  }
+  .img-footer{
+    a{
+      margin-left: 15px;
+      float: right;
+      @include breakpoint($screen-tab) {
+        margin-left: 23px;
+      }
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+  }*/
 }

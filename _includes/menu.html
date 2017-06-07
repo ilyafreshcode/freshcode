@@ -3,17 +3,24 @@
 
     <nav class="navigation-bar is-visible" data-nav-status="toggle">
         <div class="container menu-content">
-            <a href=""><img draggable="false" class="logo logo-d" src={{ site.data.links.images.menu-logo }} alt="Freshcode Logo"></a>
+            <a href="/"><img draggable="false" class="logo logo-d" src={{ site.data.links.images.menu-logo }} alt="Freshcode Logo"></a>
 
-            <a href="#CVForm" class="button float-right">Отправить резюме</a>
+
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
             <ul class="main-nav-menu">
                 {% assign p = page.url | replace:'/','' %}
-                <li><a href="/" class="{% if p == '' %}active{% endif %}" >Главная</a></li>
-                <li><a href="" class="{% if p == 'about' %}active{% endif %}" >О нас</a></li>
-                <li><a href="/vacancies" class="{% if p == 'vacancies' %}active{% endif %}" >Вакансии</a></li>
-                <li><a href="" class="{% if p == 'review' %}active{% endif %}" >Отзывы сотрудников</a></li>
-                <li><a href="/contacts" class="{% if p == 'contacts' %}active{% endif %}" >Контакты</a></li>
+                <li><a href="/" class="{% if p == '' %}active{% endif %} link" >Главная</a></li>
+                <li><a href="" class="{% if p == 'about' %}active{% endif %} link" >О нас</a></li>
+                <li><a href="/vacancies" class="{% if p == 'vacancies' %}active{% endif %} link" >Вакансии</a></li>
+                <li><a href="" class="{% if p == 'review' %}active{% endif %} link" >Отзывы сотрудников</a></li>
+                <li><a href="/contacts" class="{% if p == 'contacts' %}active{% endif %} link" >Контакты</a></li>
+                <li><a href="#CVForm" class="button">Отправить резюме</a></li>
             </ul>
         </div>
     </nav>

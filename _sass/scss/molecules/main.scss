@@ -10,6 +10,9 @@
       size: 100px;
       weight: 300;
     }
+    @include breakpoint($screen-sm) {
+      font-size: 50px;
+    }
   }
 
   span {
@@ -25,25 +28,24 @@
   z-index: -100;
   img {
     height: auto;
-    width: 1250px;
+    width: 105%;
   }
 }
 
 .team-img {
   position: absolute;
-  margin: 150px 0 0 -70px;
+  margin: -130px 0 0 -70px;
   z-index: -100;
   img {
     height: auto;
-    width: 1000px;
+    width: 100%;
   }
 }
 
 .description {
-  position: relative;
+  position: absolute;
   margin: {
     top: -100px;
-    bottom: 50px;
   }
   width: 620px;
 
@@ -53,9 +55,16 @@
       weight: 700;
     }
     margin-bottom: 50px;
+
+    @include breakpoint($screen-sm) {
+      font-size:  $font-size-big;
+      width: 100%;
+    }
   }
 
   span {
+    display: inline-block;
+    margin-top: -20px;
     font: {
       size: $font-size-big + 2px;
       weight: 400;

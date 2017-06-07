@@ -3,13 +3,23 @@
 
 .content-parallax-1 {
   position: relative;
-  margin-top: -1100px;
+  margin-top: -1135px;
   height: 950px;
+
+  @include breakpoint($screen-tab) {
+    margin-top: -700px;
+    height: 750px;
+  }
+  @include breakpoint($screen-sm) {
+    margin-top: -300px;
+    height: 500px;
+  }
 }
 
 .content-parallax-2 {
   position: relative;
-  height: 250px;
+  height: 550px;
+  margin-top: -100px;
 
   .card-style {
     font: {
@@ -41,7 +51,11 @@
     display: inline-block;
     position: relative;
     margin: {
+      top: 120px;
       left: 400px;
+    }
+    @include breakpoint($screen-tab) {
+      margin-left: 0;
     }
   }
 
@@ -52,8 +66,21 @@
   .vertical-box {
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
     position: relative;
-    width: 381px;
-    margin-top: -200px;
+    width: 390px;
+    margin: -350px -30px 0 0;
+
+    @include breakpoint($screen-tab) {
+      margin-top: -50px;
+      margin-bottom: 50px;
+      width: 261px;
+    }
+
+    .slidesjs-container{
+      height: 660px !important;
+      @include breakpoint($screen-tab) {
+        height: 510px !important;
+      }
+    }
 
     .slide-num {
       font-size: $font-size-base;
@@ -68,10 +95,24 @@
 
   .horizontal-box {
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
-    position: relative;
+    margin-top: 40px;
+    position: absolute;
     width: 572px;
+
+    @include breakpoint($screen-tab) {
+      width: 261px;
+      height: 680px;
+      .slidesjs-container{
+        height: 650px !important;
+      }
+    }
+
+
     .card-image {
       float: left;
+      @include breakpoint($screen-tab) {
+        float: none;
+      }
     }
     img {
       max-width: none !important;
@@ -90,13 +131,16 @@
 
     .card-content-1 {
       margin-left: 290px;
+      @include breakpoint($screen-tab){
+        margin-left: 0;
+      }
     }
 
   }
 }
 
 .content-parallax-3 {
-  margin-top: 1000px;
+  margin-top: 700px;
 
   .why-freshcode {
     position: relative;
@@ -122,7 +166,7 @@
       background-color: $green;
       height: 400px;
       margin: {
-        top: -300px;
+        top: -350px;
         left: 150px;
       }
     ;
@@ -187,25 +231,26 @@
       position: relative;
       height: 450px;
       opacity: 0.2;
-      margin: -150px 0 0 20%;
+      margin: -150px 0 0 270px;
+      width: calc(100% - 270px);
       z-index: -100;
     }
 
   }
 
   .vacancy-img-text {
-    margin: -200px 0 0 20%;
+    margin: -300px 0 0 270px;
     position: relative;
     z-index: -10;
 
     img {
       height: auto;
-      width: 110%;
+      width: 108%;
     }
   }
 
   .vacancy-img-lines {
-    margin: -270px 0 -5px 0;
+    margin: -140px 0 -5px 0;
     position: relative;
   }
 

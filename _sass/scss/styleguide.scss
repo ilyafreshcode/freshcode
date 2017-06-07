@@ -8,11 +8,15 @@
 
 //import atoms
 @import "./atoms/buttons";
+@import "./atoms/parallax";
+@import "./atoms/quotes";
+@import "./atoms/hamburger";
 
 //import molecules
 @import "./molecules/main";
 @import "./molecules/modal";
 @import "./molecules/vacancy";
+
 
 //import organisms
 @import "./organisms/menu";

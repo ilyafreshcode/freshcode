@@ -45,8 +45,8 @@
                                 data-parsley-trigger="change"
                                 required>
                             <option value="" disabled selected>Укажите вакансию</option>
-                            {% for vacancy in site.data.links.menu.vacancies %}
-                            <option value={{ vacancy.value }}>{{ vacancy.text }}</option>
+                            {% for vacancy in site.data.vacancies.first_section.card_type %}
+                            <option value={{ vacancy.developer }}>{{ vacancy.developer }}</option>
                             {% endfor %}
                         </select>
                     </div>

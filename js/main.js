@@ -1,3 +1,8 @@
+/**
+ * @depends lib/jquery-3.2.1.min.js
+ * @depends lib/parsley.min.js
+ */
+
 $(function(){
 
     /** ===========================================
@@ -23,20 +28,50 @@ $(function(){
         $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
     }
 
+    /**---------- Mobile ---------*/
+    //remove l4
+    var menu = $('.main-nav-menu');
+    var toggleMenuInput =  $("#menuToggle input[type='checkbox']");
+    var horizontalBox = $(".horizontal-box").find(".card");
+
+    function toggleMenuWhenResize(){
+        if($(window).width() < 1380){
+            menu.hide();
+            horizontalBox.removeClass("horizontal");
+        }
+        else {
+            horizontalBox.addClass("horizontal");
+            menu.show();
+        }
+    }
+    toggleMenuWhenResize();
+
+    $(window).resize(toggleMenuWhenResize);
+
+    toggleMenuInput.change(function(){
+        if(toggleMenuInput.is(':checked'))
+            menu.fadeIn();
+        else menu.fadeOut();
+        console.log(toggleMenuInput.is(':checked'));
+    });
+
+
+
+
     /**------ Modal window ------*/
     $('.modal').modal();
     $('select').material_select();
 
 
     /**------- For parallax ------*/
-    skrollr.init({
+    /*skrollr.init({
         forceHeight: false,
         smoothScrolling: true,
         mobileCheck: function() {
             return (/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera);
             return false;
         }
-    });
+    });*/
 
     /**------------------------------
      * Slideshow
@@ -79,7 +114,6 @@ $(function(){
 
     $('.all-vertical-num').text($('#slides-vertical .card').length);
     $('.all-horizontal-num').text($('#slides-horizontal .card').length);
-    console.log($('body').height());
 
 
 
@@ -95,10 +129,9 @@ $(function(){
         about = form.find("textarea[name='about']"),
         file = form.find("input[name='file']");
 
-    form.parsley();
     form.submit(function(e) {
         e.preventDefault();
-        console.log(vacancy.val());
+        form.parsley();
         $.ajax({
             method: "POST",
             url: "http://localhost:3000/",
