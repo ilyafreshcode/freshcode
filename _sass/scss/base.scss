@@ -1,10 +1,14 @@
+@import "mixins";
+@import "variables";
+
+
 html, body {
   height: 100%;
   width: 100%; }
 body { font-family: "Roboto", sans-serif; }
 
 .overflow {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .float-right{
@@ -33,7 +37,15 @@ body { font-family: "Roboto", sans-serif; }
 }
 
 .container{
-  //overflow: hidden;
   max-width: 1170px;
   width: 100%;
+
+  @include breakpoint($screen-lg){
+    padding: 0 35px;
+    overflow: hidden;
+  }
+  @include breakpoint($screen-iphone-sm){
+    padding: 0 20px;
+  }
+
 }

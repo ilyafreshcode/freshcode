@@ -1,10 +1,35 @@
 @import "../mixins";
 @import "../variables";
 
+.green-card{
+  background-color: $green;
+  border-bottom: 2px solid $white;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  float: right;
+  font: {
+    size: $font-size-base;
+    weight: 700;
+  }
+  padding-left: 25px;
+  margin: -2px 0 0 2px;
+  height: 63px;
+  width: 286px;
+}
+
 .team-slider {
   height: 500px;
   width: 999px !important;
   position: relative;
+  overflow: visible !important;
+
+  .link-nav{
+    position: absolute;
+    margin: 18px 0 0 930px;
+    z-index: 100;
+  }
 
   .card {
     box-shadow: none;
@@ -16,14 +41,6 @@
   }
 
   .top-navigation {
-    float: right;
-    background-color: $green;
-    border-bottom: 2px solid $white;
-    width: 286px;
-    height: 63px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     .link {
       width: 35px;
@@ -50,6 +67,7 @@
     display: flex;
     height: 401px;
     width: 999px;
+    margin: 0 0 0 -25px;
     align-items: center;
     justify-content: center;
   }

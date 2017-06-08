@@ -6,20 +6,41 @@
   margin-top: -1135px;
   height: 950px;
 
-  @include breakpoint($screen-tab) {
-    margin-top: -700px;
+  @include breakpoint($screen-menu-desktop) {
+    margin-top: -1000px;
     height: 750px;
   }
-  @include breakpoint($screen-sm) {
-    margin-top: -300px;
-    height: 500px;
+  @include breakpoint($screen-menu-desktop - 100) {
+    margin-top: -900px;
   }
+  @include breakpoint($screen-menu-desktop - 200) {
+    margin-top: -700px;
+    height: 550px;
+  }
+  @include breakpoint($screen-sm) {
+    margin-top: -600px;
+  }
+  @include breakpoint($screen-nexus){
+    margin-top: -450px;
+  }
+  @include breakpoint($screen-iphone-plus){
+    margin-top: -420px;
+  }
+  @include breakpoint($screen-iphone){
+    margin-top: -390px;
+  }
+
 }
 
 .content-parallax-2 {
   position: relative;
   height: 550px;
   margin-top: -100px;
+  width: 100%;
+
+  @include breakpoint($screen-nexus){
+    margin-top: -50px;
+  }
 
   .card-style {
     font: {
@@ -54,8 +75,17 @@
       top: 120px;
       left: 400px;
     }
-    @include breakpoint($screen-tab) {
-      margin-left: 0;
+    @include breakpoint($screen-lg) {
+      margin: {
+        top: 80px;
+        left: 0;
+      }
+    }
+    @include breakpoint($screen-nexus) {
+      margin-top: 180px;
+    }
+    @include breakpoint($screen-iphone-plus) {
+      margin-top: 350px;
     }
   }
 
@@ -66,19 +96,26 @@
   .vertical-box {
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
     position: relative;
-    width: 390px;
+    width: 393px;
     margin: -350px -30px 0 0;
 
-    @include breakpoint($screen-tab) {
-      margin-top: -50px;
-      margin-bottom: 50px;
-      width: 261px;
+    @include breakpoint($screen-md) {
+      margin: -50px 0 50px 0;
+      width: 281px;
+    }
+    @include breakpoint($screen-md) {
+      margin-left: 0;
+      width: 281px;
+    }
+    @include breakpoint($screen-iphone-sm) {
+      margin-top: -70px;
+      width: 251px;
     }
 
     .slidesjs-container{
       height: 660px !important;
-      @include breakpoint($screen-tab) {
-        height: 510px !important;
+      @include breakpoint($screen-md) {
+        height: 530px !important;
       }
     }
 
@@ -89,7 +126,7 @@
     .slidesjs-navigation {
       padding: 5px;
       display: inline-block;
-      margin: 15px 0 15px 20px;
+      margin: 15px 0 15px 15px;
     }
   }
 
@@ -99,18 +136,29 @@
     position: absolute;
     width: 572px;
 
-    @include breakpoint($screen-tab) {
-      width: 261px;
-      height: 680px;
+    @include breakpoint($screen-md) {
+      width: 281px;
+      height: 670px;
       .slidesjs-container{
-        height: 650px !important;
+        height: 670px !important;
+      }
+    }
+    @include breakpoint($screen-iphone-plus) {
+      margin-top: 500px;
+    }
+    @include breakpoint($screen-iphone-sm) {
+      height: 615px;
+      width: 251px;
+
+      .card-content{
+        padding: 15px;
       }
     }
 
 
     .card-image {
       float: left;
-      @include breakpoint($screen-tab) {
+      @include breakpoint($screen-md) {
         float: none;
       }
     }
@@ -124,14 +172,16 @@
     }
 
     .slidesjs-navigation {
+      position: absolute;
       padding: 5px;
       display: inline-block;
-      margin: 15px 0 0 0;
+      margin: -70px 0 0 310px;
+      z-index: 100;
     }
 
     .card-content-1 {
       margin-left: 290px;
-      @include breakpoint($screen-tab){
+      @include breakpoint($screen-md){
         margin-left: 0;
       }
     }
@@ -142,8 +192,20 @@
 .content-parallax-3 {
   margin-top: 700px;
 
+  @include breakpoint($screen-iphone-plus){
+    margin-top: 1500px;
+  }
+
+  .description {
+    @include breakpoint($screen-iphone-sm) {
+      width: 88%;
+    }
+  }
+
   .why-freshcode {
     position: relative;
+
+
 
     &:before {
       content: ' ';
@@ -159,17 +221,28 @@
       height: 500px;
       z-index: -20;
       opacity: 0.2;
+
     }
 
     .why-freshcode-slides {
       position: relative;
       background-color: $green;
-      height: 400px;
+      height: 398px;
       margin: {
         top: -350px;
-        left: 150px;
+        left: 170px;
+      };
+      width: 998px;
+
+      @include breakpoint($screen-iphone-plus){
+        float: none;
+        margin: {
+          top: -200px;
+          left: 0;
+        };
+        height: 700px;
+        width: 100%;
       }
-    ;
     }
 
     &:after {
@@ -177,10 +250,18 @@
       display: block;
       background-color: $grey-light;
       position: relative;
-      margin-left: 150px;
+      margin-left: 170px;
       height: 50px;
-      width: calc(100% - 150px);
+      width: 999px;
     }
+
+    .slider-top {
+      top: -86px;
+      float: right;
+      margin-right: -1px;
+      position: relative;
+    }
+
 
   }
 
@@ -193,6 +274,11 @@
     img {
       float: left;
       margin: 0 25px;
+
+      @include breakpoint($screen-iphone-plus){
+        margin: 0;
+      }
+
     }
 
     h3 {
@@ -210,11 +296,17 @@
         size: $font-size-big + 2px;
         weight: 400;
       }
+      @include breakpoint($screen-iphone-plus){
+        font-size: $font-size-big - 1px;
+      }
     }
   }
 
   .all-vacancy-position {
     margin: 10px 0 0 250px;
+    @include breakpoint($screen-iphone-plus){
+      margin: 0 0 0 0;
+    }
   }
 
   .vacancy-img {
@@ -225,15 +317,28 @@
       background: {
         image: url("/images/Paterns/02_patern.jpg");
         repeat: repeat;
-      }
-    ;
+      };
       display: block;
       position: relative;
       height: 450px;
       opacity: 0.2;
-      margin: -150px 0 0 270px;
+      margin: -185px 0 0 270px;
       width: calc(100% - 270px);
       z-index: -100;
+
+      @include breakpoint($screen-iphone-plus){
+        float: none;
+        margin: -335px 0 0 0;
+        height: 300px;
+        width: 100%;
+      }
+      @include breakpoint($screen-iphone-sm){
+        float: none;
+        margin: -310px 0 0 0;
+        height: 290px;
+        width: 100%;
+      }
+
     }
 
   }
@@ -242,16 +347,53 @@
     margin: -300px 0 0 270px;
     position: relative;
     z-index: -10;
+    @include breakpoint($screen-iphone-plus) {
+      margin: 5px 0 0 -15px;
+    }
 
     img {
       height: auto;
       width: 108%;
+      @include breakpoint($screen-iphone-plus) {
+        width: 110%;
+      }
     }
   }
 
   .vacancy-img-lines {
     margin: -140px 0 -5px 0;
     position: relative;
+
+    @include breakpoint($screen-iphone-plus) {
+      img{
+        width: 70%;
+      }
+    }
   }
+
+
+  .lines-bg {
+    background: {
+      image: url("/images/Paterns/01_patern.jpg");
+      repeat: repeat;
+      position: 50% 0;
+    }
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: -1200px;
+    width: 50%;
+    height: 1150px;
+    z-index: -20;
+    opacity: 0.2;
+  }
+
+  .line-bg-tr {
+    width: 0;
+    height: 0;
+    border-top: 650px solid $white;
+    border-left: 650px solid transparent;
+  }
+
 
 }

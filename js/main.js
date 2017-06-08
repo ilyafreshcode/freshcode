@@ -9,6 +9,7 @@ $(function(){
      Hide / show the navigation menu
      ============================================ */
     var previousScroll = 0;
+    var menuBar = $(".navigation-bar");
 
     $(window).scroll(function(){
         var currentScroll = $(this).scrollTop();
@@ -17,6 +18,12 @@ $(function(){
                 hideNav();
             } else {
                 showNav();
+            }
+
+            if(currentScroll <= 5){
+                menuBar.css("background-color", "rgba(255, 255, 255, 0.8)");
+            } else {
+                menuBar.css("background-color", "rgba(255, 255, 255, 1)");
             }
             previousScroll = currentScroll;
         }
@@ -28,19 +35,30 @@ $(function(){
         $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
     }
 
-    /**---------- Mobile ---------*/
-    //remove l4
+    /**-----------------------
+     * Mobile
+     * ----------------------*/
+
     var menu = $('.main-nav-menu');
     var toggleMenuInput =  $("#menuToggle input[type='checkbox']");
     var horizontalBox = $(".horizontal-box").find(".card");
 
+    var mobileMenuValue = 975;
+    var horizontalRemoveValue = 975;
+
     function toggleMenuWhenResize(){
-        if($(window).width() < 1380){
-            menu.hide();
+        if($(window).width() <= horizontalRemoveValue){
             horizontalBox.removeClass("horizontal");
         }
         else {
             horizontalBox.addClass("horizontal");
+        }
+
+        if($(window).width() <= mobileMenuValue){
+            menu.hide();
+        }
+        else {
+            menuBar.css("background-color", "rgba(255, 255, 255, 1)");
             menu.show();
         }
     }
@@ -49,10 +67,12 @@ $(function(){
     $(window).resize(toggleMenuWhenResize);
 
     toggleMenuInput.change(function(){
-        if(toggleMenuInput.is(':checked'))
+        if(toggleMenuInput.is(':checked')) {
             menu.fadeIn();
-        else menu.fadeOut();
-        console.log(toggleMenuInput.is(':checked'));
+        }
+        else {
+            menu.fadeOut();
+        }
     });
 
 
@@ -112,9 +132,31 @@ $(function(){
         }
     });
 
+    var IMG_NUM = 3;
+
+    $('#slides-horizontal-1').slidesjs({
+        width: 969,
+        height: 500,
+        navigation: false,
+        pagination: false,
+        callback: {
+            loaded: function(number) {
+                $('.slider-number-horizontal-1').text(number * IMG_NUM);
+            },
+            start: function(number) {
+
+            },
+            complete: function(number) {
+                $('.slider-number-horizontal-1').text(number * IMG_NUM);
+                $('.top-navigation').css("lest", "0");
+            }
+        }
+    });
+
+
     $('.all-vertical-num').text($('#slides-vertical .card').length);
     $('.all-horizontal-num').text($('#slides-horizontal .card').length);
-
+    $('.all-horizontal-num-1').text($('#slides-horizontal-1 .get-num').length * IMG_NUM);
 
 
     /**------------------------------------------------------------------------*/

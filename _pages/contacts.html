@@ -13,7 +13,6 @@ title: Контанты - Freshcode
             <div class="img-fly">
                 <img src="/images/slices/icon_fly.svg" class="float-right">
             </div>
-
         </div>
 
         <div class="form-content row" style="margin-left: 55px;">
@@ -25,10 +24,10 @@ title: Контанты - Freshcode
                            type="text"
                            class="validate"
                            name="first_name"
-                           data-parsley-required-message="Введите ваше имя"
+                           data-parsley-required-message="{{ site.data.contacts.form.error_msg.name }}"
                            data-parsley-trigger="change"
                            required>
-                    <label for="first_name">Имя</label>
+                    <label for="first_name">{{ site.data.contacts.form.name }}</label>
                 </div>
                 <div class="input-field col s6">
                     <input id="email"
@@ -38,7 +37,7 @@ title: Контанты - Freshcode
                            data-parsley-required-message="Введите Email"
                            data-parsley-trigger="change"
                            required>
-                    <label for="email">Email</label>
+                    <label for="email">{{ site.data.contacts.form.email }}</label>
                 </div>
 
                 <div class="input-field col s6">
@@ -49,14 +48,14 @@ title: Контанты - Freshcode
                            data-parsley-required-message="Введите телефон/skype"
                            data-parsley-trigger="change"
                            required>
-                    <label for="phone">Телефон/Skype</label>
+                    <label for="phone">{{ site.data.contacts.form.phone }}</label>
                 </div>
                 <div class="input-field col s6">
                     <select name="selector" class="validate"
                             data-parsley-required-message="Укажите вакансию"
                             data-parsley-trigger="change"
                             required>
-                        <option value="" disabled selected>Укажите вакансию</option>
+                        <option value="" disabled selected>{{ site.data.contacts.form.vacancies }}</option>
                         {% for vacancy in site.data.vacancies.first_section.card_type %}
                         <option value={{ vacancy.developer }}>{{ vacancy.developer }}</option>
                         {% endfor %}
@@ -65,7 +64,7 @@ title: Контанты - Freshcode
 
                 <div class="input-field col s12">
                     <textarea id="textarea1" class="materialize-textarea" data-length="250" name="about"></textarea>
-                    <label for="textarea1">Расскажите нам о себе</label>
+                    <label for="textarea1">{{ site.data.contacts.form.about }}</label>
                 </div>
 
                 <div class="input-field col s6">

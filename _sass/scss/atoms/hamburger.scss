@@ -2,7 +2,7 @@
 {
   display: none;
 
-  @include breakpoint($screen-tab) {
+  @include breakpoint($screen-md) {
     display: inline-block;
   }
 

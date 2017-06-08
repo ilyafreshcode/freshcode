@@ -4,6 +4,7 @@
 .button {
   background-color: $green;
   border: none;
+  box-shadow: 0 5px 20px 0 rgba(0, 225, 164, 0.4);
   color: $white;
   display: inline-block;
   padding: 15px 32px;
@@ -18,10 +19,6 @@
 }
 
 .button:hover {
-  cursor: pointer;
-  text-decoration: none;
-  color: $white;
-  box-shadow: 0 5px 20px 0 rgba(0, 225, 164, 0.4);
   -webkit-transition: all 0.5s;
 }
 
