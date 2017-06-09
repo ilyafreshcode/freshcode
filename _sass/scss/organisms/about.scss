@@ -41,11 +41,18 @@
     .block-image {
       .dote {
         z-index: 0;
-        width: 934px;
+        height: calc(100vw * 9 / 20);
         bottom: -117px;
         left: -215px;
-        height: 581px;
+        max-width: 934px;
+        max-height: 581px;
+        width: calc(100vw * 9 / 20);
         background-image: url("/images/Paterns/03_patern.png");
+
+        @include breakpoint(md) {
+          width: 934px;
+          height: 581px;
+        }
       }
     }
   }

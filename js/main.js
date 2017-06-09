@@ -48,7 +48,6 @@ $(function(){
 
     function toggleMenuWhenResize(){
         //$('.play-img').height($('.video-block img').height());
-        $('.lines-bg').height($('.lines-bg').width());
 
         if($(window).width() <= horizontalRemoveValue){
             horizontalBox.removeClass("horizontal");
