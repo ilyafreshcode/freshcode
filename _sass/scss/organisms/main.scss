@@ -36,7 +36,6 @@
 
 .main-img {
   position: relative;
-  z-index: -100;
   img {
     height: auto;
     width: 105%;
@@ -59,7 +58,7 @@
 .team-img {
   position: absolute;
   margin: -130px 0 0 -70px;
-  z-index: -100;
+  z-index: -1;
 
   @include breakpoint($screen-menu-desktop + 200){
     margin: -130px 0 0 -5px;

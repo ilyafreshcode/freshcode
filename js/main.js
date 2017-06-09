@@ -43,10 +43,13 @@ $(function(){
     var toggleMenuInput =  $("#menuToggle input[type='checkbox']");
     var horizontalBox = $(".horizontal-box").find(".card");
 
-    var mobileMenuValue = 975;
-    var horizontalRemoveValue = 975;
+    var mobileMenuValue = 985;
+    var horizontalRemoveValue = 985;
 
     function toggleMenuWhenResize(){
+        //$('.play-img').height($('.video-block img').height());
+        $('.lines-bg').height($('.lines-bg').width());
+
         if($(window).width() <= horizontalRemoveValue){
             horizontalBox.removeClass("horizontal");
         }

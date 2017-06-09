@@ -41,13 +41,10 @@
     }
   }
   @include breakpoint($screen-iphone-plus){
-    margin-top: 1680px;
-  }
-  @include breakpoint($screen-iphone){
     margin-top: 1710px;
   }
   @include breakpoint($screen-iphone-sm){
-    margin: 1620px 0 0 230px;
+    margin: 1650px 0 0 230px;
     img{
       height: auto;
       width: 35%;
