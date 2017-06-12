@@ -8,6 +8,8 @@ $(function(){
     /** ===========================================
      Hide / show the navigation menu
      ============================================ */
+    var isMobile = true;
+
     var previousScroll = 0;
     var menuBar = $(".navigation-bar");
 
@@ -20,7 +22,7 @@ $(function(){
                 showNav();
             }
 
-            if(currentScroll <= 5){
+            if(currentScroll <= 5 && !isMobile){
                 menuBar.css("background-color", "rgba(255, 255, 255, 0.8)");
             } else {
                 menuBar.css("background-color", "rgba(255, 255, 255, 1)");
@@ -38,6 +40,7 @@ $(function(){
     /**-----------------------
      * Mobile
      * ----------------------*/
+
 
     var menu = $('.main-nav-menu');
     var toggleMenuInput =  $("#menuToggle input[type='checkbox']");
@@ -57,10 +60,12 @@ $(function(){
         }
 
         if($(window).width() <= mobileMenuValue){
+            isMobile = true;
+            menuBar.css("background-color", "rgba(255, 255, 255, 1)");
             menu.hide();
         }
         else {
-            menuBar.css("background-color", "rgba(255, 255, 255, 1)");
+            isMobile = false;
             menu.show();
         }
     }
@@ -81,8 +86,14 @@ $(function(){
 
 
     /**------ Modal window ------*/
-    $('.modal').modal();
-    $('select').material_select();
+    $('.modal').modal(
+        {
+            dismissible: true, // Modal can be dismissed by clicking outside of the modal
+            opacity: .5, // Opacity of modal background
+            inDuration: 400, // Transition in duration
+            outDuration: 400
+        }
+    );
 
 
     /**------- For parallax ------*/

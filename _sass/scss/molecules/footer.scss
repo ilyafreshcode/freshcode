@@ -11,7 +11,7 @@ footer {
   height: 200px;
   width: 100%;
 
-  @include breakpoint($screen-nexus){
+  @include breakpoint($screen-ipad){
     height: 300px;
   }
   @include breakpoint($screen-iphone-sm){
@@ -23,7 +23,7 @@ footer {
     height: 200px;
     width: 33%;
 
-    @include breakpoint($screen-nexus){
+    @include breakpoint($screen-ipad){
       height: 100px;
       width: 100%;
     }
@@ -32,11 +32,7 @@ footer {
       display: inline-block;
       width: 40%;
 
-      @include breakpoint($screen-nexus){
-        margin: 0 auto;
-        width: 70%;
-      }
-      @include breakpoint($screen-nexus){
+      @include breakpoint($screen-ipad){
         width: 100%;
       }
     }
@@ -44,11 +40,7 @@ footer {
     .links-block{
       width: 100%;
 
-      @include breakpoint($screen-nexus){
-        margin: 0 auto;
-        width: 70%;
-      }
-      @include breakpoint($screen-nexus){
+      @include breakpoint($screen-ipad){
         width: 100%;
       }
 
@@ -60,7 +52,7 @@ footer {
           margin: 0;
         }
 
-        @include breakpoint($screen-nexus){
+        @include breakpoint($screen-ipad){
           float: left;
           margin: 0 35px 0 0;
         }
@@ -89,11 +81,6 @@ footer {
 
           background: $white;
         }
-      }
-
-      @include breakpoint($screen-nexus){
-        margin: 0 auto;
-        width: 70%;
       }
       @include breakpoint($screen-nexus){
         width: 100%;

@@ -40,11 +40,17 @@
       width: 50%;
     }
   }
+  @include breakpoint($screen-ipad){
+    margin: 770px 0 0 675px;
+  }
+  @include breakpoint($screen-nexus){
+    margin: 1490px 0 0 280px;
+  }
   @include breakpoint($screen-iphone-plus){
-    margin-top: 1710px;
+    margin: 1660px 0 0 250px;
   }
   @include breakpoint($screen-iphone-sm){
-    margin: 1650px 0 0 230px;
+    margin: 1630px 0 0 230px;
     img{
       height: auto;
       width: 35%;

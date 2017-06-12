@@ -63,6 +63,9 @@
   @include breakpoint($screen-menu-desktop + 200){
     margin: -130px 0 0 -5px;
   }
+  @include breakpoint($screen-nexus){
+    margin: -155px 0 0 -5px;
+  }
   @include breakpoint($screen-iphone-sm){
     margin: -125px 0 0 -5px;
   }
@@ -73,6 +76,12 @@
 
     @include breakpoint($screen-menu-desktop + 200){
       width: 115%;
+    }
+    @include breakpoint($screen-ipad){
+      width: 80%;
+    }
+    @include breakpoint($screen-nexus){
+      width: 100%;
     }
 
   }

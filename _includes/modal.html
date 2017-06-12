@@ -4,76 +4,8 @@
     </a>
     <div class="m-content">
         <h3>Напишите нам</h3>
-
-        <div class="row">
-            <form class="col s12 cv_form" data-parsley-validate>
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="first_name"
-                               type="text"
-                               class="validate"
-                               name="first_name"
-                               data-parsley-required-message="Введите ваше имя"
-                               data-parsley-trigger="change"
-                               required>
-                        <label for="first_name">Имя</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="email"
-                               type="email"
-                               class="validate"
-                               name="email"
-                               data-parsley-required-message="Введите Email"
-                               data-parsley-trigger="change"
-                               required>
-                        <label for="email">Email</label>
-                    </div>
-
-                    <div class="input-field col s6">
-                        <input id="phone"
-                               type="text"
-                               class="validate"
-                               name="phone"
-                               data-parsley-required-message="Введите телефон/skype"
-                               data-parsley-trigger="change"
-                               required>
-                        <label for="phone">Телефон/Skype</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <select name="selector" class="validate"
-                                data-parsley-required-message="Укажите вакансию"
-                                data-parsley-trigger="change"
-                                required>
-                            <option value="" disabled selected>Укажите вакансию</option>
-                            {% for vacancy in site.data.vacancies.first_section.card_type %}
-                            <option value={{ vacancy.developer }}>{{ vacancy.developer }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-
-                    <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea" data-length="250" name="about"></textarea>
-                        <label for="textarea1">Расскажите нам о себе</label>
-                    </div>
-
-                    <div class="input-field col s6">
-                        <div class="file-field input-field">
-                                <img src="/images/file-icon.png">
-
-                            <div class="file-path-wrapper float-right file-input">
-                                <input class="file-path validate" type="text" value="Добавить файл"
-                                       >
-                                <input type="file" data-parsley-required-message="Добавьте резюме"
-                                       data-parsley-trigger="change" required>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="input-field col s6">
-                        <button class="button float-right btn-submit-cv">Отправить резюме</button>
-                    </div>
-                </div>
-            </form>
+        <div class="iframe-border">
+            <iframe class="frame" scrolling="no" src="https://script.google.com/macros/s/AKfycbwjWXZOaJwxeymSvmUHsj1PkD-e774X7n8Fi7FG750t1jSdFZM/exec" frameborder="0"></iframe>
         </div>
 
 

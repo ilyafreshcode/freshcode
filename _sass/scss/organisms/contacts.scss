@@ -4,7 +4,7 @@
   .send-form {
     background-color: $green;
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
-    height: 500px;
+    height: 650px;
     margin: 0 auto;
     position: relative;
     width: 80%;
@@ -22,29 +22,38 @@
   .form-content {
     box-shadow: -5px 5px 25px 0 rgba(0, 0, 0, 0.15);
     background-color: $white;
-    padding: 50px;
+    padding: 40px;
     position: relative;
-    margin: -450px 0 150px 50px;
+    margin: -600px 0 150px 55px;
     width: 70%;
+    height: 720px;
+    overflow: hidden;
 
     h3 {
       font-weight: 700;
     }
 
-  }
+    .iframe-border{
+      width: 100%;
+      overflow: hidden;
+      height: 630px;
+    }
 
-  .contact-img {
-    margin-top: -100px;
-    position: relative;
-    z-index: -25;
+    .frame{
+      margin-top: -50px;
+      width: 100%;
+      height: 650px;
+    }
+
   }
 
   .gray-block {
+    position: relative;
     background-color: $grey-light;
-    margin: -350px 0 50px 0;
-    height: 700px;
+    margin: -1050px 0 200px 0;
+    height: 1100px;
     width: 50%;
-    z-index: -30;
+    z-index: -100;
   }
 
   .lines-bg-1 {
@@ -56,9 +65,9 @@
     display: block;
     position: relative;
     float: right;
-    margin-top: -1200px;
+    margin-top: -1550px;
     width: 50%;
-    height: 1150px;
+    height: 1455px;
     z-index: -20;
     opacity: 0.2;
   }
@@ -72,16 +81,18 @@
 
   .subtext {
     color: $subtext-color;
-    font-size: $font-size-title + 100px;
+    font-size: $font-size-title + 85px;
     line-height: 150px;
     font-weight: 700;
     text-align: right;
+    margin-top: 10px;
+    margin-right: -15px;
     width: 120%;
     z-index: 10;
   }
 
   .title {
-    margin: 250px 0 0 -28px;
+    margin: 100px 0 0 -28px;
     width: 510px;
     line-height: .9;
     font-size: $font-size-title - 4px;
