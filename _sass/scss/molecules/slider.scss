@@ -16,7 +16,13 @@
   padding-left: 25px;
   margin: -2px 0 0 2px;
   height: 63px;
-  width: 286px;
+  width: 292px;
+
+  @include breakpoint($screen-nexus){
+    width: 50%;
+
+  }
+
 }
 
 .team-slider {
@@ -38,6 +44,10 @@
   .slidesjs-container,
   .slidesjs-control {
     height: 500px !important;
+
+    @include breakpoint($screen-nexus){
+      height: 1300px !important;
+    }
   }
 
   .top-navigation {

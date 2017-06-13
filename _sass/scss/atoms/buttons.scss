@@ -15,11 +15,14 @@
     size: $font-size-base;
     weight: 700;
   }
-  -webkit-transition: all 0.5s;
+  -webkit-transition: all 0.3s;
 }
 
 .button:hover {
-  -webkit-transition: all 0.5s;
+  background-color: rgb(0, 225, 164);
+  box-shadow: 0 5px 20px 0 rgba(0, 225, 164, 0.7);
+
+  -webkit-transition: all 0.3s;
 }
 
 .button-square {

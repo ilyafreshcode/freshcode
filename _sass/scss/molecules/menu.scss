@@ -61,10 +61,12 @@
         padding-right: 0;
       }
 
-      @include breakpoint($screen-menu-desktop){
+      @include breakpoint($screen-lg){
         font: {
           size: $font-size-base - 1;
         }
+      }
+      @include breakpoint($screen-menu-desktop){
         padding: 17px 5px;
       }
 

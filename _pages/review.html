@@ -1,0 +1,74 @@
+---
+permalink: /review
+layout: default
+
+title: Отзывы сотрудников - Freshcode
+---
+
+<div class="container ">
+    {% include lines.html %}
+    <div class="review">
+        <div class="triangle-grey"></div>
+        <div class="lines-block"></div>
+        <div class="title-section">
+            <h2 class="title">{{site.data.review.title}}</h2>
+            <hr class="line">
+        </div>
+        <div class="text-bg text-rotation">Отзывы</div>
+        <div class="cards-review">
+            <div class="card krasnogor">
+                <div class="card-image">
+                    <img src="{{site.data.review.reviews[1].img}}">
+                </div>
+                <div class="card-style card-content">
+                    <p class="text">{{site.data.review.reviews[1].text}}</p>
+                    <p class="name">{{site.data.review.reviews[1].name}}, </p>
+                    <p class="job">{{site.data.review.reviews[1].title}}</p>
+                </div>
+            </div>
+            <div class="rv-quotes" data-500="top: 0px" data-1000="top: -100px">
+                <img src={{ site.data.links.images.quotes-2 }} />
+            </div>
+            <div class="card troian">
+                <div class="card-image">
+                    <img src="{{site.data.review.reviews[0].img}}">
+                </div>
+                <div class="card-style card-content">
+                    <p class="text">{{site.data.review.reviews[0].text}}</p>
+                    <p class="name">{{site.data.review.reviews[0].name}}, </p>
+                    <p class="job">{{site.data.review.reviews[0].title}}</p>
+                </div>
+            </div>
+            <div class="grey-block"></div>
+            <div class="card logvinova" style="margin-top: 50px;">
+                <div class="card-image">
+                    <img src="{{site.data.review.reviews[2].img}}">
+                </div>
+                <div class="card-style card-content">
+                    <p class="text">{{site.data.review.reviews[2].text}}</p>
+                    <p class="name">{{site.data.review.reviews[2].name}}, </p>
+                    <p class="job">{{site.data.review.reviews[2].title}}</p>
+                </div>
+            </div>
+            <div class="card gonchar">
+                <div class="card-image">
+                    <img src="{{site.data.review.reviews[3].img}}">
+                </div>
+                <div class="card-style card-content">
+                    <p class="text">{{site.data.review.reviews[3].text}}</p>
+                    <p class="name">{{site.data.review.reviews[3].name}}, </p>
+                    <p class="job">{{site.data.review.reviews[3].title}}</p>
+                </div>
+            </div>
+
+            <div class="rv-quotes-2" data-500="top: 0px" data-1000="top: -100px">
+                <img src={{ site.data.links.images.quotes-1 }} />
+            </div>
+        </div>
+        <div class="send-cv">
+            <a href="#CVForm" class="button">Отправить резюме</a>
+        </div>
+        <div class="dot-block"></div>
+        <div class="line-bg"></div>
+    </div>
+</div>

@@ -1,17 +1,19 @@
-/**
- * @depends lib/jquery-3.2.1.min.js
- * @depends lib/parsley.min.js
- */
-
 $(function(){
 
-    /** ===========================================
-     Hide / show the navigation menu
-     ============================================ */
     var isMobile = true;
 
     var previousScroll = 0;
     var menuBar = $(".navigation-bar");
+
+
+    var menu = $('.main-nav-menu');
+    var toggleMenuInput =  $("#menuToggle input[type='checkbox']");
+    var horizontalBox = $(".horizontal-box").find(".card");
+
+    var mobileMenuValue = 985,
+        horizontalRemoveValue = 985;
+
+
 
     $(window).scroll(function(){
         var currentScroll = $(this).scrollTop();
@@ -21,7 +23,6 @@ $(function(){
             } else {
                 showNav();
             }
-
             if(currentScroll <= 5 && !isMobile){
                 menuBar.css("background-color", "rgba(255, 255, 255, 0.8)");
             } else {
@@ -37,20 +38,12 @@ $(function(){
         $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
     }
 
-    /**-----------------------
-     * Mobile
-     * ----------------------*/
 
 
-    var menu = $('.main-nav-menu');
-    var toggleMenuInput =  $("#menuToggle input[type='checkbox']");
-    var horizontalBox = $(".horizontal-box").find(".card");
 
-    var mobileMenuValue = 985;
-    var horizontalRemoveValue = 985;
 
     function toggleMenuWhenResize(){
-        //$('.play-img').height($('.video-block img').height());
+        //$('.play-img').height($('.video-block img').height()); for video
 
         if($(window).width() <= horizontalRemoveValue){
             horizontalBox.removeClass("horizontal");
@@ -68,6 +61,7 @@ $(function(){
             isMobile = false;
             menu.show();
         }
+        lines()
     }
     toggleMenuWhenResize();
 
@@ -84,13 +78,11 @@ $(function(){
 
 
 
-
-    /**------ Modal window ------*/
     $('.modal').modal(
         {
-            dismissible: true, // Modal can be dismissed by clicking outside of the modal
-            opacity: .5, // Opacity of modal background
-            inDuration: 400, // Transition in duration
+            dismissible: true,
+            opacity: .5,
+            inDuration: 400,
             outDuration: 400
         }
     );
@@ -106,9 +98,8 @@ $(function(){
         }
     });*/
 
-    /**------------------------------
-     * Slideshow
-     * ----------------------------*/
+
+
     $('#slides-vertical').slidesjs({
         width: 381,
         height: 579,
@@ -137,9 +128,11 @@ $(function(){
                 $('.slider-number-horizontal').text(number);
             },
             start: function(number) {
+                $('#slides-horizontal .slidesjs-navigation').hide();
                 $('#slides-horizontal .card-content').addClass("card-content-1");
             },
             complete: function(number) {
+                $('#slides-horizontal .slidesjs-navigation').show();
                 $('.slider-number-horizontal').text(number);
             }
         }
@@ -172,44 +165,36 @@ $(function(){
     $('.all-horizontal-num-1').text($('#slides-horizontal-1 .get-num').length * IMG_NUM);
 
 
-    /**------------------------------------------------------------------------*/
-    /**------------------------ Submit Form -----------------------------------*/
-    /**------------------------------------------------------------------------*/
 
-    var form = $('form.cv_form'),
-        name = form.find("input[name='first_name']"),
-        email = form.find("input[name='email']"),
-        phone = form.find("input[name='phone']"),
-        vacancy = form.find("select[name=selector]"),
-        about = form.find("textarea[name='about']"),
-        file = form.find("input[name='file']");
-
-    form.submit(function(e) {
-        e.preventDefault();
-        form.parsley();
-        $.ajax({
-            method: "POST",
-            url: "http://localhost:3000/",
-            data: {
-                name: name.val(),
-                email: email.val(),
-                phone: phone.val(),
-                vacancy: vacancy.val(),
-                about: about.val(),
-                file: file.val()
-            },
-            crossDomain: true,
-            error: function (xhr){
-                console.log("error");
-            }
-        });
-        resetForm();
-    });
-
-    function resetForm() {
-        form[0].reset();
+    function reviewPageFixHeight(){
+        $('.review').height($('.review').height() + 200);
+        console.log( $('.review').height());
     }
 
+
+    var LINES_NUM = 4;
+    var MOB_LINES_NUM = 2;
+
+    function lines(){
+        var linesConteiner = $('.lines');
+        var conteiner = $('#skrollr-body .container');
+        var line = linesConteiner.find("div");
+
+        var linesWidth = conteiner.width();
+        var linesHeight = conteiner.height() + 200;
+
+        linesConteiner.width(linesWidth);
+        linesConteiner.height(linesHeight);
+
+        if(!isMobile)
+            line.width(linesWidth / LINES_NUM - 1.1);
+        else
+            line.width(linesWidth / MOB_LINES_NUM - 1.1);
+        line.height(linesHeight);
+    }
+
+    reviewPageFixHeight();
+    lines();
 
 
 });

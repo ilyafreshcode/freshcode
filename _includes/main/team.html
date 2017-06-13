@@ -36,10 +36,9 @@
                 <p class="name">{{ c.name }},</p>
                 <p class="job">{{ c.job }}</p>
             </div>
-
             <a href="#" class="slidesjs-previous slidesjs-navigation"><img src={{ site.data.links.images.left-arrow }} /></a>
             <a href="#" class="slidesjs-next slidesjs-navigation" style="margin-left: 7px;" ><img src={{ site.data.links.images.right-arrow }} /></a>
-        </div>
+            </div>
         {% endfor %}
     </section>
 
@@ -69,11 +68,11 @@
     </section>
 
 
-    <section class="video-team hide">
+    <section class="video-team">
         <div class="grey-block"></div>
-        <div class="dot-block"></div>
-        <div class="video-text text-rotation">Видео</div>
-        <div class="play-video">
+        <div class="dot-block hide"></div>
+        <div class="video-text text-rotation hide">Видео</div>
+        <div class="play-video hide">
             <div class="video-block">
                 <img src="/images/video-img.png" />
             </div>

@@ -53,27 +53,27 @@
     "social" : [
       {
         "img": "/images/slices/icon_linkedin.svg",
-        "link": ""
+        "link": "https://www.linkedin.com/company/freshcode-it?trk=biz-companies-cym"
       },
       {
         "img": "/images/slices/icon_facebook.svg",
-        "link": ""
+        "link": "https://www.facebook.com/FreshCode-1569539716705171/"
       },
       {
         "img": "/images/slices/icon_twitter.svg",
-        "link": ""
+        "link": "https://twitter.com/FreshCode1"
       },
       {
         "img": "/images/slices/icon_google_plus.svg",
-        "link": ""
+        "link": "https://plus.google.com/109449845191701968335"
       },
       {
         "img": "/images/slices/icon_git_hub.svg",
-        "link": ""
+        "link": "https://github.com/fresh-code"
       },
       {
         "img": "/images/slices/icon_bitbucket.svg",
-        "link": ""
+        "link": "https://bitbucket.org/fresh_code/"
       }
     ]
   },

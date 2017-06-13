@@ -12,7 +12,7 @@
             <div class="valign-wrapper footer-col">
                 <ul class="links-block">
                     {% for s in site.data.links.footer.social %}
-                    <li class="links"><a href="{{ s.lick }}" class="float-right"><img src={{ s.img }} /></a></li>
+                    <li class="links"><a href="{{s.link}}" class="float-right" target="_blank"><img src="{{ s.img }}" /></a></li>
                     {% endfor %}
                 </ul>
             </div>

@@ -1,0 +1,192 @@
+@import "../mixins";
+@import "../variables";
+.review {
+  display: block;
+
+  .title-section {
+    margin-top: -2120px;
+
+    .title {
+      display: inline-block;
+      margin: 250px 0 110px -28px;
+      line-height: .9;
+      font-size: $font-size-title - 4px;
+      font-weight: 300;
+      height: 76px;
+      text-transform: uppercase;
+      width: 510px;
+    }
+
+    .line {
+      width: 650px;
+    }
+  }
+
+  .cards-review {
+    margin-top: -450px;
+
+    .card {
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+      width: 443px;
+      z-index: -1;
+
+      @include breakpoint($screen-lg){
+        width: 400px;
+      }
+    }
+
+    .card-style {
+      font: {
+        size: $font-size-big;
+        weight: 500;
+      }
+      padding: 35px;
+
+      .text {
+        font: {
+          size: $font-size-base;
+          weight: 400;
+        }
+      }
+
+      .name {
+        margin-top: 10px;
+      }
+
+      .job {
+        color: $grey;
+        font: {
+          size: 20px;
+          weight: 400;
+        }
+      }
+    }
+
+    .krasnogor {
+      float: right;
+      margin-top: -160px;
+
+      @include breakpoint($screen-lg){
+        float: none;
+        margin: 50px 0 0 0;
+      }
+      @include breakpoint($screen-ipad){
+        margin-top: 700px;
+      }
+
+
+      .card-style{
+        margin-top: -50px;
+      }
+      img {
+        top: -60px;
+      }
+    }
+    .troian{
+      @include breakpoint($screen-lg){
+        float: right;
+        margin-top: -850px;
+      }
+      @include breakpoint($screen-ipad){
+        margin-top: -1500px;
+      }
+    }
+    .logvinova{
+      float: right;
+    }
+    .gonchar {
+      margin-top: 163px;
+      .card-style{
+        margin-top: -70px;
+        padding-top: 15px;
+      }
+      img {
+        top: -68px;
+        width: 107.5%
+      }
+    }
+  }
+
+  .send-cv {
+    margin: 35px 0 350px 585px;
+  }
+
+
+  .triangle-grey {
+    position: absolute;
+    margin-top: 95px;
+    width: 0;
+    height: 0;
+    border-bottom: 370px solid $grey;
+    border-right: 370px solid transparent;
+    z-index: -20;
+    opacity: 0.2;
+  }
+  .lines-block {
+    background: {
+      image: url("/images/Paterns/01_patern.jpg");
+      repeat: repeat;
+      position: 50% 0;
+    }
+    display: inline-block;
+    position: relative;
+    margin: 300px 0 0 50%;
+    width: 25%;
+    height: 1805px;
+    z-index: -20;
+    opacity: 0.2;
+  }
+  .text-bg {
+    color: $subtext-color;
+    font-size: $font-size-title + 170px;
+    display: inline-block;
+    position: relative;
+    margin: 430px 0 0 -37px;
+    line-height: 150px;
+    font-weight: 700;
+    z-index: -10;
+
+    @include breakpoint($screen-lg){
+      margin: 430px 0 0 -480px;
+    }
+
+  }
+  .text-rotation{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+  .grey-block{
+    background-color: $grey-light;
+    position: relative;
+    margin: -440px 0 -500px 50%;
+    width: 50%;
+    height: 887px;
+    z-index: -10;
+  }
+  .dot-block{
+    background: {
+      image: url("/images/Paterns/02_patern.jpg");
+      repeat: repeat;
+      position: 50% 0;
+    }
+    display: block;
+    position: relative;
+    margin: -768px 0 0 0;
+    width: 50%;
+    height: 530px;
+    z-index: -20;
+    opacity: 0.2;
+  }
+  .line-bg{
+    border-left: 1px solid #f5f5f5;
+    background-color: $grey;
+    opacity: 0.5;
+    position: relative;
+    height: 5px;
+    width: 50%;
+  }
+
+}
