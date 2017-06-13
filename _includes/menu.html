@@ -15,11 +15,10 @@
 
             <ul class="main-nav-menu">
                 {% assign p = page.url | replace:'/','' %}
-                <li><a href="/" class="{% if p == '' %}active{% endif %} link" >Главная</a></li>
-                <li><a href="/about" class="{% if p == 'about' %}active{% endif %} link" >О нас</a></li>
-                <li><a href="/vacancies" class="{% if p == 'vacancies' %}active{% endif %} link" >Вакансии</a></li>
-                <li><a href="/review" class="{% if p == 'review' %}active{% endif %} link" >Отзывы сотрудников</a></li>
-                <li><a href="/contacts" class="{% if p == 'contacts' %}active{% endif %} link" >Контакты</a></li>
+                {% for page in site.data.links.menu.pages %}
+                {% assign currentPage = {{page.link}} %}
+                <li><a href="/{{page.link}}" class="{% if p == currentPage %}active{% endif %} link" >{{page.text}}</a></li>
+                {% endfor %}
                 <li><a href="#CVForm" class="button">Отправить резюме</a></li>
             </ul>
         </div>

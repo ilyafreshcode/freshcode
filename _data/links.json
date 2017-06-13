@@ -14,23 +14,23 @@
   "menu": {
     "pages": [
       {
-        "link": "/",
+        "link": "",
         "text": "Главная"
       },
       {
-        "link": "/about",
+        "link": "about",
         "text": "О нас"
       },
       {
-        "link": "/vacancies",
+        "link": "vacancies",
         "text": "Вакансии"
       },
       {
-        "link": "",
+        "link": "review",
         "text": "Отзывы сотрудников"
       },
       {
-        "link": "",
+        "link": "contacts",
         "text": "Контакты"
       }
     ],
@@ -74,7 +74,12 @@
       {
         "img": "/images/slices/icon_bitbucket.svg",
         "link": "https://bitbucket.org/fresh_code/"
+      },
+      {
+        "img": "/images/slices/icon_instagram.svg",
+        "link": "https://www.instagram.com/freshcode_it/"
       }
+
     ]
   },
   "vacancies_img": {

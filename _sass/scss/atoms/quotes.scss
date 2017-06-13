@@ -61,8 +61,52 @@
 .rv-quotes{
   margin: 0 0 -37px -45px;
   z-index: 1000;
+  @include breakpoint($screen-lg){
+    float:left;
+    margin: -735px 0 -37px -45px;
+  }
+  @include breakpoint($screen-ipad){
+    float: right;
+    margin: -1532px 369px 0 0;
+  }
+  @include breakpoint($screen-nexus - 120){
+    margin: -1245px 255px 0 0;
+    img{
+      height: auto;
+      width: 60px;
+    }
+  }
+  @include breakpoint($screen-iphone-sm){
+    margin: -1240px 225px 0 0;
+    img{
+      height: auto;
+      width: 50px;
+    }
+  }
 }
 .rv-quotes-2{
   float: right;
-  margin: -195px -45px 0 0;
+  margin: -245px -45px 0 0;
+  @include breakpoint($screen-lg){
+    margin: -278px -45px 0 0;
+  }
+  @include breakpoint($screen-ipad){
+    position: absolute;
+    float: none;
+    margin: -45px 0 0 370px;
+  }
+  @include breakpoint($screen-nexus - 120){
+    margin: -39px 0 0 255px;
+    img{
+      height: auto;
+      width: 60px;
+    }
+  }
+  @include breakpoint($screen-iphone-sm){
+    margin: -35px 0 0 225px;
+    img{
+      height: auto;
+      width: 50px;
+    }
+  }
 }

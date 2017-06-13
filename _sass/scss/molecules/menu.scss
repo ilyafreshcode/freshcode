@@ -63,11 +63,14 @@
 
       @include breakpoint($screen-lg){
         font: {
-          size: $font-size-base - 1;
+          size: $font-size-base - 1px;
         }
       }
       @include breakpoint($screen-menu-desktop){
-        padding: 17px 5px;
+        font: {
+          size: $font-size-base - 2px;
+        }
+        padding: 17px 7px;
       }
 
       @include breakpoint($screen-md) {

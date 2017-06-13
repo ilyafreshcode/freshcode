@@ -4,7 +4,16 @@
   display: block;
 
   .title-section {
-    margin-top: -2120px;
+    margin-top: -2131px;
+    @include breakpoint($screen-lg) {
+      margin-top: -2215px;
+    }
+    @include breakpoint($screen-ipad) {
+      margin-top: -3564px;
+    }
+    @include breakpoint($screen-nexus - 120) {
+      margin-top: -2980px;
+    }
 
     .title {
       display: inline-block;
@@ -15,14 +24,41 @@
       height: 76px;
       text-transform: uppercase;
       width: 510px;
+
+      @include breakpoint($screen-ipad){
+        overflow: hidden;
+      }
+      @include breakpoint($screen-nexus - 120){
+        font-size: $font-size-title - 50px;
+        height: 40px;
+        margin-left: -15px;
+      }
+
     }
 
     .line {
-      width: 650px;
+      width: 670px;
+      @include breakpoint($screen-ipad) {
+        margin-top: -100px;
+        width: 360px;
+      }
+      @include breakpoint($screen-nexus - 120){
+        width: 187px;
+      }
     }
   }
 
   .cards-review {
+    @include breakpoint($screen-ipad) {
+      margin-top: -370px;
+    }
+    @include breakpoint($screen-nexus - 120){
+      margin-top: -570px;
+    }
+    @include breakpoint($screen-iphone-sm){
+      margin-top: -583px;
+    }
+
     margin-top: -450px;
 
     .card {
@@ -33,6 +69,12 @@
       @include breakpoint($screen-lg){
         width: 400px;
       }
+      @include breakpoint($screen-nexus - 120){
+        width: 280px;
+      }
+      @include breakpoint($screen-iphone-sm){
+        width: 245px;
+      }
     }
 
     .card-style {
@@ -41,6 +83,9 @@
         weight: 500;
       }
       padding: 35px;
+      @include breakpoint($screen-nexus - 120){
+        padding: 20px;
+      }
 
       .text {
         font: {
@@ -90,12 +135,29 @@
       @include breakpoint($screen-ipad){
         margin-top: -1500px;
       }
+      @include breakpoint($screen-nexus - 120){
+        margin-top: -1220px;
+      }
     }
     .logvinova{
       float: right;
+      @include breakpoint($screen-lg){
+        margin-top: -100px;
+      }
+      @include breakpoint($screen-ipad){
+        margin-top: 50px;
+      }
     }
     .gonchar {
       margin-top: 163px;
+
+      @include breakpoint($screen-ipad){
+        margin-top: 833px;
+      }
+      @include breakpoint($screen-nexus - 120){
+        margin-top: 700px;
+      }
+
       .card-style{
         margin-top: -70px;
         padding-top: 15px;
@@ -108,19 +170,35 @@
   }
 
   .send-cv {
-    margin: 35px 0 350px 585px;
+    margin: 45px 0 350px 50%;
+
+    @include breakpoint($screen-lg){
+      margin: 115px 0 350px 50%;
+    }
+    @include breakpoint($screen-ipad){
+      float: right;
+      margin: 120px 0 100px 0;
+    }
+
   }
 
-
   .triangle-grey {
-    position: absolute;
+    position: relative;
     margin-top: 95px;
     width: 0;
     height: 0;
-    border-bottom: 370px solid $grey;
+    border-bottom: 370px solid $grey-light;
     border-right: 370px solid transparent;
-    z-index: -20;
-    opacity: 0.2;
+    z-index: -10;
+    @include breakpoint($screen-ipad){
+      margin-top: 120px;
+      border-bottom: 250px solid $grey-light;
+      border-right: 250px solid transparent;
+    }
+    @include breakpoint($screen-nexus - 120){
+      border-bottom: 200px solid $grey-light;
+      border-right: 200px solid transparent;
+    }
   }
   .lines-block {
     background: {
@@ -130,11 +208,26 @@
     }
     display: inline-block;
     position: relative;
-    margin: 300px 0 0 50%;
+    margin: -150px 0 0 50%;
     width: 25%;
-    height: 1805px;
+    height: 1800px;
     z-index: -20;
-    opacity: 0.2;
+    opacity: 0.15;
+
+    @include breakpoint($screen-lg){
+      height: 1885px;
+    }
+    @include breakpoint($screen-ipad){
+      margin-top: -200px;
+      height: 3300px;
+      width: 50%;
+    }
+    @include breakpoint($screen-nexus - 120){
+      margin-top: -163px;
+      height: 2720px;
+      width: 50%;
+    }
+
   }
   .text-bg {
     color: $subtext-color;
@@ -147,7 +240,12 @@
     z-index: -10;
 
     @include breakpoint($screen-lg){
-      margin: 430px 0 0 -480px;
+      font-size: $font-size-title + 100px;
+      margin: 430px 0 0 -355px;
+    }
+    @include breakpoint($screen-nexus - 120){
+      font-size: $font-size-title + 5px;
+      margin: 420px 0 0 -186px;
     }
 
   }
@@ -165,6 +263,11 @@
     width: 50%;
     height: 887px;
     z-index: -10;
+
+    @include breakpoint($screen-ipad){
+      display: none;
+    }
+
   }
   .dot-block{
     background: {
@@ -174,19 +277,29 @@
     }
     display: block;
     position: relative;
-    margin: -768px 0 0 0;
+    margin: -777px 0 0 0;
     width: 50%;
     height: 530px;
     z-index: -20;
-    opacity: 0.2;
+    opacity: 0.15;
+
+    @include breakpoint($screen-lg){
+      margin-top: -750px;
+    }
+    @include breakpoint($screen-ipad){
+      display: none;
+    }
   }
   .line-bg{
-    border-left: 1px solid #f5f5f5;
-    background-color: $grey;
-    opacity: 0.5;
+    background-color: #f1f1f1;
     position: relative;
-    height: 5px;
+    height: 7px;
     width: 50%;
+    margin-bottom: 185px;
+    @include breakpoint($screen-ipad){
+      float: right;
+      margin: 113px -209px 0 0;
+    }
   }
 
 }
