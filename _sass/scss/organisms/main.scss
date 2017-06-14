@@ -352,11 +352,24 @@
       display: block;
       background-color: $grey-light;
       position: relative;
-      margin-left: 285px;
-      margin-top: -80px;
+      margin-left: 25%;
+      margin-top: -85px;
       height: 490px;
-      width: 600px;
+      width: 75%;
       z-index: -10;
+
+      @include breakpoint($screen-ipad){
+        margin-top: -105px;
+      }
+      @include breakpoint($screen-nexus){
+        margin-top: -65px;
+        margin-left: 0;
+        height: 400px;
+      }
+      @include breakpoint($screen-iphone-sm){
+        margin-top: -76px;
+      }
+
     }
 
     .dot-block{
@@ -448,8 +461,9 @@
   }
 
   .description{
-    margin: {
-      top: -55px;
+    margin-top: -55px;
+    @include breakpoint($screen-nexus){
+      margin-top: -48px;
     }
   }
 
@@ -470,7 +484,6 @@
       height: 500px;
       z-index: -20;
       opacity: 0.2;
-
     }
 
     .why-freshcode-slides {
@@ -478,11 +491,14 @@
       background-color: $green;
       height: 400px;
       margin: {
-        top: -320px;
+        top: -300px;
         left: 172px;
       };
       width: calc(100% - 172px);
 
+      @include breakpoint($screen-lg){
+
+      }
       @include breakpoint($screen-nexus){
         width: 100%;
         margin: {
@@ -499,6 +515,7 @@
         width: 100%;
       }
       @include breakpoint($screen-iphone-sm){
+        margin-top: -150px;
         height: 665px;
       }
     }
@@ -523,14 +540,16 @@
       position: relative;
       width: 100%;
     }
-
-
   }
 
 }
 
 .content-parallax-4 {
   margin-top: 150px;
+
+  @include breakpoint($screen-nexus){
+    margin-top: 100px;
+  }
 
   .vac-description {
     position: relative;
