@@ -10,7 +10,7 @@
   top: 0;
   overflow: hidden;
   width: 100%;
-  z-index: 9999;
+  z-index: 1001;
 
   @include breakpoint($screen-lg){
     padding: 0 35px;

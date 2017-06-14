@@ -17,10 +17,12 @@
 
     .title {
       display: inline-block;
-      margin: 250px 0 110px -28px;
+      margin: 255px 0 110px -28px;
       line-height: .9;
+      font-family: $font-style-caption;
       font-size: $font-size-title - 4px;
       font-weight: 300;
+      padding-top: 3px;
       height: 76px;
       text-transform: uppercase;
       width: 510px;
@@ -40,10 +42,10 @@
       width: 670px;
       @include breakpoint($screen-ipad) {
         margin-top: -100px;
-        width: 360px;
+        width: 373px;
       }
       @include breakpoint($screen-nexus - 120){
-        width: 187px;
+        width: 195px;
       }
     }
   }

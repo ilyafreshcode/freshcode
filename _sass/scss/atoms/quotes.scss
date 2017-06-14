@@ -29,7 +29,7 @@
   position: relative;
   margin: 622px -70px 0 0;
   width: 100px;
-  z-index: 1000;
+  z-index: 700;
 
   @include breakpoint($screen-sm + 100) {
     position: absolute;

@@ -7,6 +7,7 @@
   h3 {
     text-transform: uppercase;
     font: {
+      family: $font-style-caption;
       size: 100px;
       weight: 300;
     }
@@ -678,6 +679,9 @@
 
       width: 100%;
       height: calc(100vw - 200px);
+    }
+    @include breakpoint($screen-iphone-sm) {
+      height: calc(100vw - 150px);
     }
 
     .line-bg-tr {
