@@ -18,8 +18,15 @@ footer {
     font-size: $font-size-base - 2px;
   }
 
+  .footer-main{
+    display: flex;
+    flex-direction: row;
+    @include breakpoint($screen-ipad){
+      flex-direction: column;
+    }
+  }
+
   .footer-col{
-    float: left;
     height: 200px;
     width: 33%;
 
@@ -33,42 +40,36 @@ footer {
       width: 40%;
 
       @include breakpoint($screen-ipad){
+        text-align: center;
         width: 100%;
       }
     }
 
     .links-block{
-      width: 100%;
+      text-align: justify;
+      text-align-last: center;
+      -moz-text-align-last: center;
+      width: 101%;
 
       @include breakpoint($screen-ipad){
+        width: 70%;
+        margin: 0 auto;
+      }
+      @include breakpoint($screen-iphone-plus){
         width: 100%;
+        margin: 0 auto;
       }
 
       li{
-        float: right;
-        margin-left: 20px;
-
-        &:last-child{
-          margin: 0;
-        }
+        display: inline-block;
+        text-align: justify;
+        text-align-last: center;
+        -moz-text-align-last: center;
+        width: calc(100% / 8);
 
         img{
           height: 22px;
           width: 22px;
-        }
-
-        @include breakpoint($screen-ipad){
-          float: left;
-          margin: 0 35px 0 0;
-        }
-        @include breakpoint($screen-iphone-plus){
-          margin: 0 30px 0 0;
-        }
-        @include breakpoint($screen-iphone){
-          margin: 0 25px 0 0;
-        }
-        @include breakpoint($screen-iphone-sm){
-          margin: 0 20px 0 0;
         }
 
       }
@@ -87,8 +88,15 @@ footer {
           background: $white;
         }
       }
-      @include breakpoint($screen-nexus){
+      @include breakpoint($screen-ipad){
+        margin-left: 30%;
         width: 100%;
+      }
+      @include breakpoint($screen-nexus){
+        margin-left: 22%;
+      }
+      @include breakpoint($screen-iphone-plus){
+        margin-left: 0;
       }
     }
 
