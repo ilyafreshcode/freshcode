@@ -2,56 +2,165 @@
 @import "../variables";
 
 .about {
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+
   margin-top: 95px;
 
   .base-section {
     position: relative;
+    flex-direction: column;
+
+    @include breakpoint(md) {
+      flex-direction: row;
+    }
+
+    .text-block {
+      width: 100%;
+      max-width: none;
+
+      @include breakpoint(md) {
+        max-width: 704px;
+        width: 100%;
+      }
+    }
 
     .title {
-      margin-top: 128px;
+      margin-top: 40px;
+      max-width: 510px;
+      font-family: "helv", sans-serif;
+      font-size: 44px;
+      height: 35px;
+      margin-left: -15px;
+
+      @include breakpoint(md) {
+        margin: 128px 0 0 -35px;
+        font-size: 96.98px;
+        height: 76px;
+      }
     }
 
     .line {
-      width: 259px;
+      max-width: 129.5px;
+      margin-top: 9.5px;
+      border: none;
+
+      @include breakpoint(md) {
+        margin-top: 29px;
+        max-width: 259px;
+      }
     }
 
     .subtitle {
-      width: 503px;
+      font-size: 28px;
+      line-height: 35px;
+      max-width: 489px;
+      width: 100%;
+      margin: 40px 0 29px 0;
+
+      @include breakpoint(md) {
+        font-size: 40px;
+        line-height: 40px;
+        max-width: 527px;
+        letter-spacing: 0.5px;
+        margin: 62px 0 38px 0;
+      }
     }
 
     .dotes {
       position: absolute;
-      top: 0;
+      top: 40px;
+
+      @include breakpoint(md) {
+        top: 0;
+      }
 
       img {
-        width: 535px;
+        max-width: 521px;
+        width: 100%;
+        max-height: 532px;
+
+        @include breakpoint(md) {
+          max-width: 535px;
+          width: 100%;
+          height: 537px;
+        }
       }
     }
 
     .logo {
+      display: none;
       position: absolute;
       top: -13rem;
-      left: 18.5rem;
+      left: 19.5rem;
+
+      @include breakpoint(md) {
+        display: block;
+      }
 
       img {
-        width: 655px;
+        max-width: 655px;
       }
     }
 
     .block-image {
+      margin-top: -10px;
+      height: 561px;
+      display: inline-block;
+      max-width: 600px;
+      overflow: hidden;
+
+      @include breakpoint(600px) {
+        margin-top: -10px;
+        height: 265px;
+      }
+
+      @include breakpoint(md) {
+        width: 100%;
+        max-width: 754px;
+        height: 100%;
+        margin-top: 30px;
+        overflow: inherit;
+        right: 0;
+      }
+
       .dote {
-        z-index: 0;
-        height: calc(100vw * 9 / 20);
-        bottom: -117px;
-        left: -215px;
         max-width: 934px;
         max-height: 581px;
-        width: calc(100vw * 9 / 20);
-        background-image: url("/images/Paterns/patern_04.png");
+        z-index: 0;
+        min-height: 152px;
+        width: 100%;
+        left: 0;
+        background-image: url(/images/Paterns/patern_04.png);
+        bottom: 0;
+
+        @include breakpoint(600px) {
+          min-height: 76px;
+        }
 
         @include breakpoint(md) {
+          left: -292px;
+          bottom: -117px;
+          max-width: none;
+          max-height: none;
           width: 934px;
           height: 581px;
+        }
+      }
+
+      img {
+        max-width: 611px;
+        width: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+
+        @include breakpoint(md) {
+          width: 125%;
+          max-width: none;
+          height: 971px;
+          margin-right: -100px;
         }
       }
     }
@@ -65,10 +174,16 @@
   }
 
   .first-section {
-    height: 38rem;
+    height: 94rem;
     position: relative;
-    top: -24.4rem;
-    left: -3rem;
+    margin-top: -30px;
+
+    @include breakpoint(md) {
+      height: 38rem;
+      top: -24.4rem;
+      left: -2.7rem;
+      margin-top: -95px;
+    }
 
     .line-vertical {
       background-color: $grey;
@@ -78,22 +193,53 @@
       border: 0;
       position: relative;
       bottom: -82px;
-      left: -2rem;
+      left: -13px;
+
+      @include breakpoint(md) {
+        left: -2rem;
+        height: 76px;
+      }
     }
 
     .left-text {
       color: $black;
-      font-size: $font-size-big * 2;
-      line-height: 46px;
+      font-size: 28px;
       font-weight: 700;
-      width: 285px;
+      line-height: 35px;
+      max-width: 512px;
       text-align: left;
+
+      @include breakpoint(md) {
+        font-size: $font-size-big * 2;
+        width: 285px;
+        line-height: 46px;
+      }
     }
 
     .subtext {
-      font-size: 239.63px;
+      font-size: 150.63px;
       position: relative;
-      top: -28rem;
+      top: -25rem;
+
+      @include breakpoint(md) {
+        font-size: 239.63px;
+        top: -28rem;
+      }
+    }
+
+    .dote {
+      max-width: 934px;
+      max-height: 581px;
+      z-index: 0;
+      height: 115px;
+      width: 100%;
+      left: 0;
+      background-image: url(/images/Paterns/patern_04.png);
+      bottom: 0;
+
+      @include breakpoint(md) {
+        display: none;
+      }
     }
 
     .absolute-img {
@@ -101,73 +247,132 @@
     }
 
     .top {
-      left: 20rem;
       z-index: 2;
-      top: 6rem;
+      left: 22rem;
+      top: 13rem;
+
+      @include breakpoint(md) {
+        top: 6rem;
+        left: 20rem;
+      }
     }
 
     .bottom {
-      left: 21.2rem;
+      left: 10rem;
       z-index: 2;
-      bottom: -14rem;
+      bottom: 182px;
+
+      @include breakpoint(md) {
+        left: 21.5rem;
+        bottom: -14rem;
+      }
     }
 
     .right-text {
       position: relative;
       z-index: 2;
-      left: 22.2rem;
       top: 43px;
+
+      @include breakpoint(md) {
+        left: 22.2rem;
+      }
 
       p {
         color: $black;
-        font-size: 39.94px;
-        line-height: 30px;
+        font-size: 55.98px;
+        line-height: 72px;
         font-weight: 700;
         text-align: left;
         transform: scaleX(1.002);
+
+        @include breakpoint(md) {
+          font-size: 39.94px;
+          line-height: 30px;
+        }
       }
 
       .about {
         margin-top: 40px;
         margin-bottom: 47px;
         color: $black;
-        font-size: 19.97px;
+        font-size: 25.95px;
         font-weight: 400;
-        line-height: 26px;
+        line-height: 38px;
         text-align: left;
         transform: scaleX(1.002);
-        width: 495px;
+        width: 500px;
+
+        @include breakpoint(md) {
+          font-size: 19.97px;
+          line-height: 26px;
+          width: 495px;
+        }
       }
 
       .next {
-        margin-top: 215px;
         color: $black;
-        font-size: 40px;
+        margin-top: 125px;
+        position: relative;
+        font-size: 55px;
         font-weight: 700;
         text-align: left;
-        left: -31px;
-        position: relative;
+        left: -26px;
+
+        @include breakpoint(md) {
+          margin-top: 215px;
+          font-size: 40px;
+        }
       }
 
       .button {
         box-shadow: 0 5px 20px 0 rgba(0, 225, 164, 0.4);
+        font-size: 29.97px;
+        width: 371px;
+        line-height: 58px;
+        height: 90px;
+
+        @include breakpoint(md) {
+          width: 220px;
+          height: 50px;
+          font-size: 16.97px;
+          line-height: 20px;
+        }
       }
     }
   }
 
   .second-section {
-    margin-top: -2rem;
+    margin: 20px auto;
     position: relative;
+    max-width: 520px;
+
+    @include breakpoint(md) {
+      max-width: 1170px;
+    }
+
+    @include breakpoint(md) {
+      margin-top: -2rem;
+    }
 
     .single-block {
-      width: 380px;
-      height: 321px;
+      max-width: 520px;
+      min-height: 321px;
       border: 2px solid $black;
-      border-right: 0;
+      border-bottom: 0;
       position: relative;
 
+      @include breakpoint(md) {
+        border-right: 0;
+        border-bottom: 2px solid $black;
+        max-width: 390px;
+      }
+
       &:last-child {
-        border-right: 2px solid $black;
+        border-bottom: 2px solid $black;
+
+        @include breakpoint(md)  {
+          border-right: 2px solid $black;
+        }
       }
 
       .text-block {
@@ -192,28 +397,46 @@
 
       .step {
         color: $black;
-        font-size: 16px;
+        font-size: 26px;
         margin-bottom: 36px;
         text-transform: uppercase;
         font-weight: 700;
         text-align: left;
+
+        @include breakpoint(md) {
+          font-size: 16px;
+        }
       }
 
       .about-step {
         color: $black;
-        font-size: 16px;
+        font-size: 26px;
         font-weight: 400;
-        line-height: 22px;
+        line-height: 33px;
         text-align: left;
+
+        @include breakpoint(md) {
+          font-size: 16px;
+          line-height: 22px;
+        }
       }
     }
 
     .block {
       display: flex;
-      height: 321px;
-      margin-left: 30px;
-      max-width: 1140px;
+      background-color: $white;
       box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+      flex-direction: column;
+      height: 100%;
+      max-width: 520px;
+      margin: auto;
+
+      @include breakpoint(md) {
+        min-height: 321px;
+        flex-direction: row;
+        max-width: 1170px;
+      }
+
     }
 
     .reverse,
@@ -222,11 +445,40 @@
     }
 
     .reverse {
-      width: 284px;
-      height: 142px;
-      right: 285px;
+      width: 258px;
+      height: 96px;
+      right: 260px;
+      top: -95px;
+      background-image: url(/images/Paterns/01_patern.jpg);
+      opacity: 0.1;
+
+      @include breakpoint(md) {
+        right: 293px;
+        width: 292px;
+        height: 142px;
+        top: -142px;
+        background-color: $shadow;
+        background-image: none;
+        opacity: 1;
+      }
+    }
+
+    .line-rectangle {
+      width: 260px;
+      height: 205px;
+      top: -205px;
+      opacity: 1;
+      position: absolute;
+      right: 0;
+      z-index: -15;
       background-color: $shadow;
-      top: -142px;
+
+      @include breakpoint(md) {
+        top: -254px;
+        width: 292px;
+        height: 255px;
+        background-image: url(/images/Paterns/02_patern.jpg);
+      }
     }
 
     img {
@@ -240,8 +492,10 @@
 
     .slider-top {
       top: -27rem;
+      margin-right: 0;
+      width: 999px;
+      right: 0;
       float: right;
-      margin-right: 29px;
       position: relative;
     }
 
@@ -274,16 +528,20 @@
       position: relative;
       z-index: -1;
       top: -160px;
-      width: 1141px;
+      width: 1170px;
       height: 532px;
+
+      img {
+        width: 1170px;
+      }
     }
 
     .line-rectangle {
       background-color: #f9f9f9;
       width: 998px;
       height: 51px;
-      margin-top: 59px;
-      margin-left: 143px;
+      margin-top: 58px;
+      margin-left: 172px;
     }
   }
 
@@ -295,14 +553,15 @@
     .absolute {
       position: absolute;
       top: 0;
-      right: 29px;
+      right: 0;
+      width: 876px;
     }
 
     .target {
       display: flex;
-      margin-left: 35px;
+      margin-left: 42px;
       position: absolute;
-      top: 133px;
+      top: 143px;
       z-index: 2;
 
       .target-img {
@@ -336,7 +595,7 @@
 
     .small-rectangle {
       background-color: $shadow;
-      width: 249px;
+      width: 254px;
       height: 188px;
       position: absolute;
       bottom: 0;
@@ -344,10 +603,11 @@
 
     .subtext {
       bottom: 0;
-      right: -25px;
+      right: -60px;
       position: absolute;
       font-size: 266.49px;
       line-height: 182px;
+      letter-spacing: 5px;
     }
   }
 
@@ -358,17 +618,17 @@
 
     .top {
       background-color: $subtext-lite;
-      width: 572px;
+      width: 586px;
       height: 7px;
-      margin-left: 19.3rem;
+      margin-left: 19.5rem;
       border: 0;
     }
 
     .bottom {
       background-color: $subtext-lite;
-      width: 287px;
+      width: 292px;
       height: 7px;
-      margin-left: 19.3rem;
+      margin-left: 19.5rem;
       border: 0;
       position: absolute;
       bottom: 0;
@@ -379,23 +639,28 @@
       position: absolute;
       top: 0;
       z-index: -1;
-      right: 23px;
+      right: 0;
+      width: 877px;
     }
 
     .small-rectangle {
       background-color: $shadow;
-      width: 286px;
+      width: 291px;
       height: 355px;
     }
 
     .dote-rectangle {
-      width: 286px;
+      width: 292px;
       height: 356px;
+      opacity: 0.1;
+      background-image: url(/images/Paterns/02_patern.jpg);
     }
 
     .line-rectangle {
-      width: 285px;
+      width: 293px;
       height: 357px;
+      opacity: 0.1;
+      background-image: url(/images/Paterns/01_patern.jpg);
     }
 
     .block {
@@ -412,14 +677,14 @@
         font-weight: 400;
         line-height: 26px;
         text-align: left;
-        width: 305px;
+        width: 308px;
       }
     }
 
     .progress-img {
       position: absolute;
       top: 110px;
-      right: -30px;
+      right: -48px;
       background-color: $green;
       width: 858px;
       height: 155px;
@@ -475,7 +740,7 @@
   .last-section {
     position: relative;
     background-color: transparent;
-    margin-top: 170px;
+    margin-top: 17rem;
     margin-bottom: 70px;
     align-items: center;
     display: flex;
@@ -492,18 +757,18 @@
       position: absolute;
       z-index: -2;
       background-color: $shadow;
-      width: 286px;
+      width: 292px;
       height: 581px;
-      top: -274px;
-      right: 23px;
+      top: -24rem;
+      right: 0;
     }
 
     .white-block {
-      box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
       width: 857px;
       height: 425px;
-      margin-right: 10px;
       right: 0;
+      bottom: 77px;
       position: relative;
       background-color: $white;
 
@@ -530,6 +795,29 @@
       font-weight: 700;
       margin-bottom: 50px;
       text-align: center;
+    }
+  }
+
+  .lines-bg {
+    background-image: url(/images/Paterns/01_patern.jpg);
+    background-repeat: repeat;
+    background-position: 50% 0;
+    display: block;
+    position: absolute;
+    margin-top: -295px;
+    width: 63%;
+    height: 731px;
+    z-index: -20;
+    opacity: 0.1;
+    left: 0;
+    border: 0;
+    bottom: -70px;
+
+    .line-bg-tr {
+      width: 0;
+      height: 0;
+      border-top: 731px solid #fff;
+      border-left: 737px solid transparent;
     }
   }
 }

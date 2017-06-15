@@ -52,6 +52,7 @@
   .slidesjs-container,
   .slidesjs-control {
     height: 500px !important;
+    width: 100% !important;
 
     @include breakpoint($screen-nexus){
       height: 1300px !important;

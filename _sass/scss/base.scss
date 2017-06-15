@@ -1,27 +1,33 @@
 @import "mixins";
 @import "variables";
 
-
-html, body {
+html,
+body {
   height: 100%;
-  width: 100%; }
-body { font-family: "Roboto", sans-serif; }
+  width: 100%;
+}
+
+body {
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+}
 
 .overflow {
   overflow: hidden;
 }
 
-.float-right{
+.float-right {
   float: right;
 }
 
-.vertical-middle{
+.vertical-middle {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
@@ -33,19 +39,19 @@ body { font-family: "Roboto", sans-serif; }
   width: 482px;
 }
 
-.opacity{
+.opacity {
   opacity: 0.8;
 }
 
-.container{
+.container {
   max-width: 1170px;
   width: 100%;
 
-  @include breakpoint($screen-lg){
+  @include breakpoint($screen-lg) {
     padding: 0 35px;
     overflow: hidden;
   }
-  @include breakpoint($screen-iphone-sm){
+  @include breakpoint($screen-iphone-sm) {
     padding: 0 20px;
   }
 
