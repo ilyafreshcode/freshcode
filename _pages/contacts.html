@@ -8,25 +8,23 @@ title: Контанты - Freshcode
     {% include lines.html %}
     <div class="contacts">
         <h2 class="title">Контакты</h2>
-        <hr class="line" style="margin-bottom: 100px; z-index: 1000;">
-        <div class="send-form vertical-middle">
-
+        <hr class="line">
+        <div class="send-form">
             <div class="img-fly">
-                <img src="/images/slices/icon_fly.svg" class="float-right">
+                <img src="/images/slices/icon_fly.svg" class="img-fly-position">
             </div>
         </div>
 
        <div class="form-content">
-           <h3>{{site.data.contacts.form.title}}</h3>
            <div class="iframe-border">
-               <iframe class="frame" scrolling="no" src="https://script.google.com/macros/s/AKfycbyOfhJQGaJoY_Zu9rdSdpZZQ_vsQpEQHRYWoPp2ZT4/dev" frameborder="0"></iframe>
+               <iframe class="frame" scrolling="no" src="{{site.data.contacts.iframe}}" frameborder="0"></iframe>
            </div>
        </div>
 
-
-        <div class="float-right subtext">{{site.data.contacts.form.title}}</div>
+        <div class="subtext">{{site.data.contacts.form.title}}</div>
         <div class="gray-block"></div>
         <div class="lines-bg-1"><div class="line-bg-tr"></div></div>
+        <div class="lines-bg-sq"></div>
 
     </div>
 </div>

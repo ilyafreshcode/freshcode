@@ -3,45 +3,132 @@
   .send-form {
     background-color: $green;
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
-    height: 650px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 550px;
     margin: 0 auto;
     position: relative;
     width: 80%;
 
+    @include breakpoint($screen-ipad){
+      margin: 0 0 0 -25px;
+      width: 100%;
+      flex-direction: row;
+    }
+
+    @include breakpoint($screen-iphone-plus){
+      height: 748px;
+    }
+    @include breakpoint($screen-iphone){
+      height: 708px;
+    }
+    @include breakpoint($screen-iphone-sm){
+      margin: 0 0 0 -10px;
+    }
+
     .img-fly {
-      padding-right: 40px;
+      padding-right: 55px;
+      @include breakpoint($screen-lg){
+        padding-right: 45px;
+      }
+      @include breakpoint($screen-ipad){
+        padding-right: 0;
+        margin: -490px 930px 0 0;
+
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+      @include breakpoint($screen-iphone-plus){
+        margin: -672px 1309px 0 0;
+      }
+      @include breakpoint($screen-iphone){
+        margin: -647px 1248px 0 0;
+      }
+
+      .img-fly-position{
+        float: right;
+
+        @include breakpoint($screen-ipad){
+          float: none;
+        }
+
+      }
+
     }
 
     img {
       height: auto;
       width: 100px;
+
+      @include breakpoint($screen-ipad){
+        height: auto;
+        width: 50px;
+      }
     }
   }
 
   .form-content {
     box-shadow: -5px 5px 25px 0 rgba(0, 0, 0, 0.15);
     background-color: $white;
-    padding: 40px;
+    padding: 15px 35px;
     position: relative;
-    margin: -600px 0 150px 55px;
-    width: 70%;
-    height: 620px;
+    margin: -489px 0 150px 80px;
+    width: 65%;
+    height: 550px;
     overflow: hidden;
+
+    @include breakpoint($screen-ipad){
+      width: 100%;
+      margin: -489px 0 150px 0;
+    }
+    @include breakpoint($screen-nexus + 120px){
+      height: 700px
+    }
+    @include breakpoint($screen-iphone-plus){
+      padding: 15px 0px 0 15px;
+      margin: -670px 0 150px 0;
+      height: 700px;
+    }
+    @include breakpoint($screen-iphone){
+      height: 670px;
+      margin: -645px 0 150px 0;
+    }
 
     h3 {
       font-weight: 700;
     }
 
     .iframe-border{
-      width: 100%;
+      width: 104%;
       overflow: hidden;
-      height: 570px;
+      height: 530px;
+
+      @include breakpoint($screen-nexus + 120px){
+        height: 750px
+      }
+      @include breakpoint($screen-iphone){
+        height: 735px;
+      }
+
     }
 
     .frame{
-      margin: -55px 0 0 -18px;
+      margin: -52px 0 0 -18px;
       width: 100%;
-      height: 540px;
+      height: 570px;
+      overflow: hidden;
+
+      @include breakpoint($screen-nexus + 120px){
+        height: 750px;
+      }
+      @include breakpoint($screen-iphone){
+        margin: -65px 0 0 -18px;
+        height: 735px;
+      }
     }
 
   }
@@ -49,10 +136,20 @@
   .gray-block {
     position: relative;
     background-color: $grey-light;
-    margin: -1065px 0 200px 0;
-    height: 1050px;
+    margin: -904px 0 300px 0;
+    height: 889px;
     width: 50%;
     z-index: -100;
+
+    @include breakpoint($screen-lg){
+      margin-top: -1003px;
+    }
+    @include breakpoint($screen-ipad){
+      margin: -1200px 0 400px 10px;
+      background-color: $white;
+      width: 30%;
+    }
+
   }
 
   .lines-bg-1 {
@@ -64,18 +161,47 @@
     display: block;
     position: relative;
     float: right;
-    margin-top: -1500px;
+    margin-top: -1425px;
     width: 50%;
-    height: 1398px;
+    height: 1223px;
     z-index: -20;
-    opacity: 0.2;
+    opacity: 0.15;
+
+    @include breakpoint($screen-ipad){
+      margin-top: -1370px;
+      height: 1000px;
+    }
+    @include breakpoint($screen-nexus + 120px){
+      margin-top: -1625px;
+    }
+    @include breakpoint($screen-iphone){
+      margin-top: -1562px;
+    }
+
+  }
+
+  .lines-bg-sq{
+    background: {
+      image: url("/images/Paterns/01_patern.jpg");
+      repeat: repeat;
+      position: 50% 0;
+    }
+    display: none;
+    @include breakpoint($screen-ipad){
+      display: block;
+      margin: -150px 0 86px 0;
+      opacity: 0.15;
+      height: 60px;
+      width: 100%;
+      z-index: -30;
+    }
   }
 
   .line-bg-tr {
     width: 0;
     height: 0;
     border-top: 650px solid $white;
-    border-right: 580px solid transparent;
+    border-right: 650px solid transparent;
   }
 
   .subtext {
@@ -83,11 +209,29 @@
     font-size: $font-size-title + 85px;
     line-height: 150px;
     font-weight: 700;
+    float: right;
     text-align: right;
     margin-top: -55px;
     margin-right: -15px;
     width: 120%;
     z-index: 10;
+    
+    @include breakpoint($screen-lg){
+      float: none;
+      text-align: left;
+      height: 155px;
+      width: 100%;
+      overflow: hidden;
+    }
+    @include breakpoint($screen-ipad){
+      font-size: 125px;
+      margin: -200px 0 0 -24px;
+    }
+    @include breakpoint($screen-nexus + 120px){
+      font-size: 55px;
+      margin: -214px 0 0 -9px;
+    }
+    
   }
 
   .title {
@@ -100,5 +244,36 @@
     font-weight: 300;
     height: 76px;
     text-transform: uppercase;
+
+    @include breakpoint($screen-lg){
+      margin: 150px 0 0 -28px;
+    }
+    @include breakpoint($screen-nexus + 120px){
+      font-size: 80px;
+    }
+    @include breakpoint($screen-iphone-plus){
+      font-size: 60px;
+    }
+    @include breakpoint($screen-iphone-sm){
+      font-size: 46px;
+      margin-left: -10px;
+    }
+  }
+  .line{
+    margin-bottom: 100px;
+    z-index: 1000;
+    width: 469px;
+    @include breakpoint($screen-nexus + 120px) {
+      width: 388px;
+    }
+    @include breakpoint($screen-iphone-plus){
+      width: 283px;
+      margin: -16px 0 42px 0;
+    }
+    @include breakpoint($screen-iphone-sm){
+      font-size: 46px;
+      margin: -31px 0 42px 0;
+      width: 229px;
+    }
   }
 }

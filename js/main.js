@@ -140,7 +140,7 @@ $(function(){
     $(window).scroll(function(){
         var currentScroll = $(this).scrollTop();
         if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()){
-            if (currentScroll > previousScroll){
+            if (currentScroll >= previousScroll){
                 hideNav();
             } else {
                 showNav();
