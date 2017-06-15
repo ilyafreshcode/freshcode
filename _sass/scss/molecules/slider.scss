@@ -25,7 +25,7 @@
 }
 
 .team-slider {
-  height: 500px;
+  min-height: 500px;
   width: 100% !important;
   position: relative;
   overflow: visible !important;
@@ -74,6 +74,7 @@
 
   .card.horizontal {
     display: block;
+    padding: 0;
   }
 
   .green-card {
@@ -86,24 +87,25 @@
     background-color: $green;
     display: flex;
     height: 401px;
-    width: 999px;
-    margin: 0 0 0 -25px;
+    max-width: 999px;
+    padding: 10px;
+   // margin: 0 0 0 -25px;
     align-items: center;
     justify-content: center;
 
     @include breakpoint($screen-nexus){
       flex-direction: column;
-      margin: 0 0 0 -39px;
+      //margin: 0 0 0 -39px;
       padding: 25px 45px;
       height: auto;
-      width: 111%;
+      width: 100%;
     }
     @include breakpoint($screen-nexus - 100){
-      margin: 0 0 0 -35px;
+    //  margin: 0 0 0 -35px;
     }
     @include breakpoint($screen-iphone){
       padding: 25px;
-      margin: 0 0 0 -30px;
+    //  margin: 0 0 0 -30px;
     }
 
   }
@@ -125,14 +127,21 @@
 
     &:last-child {
       border-left: 0;
-      @include breakpoint($screen-nexus){
-        border: 2px solid $white;
+      border-top: 2px solid $white;
+
+      @include breakpoint($screen-nexus) {
+        border-top: 0;
+        border-left: 2px solid $white;
       }
     }
 
     &:first-child {
-      @include breakpoint($screen-nexus){
-        border: 2px solid $white;
+      border-right: 0;
+      border-bottom: 2px solid $white;
+
+      @include breakpoint($screen-nexus) {
+        border-bottom: 0;
+        border-right: 2px solid $white;
       }
     }
   }
@@ -166,6 +175,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     @include breakpoint($screen-iphone-sm){
       height: 160px;
 
@@ -182,5 +192,13 @@
     font-size: 16px;
     font-weight: 700;
     text-align: left;
+  }
+
+  .slidesjs-navigation {
+    display: none;
+
+    @include breakpoint(md) {
+      display: block;
+    }
   }
 }
