@@ -96,16 +96,18 @@
     "triangle": "/images/triangle.png",
     "arrow": "/images/about/arrow_down.svg",
     "rectangle": "/images/about/bckg_rectangle.svg",
-    "team": "/images/about/team.svg",
+    "team": "/images/about/team.png",
     "big_triangle": "/images/about/big_triangle.jpg",
     "bigger": "/images/about/bigger_rectangle.svg",
     "dote_line": "/images/about/dote_line.svg",
+    "small_dote_line": "/images/about/small_doted_line.svg",
     "dote_rectangle": "/images/about/dote_rectangle.svg",
     "small_rectangle": "/images/about/small_rectangle.svg",
     "target": "/images/about/target.svg",
     "troyanova": "/images/about/troyanova_small.svg",
     "rectangle_part_line": "/images/about/rectangle_part_line.svg",
     "rectangle_part_dote": "/images/about/rectangle_part_dote.svg",
-    "shape": "/images/about/shape.svg"
+    "shape": "/images/about/shape.svg",
+    "small_shape": "/images/about/small_arrow.svg"
   }
 }

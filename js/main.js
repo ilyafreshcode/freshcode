@@ -106,6 +106,7 @@ $(function(){
             line.width(linesWidth / MOB_LINES_NUM - 1.1);
         line.height(linesHeight);
     }
+
     function toggleMenuWhenResize(){
         //$('.play-img').height($('.video-block img').height()); for video
 
