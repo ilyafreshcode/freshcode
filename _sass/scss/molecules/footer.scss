@@ -18,9 +18,11 @@ footer {
     font-size: $font-size-base - 2px;
   }
 
-  .footer-main{
+  .footer-main {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+
     @include breakpoint($screen-ipad){
       flex-direction: column;
     }
@@ -46,10 +48,8 @@ footer {
     }
 
     .links-block{
-      text-align: justify;
-      text-align-last: center;
-      -moz-text-align-last: center;
-      width: 101%;
+      display: flex;
+      justify-content: space-between;
 
       @include breakpoint($screen-ipad){
         width: 70%;

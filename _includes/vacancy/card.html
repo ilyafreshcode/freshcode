@@ -1,0 +1,28 @@
+<div class="first-section">
+  <div class="subtext">{{site.data.vacancies.first_section.subtext}}</div>
+  <div class="card-section">
+    <div class="bckg-line"></div>
+    <div class="cards">
+      {% for card in site.data.vacancies.first_section.card_type %}
+      <div class="shadow-card">
+        <div class="single-card">
+          <hr class="top">
+          <hr class="right">
+          <hr class="left">
+          <hr class="bottom">
+          <hr class="angle">
+          <div class="developer">{{ card.developer }}</div>
+          <div class="status-block">
+            <div class="status">{{ card.status }}</div>
+            <div class="link">
+              <a href="{{ card.link }}">
+                <span class="material-icons">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

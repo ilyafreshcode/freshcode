@@ -2,11 +2,11 @@
 @import "../variables";
 
 .about {
+  margin-top: 95px;
+
   * {
     font-family: "Roboto", sans-serif;
   }
-
-  margin-top: 95px;
 
   .base-section {
     position: relative;
@@ -107,15 +107,10 @@
 
     .block-image {
       margin-top: -10px;
-      height: 561px;
+      height: 265px;
       display: inline-block;
       max-width: 600px;
       overflow: hidden;
-
-      @include breakpoint(600px) {
-        margin-top: -10px;
-        height: 265px;
-      }
 
       @include breakpoint(md) {
         width: 100%;
@@ -130,15 +125,11 @@
         max-width: 934px;
         max-height: 581px;
         z-index: 0;
-        min-height: 152px;
+        min-height: 76px;
         width: 100%;
         left: 0;
         background-image: url(/images/Paterns/patern_04.png);
         bottom: 0;
-
-        @include breakpoint(600px) {
-          min-height: 76px;
-        }
 
         @include breakpoint(md) {
           left: -49%;
@@ -201,7 +192,7 @@
     .white-block {
       @include breakpoint(md) {
         background-color: $white;
-        width: 566px;
+        width: 587px;
         height: 212px;
         top: -13px;
         position: absolute;
@@ -560,14 +551,7 @@
   .third-section {
     margin-top: 59px;
     position: relative;
-
-    @include breakpoint(338px) {
-      min-height: 1000px !important;
-    }
-
-    @include breakpoint($screen-nexus) {
-      min-height: 1300px;
-    }
+    min-height: 1120px;
 
     @include breakpoint(md) {
       margin-top: 148px;
@@ -650,7 +634,7 @@
       height: 25px;
       position: absolute;
       border: 0;
-      bottom: -5px;
+      bottom: 161px;
       width: 100%;
 
       @include breakpoint(md) {
@@ -801,7 +785,7 @@
 
   .progress-section {
     position: relative;
-    min-height: 57rem;
+    min-height: 33rem;
     margin-top: 80px;
 
     @include breakpoint(md) {
@@ -968,10 +952,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 200px;
+        min-height: 100px;
 
         @include breakpoint(md) {
           height: 100%;
+          min-height: 200px;
           width: 287px;
         }
 

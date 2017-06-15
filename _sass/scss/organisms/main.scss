@@ -35,6 +35,15 @@
   }
 }
 
+.mobile {
+  @include breakpoint(1024px) {
+    max-width: 280px;
+    margin: 95px auto 0;
+    padding: 0;
+    overflow: initial;
+  }
+}
+
 .main-img {
   position: relative;
   img {
