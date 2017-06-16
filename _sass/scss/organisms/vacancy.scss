@@ -396,14 +396,15 @@
 
   .third-section {
     margin-top: 200px;
-    min-height: 755px;
+    height: 755px;
+    position: relative;
 
     .subtext {
       z-index: 3;
       font-size: 240.82px;
       margin-left: 13.2rem;
       position: relative;
-      top: 19.4rem;
+      top: 19rem;
       left: 3rem;
       letter-spacing: 4px;
     }
@@ -418,12 +419,12 @@
 
     .dote {
       z-index: 1;
-      position: relative;
-      top: -33.2rem;
-      left: 29.3rem;
+      position: absolute;
+      top: 9.5rem;
+      left: 28.5rem;
       background-image: url(/images/Paterns/02_patern.jpg);
-      width: 438px;
-      height: 311px;
+      width: 450px;
+      height: 330px;
       opacity: 0.1;
     }
 
@@ -439,7 +440,7 @@
     }
 
     .text-block {
-      top: -57rem;
+      top: -37.1rem;
       left: 19.5rem;
       position: relative;
 
@@ -460,7 +461,7 @@
         text-align: left;
         transform: scaleX(1.002);
         width: 547px;
-        margin: 49px 0 46px;
+        margin: 51px 0 51px;
       }
 
       .button {
