@@ -8,7 +8,7 @@ $(function(){
     var toggleMenuInput =  $("#menuToggle input[type='checkbox']");
     var horizontalBox = $(".horizontal-box").find(".card");
 
-    var mobileMenuValue = 985;
+    var mobileMenuValue = 1002;
 
     var LINES_NUM = 4;
     var MOB_LINES_NUM = 2;
@@ -147,6 +147,7 @@ $(function(){
                 showNav();
             }
             if(currentScroll <= 5 && !isMobile){
+                showNav();
                 menuBar.css("background-color", "rgba(255, 255, 255, 0.8)");
             } else {
                 menuBar.css("background-color", "rgba(255, 255, 255, 1)");

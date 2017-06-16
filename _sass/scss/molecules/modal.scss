@@ -14,7 +14,7 @@
   }
   @include breakpoint($screen-iphone-plus){
     max-height: 90%;
-    height: 675px;
+    height: 525px;
     margin-top: -50px;
   }
   @include breakpoint($screen-iphone){
@@ -50,7 +50,10 @@
       height: 745px;
     }
     @include breakpoint($screen-iphone-plus){
-      height: 645px;
+      height: 525px;
+    }
+    @include breakpoint($screen-iphone){
+      height: 510px;
     }
 
   }
@@ -63,8 +66,8 @@
       height: 771px;
     }
     @include breakpoint($screen-iphone-plus){
-      margin: -80px 0 0 -15px;
-      height: 760px;
+      margin: -63px 0 0 -15px;
+      height: 580px;
     }
   }
 
