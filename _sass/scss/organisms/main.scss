@@ -70,26 +70,24 @@
 
 .team-img {
   position: absolute;
-  margin: -130px 0 0 -70px;
+  margin: -39px 0 0 -70px;
   z-index: -1;
+  color: $subtext-color;
+  font-size: 236px;
+  line-height: 168px;
+  font-weight: 700;
+  width: 120%;
+
   @include breakpoint($screen-default){
-    margin: -125px 0 0 -5px;
-  }
-
-  img {
-    height: auto;
-    width: 100%;
-    @include breakpoint($screen-default){
-      width: 100%;
-    }
-
+    font-size: 82px;
+    margin: -177px 0 0 -14px;
   }
 }
 
 .description {
   position: absolute;
   margin: {
-    top: -125px;
+    top: -98px;
   }
   width: 620px;
 
@@ -144,7 +142,7 @@
   margin-top: -100px;
   width: 100%;
   @include breakpoint($screen-default){
-    margin-top: -20px;
+    margin-top: -60px;
   }
 
   .card-style {
@@ -177,12 +175,12 @@
     display: inline-block;
     position: relative;
     margin: {
-      top: 120px;
+      top: 70px;
       left: 400px;
     }
     @include breakpoint($screen-default) {
       margin: {
-        top: 310px;
+        top: 260px;
         left: 0;
       }
     }
@@ -196,27 +194,27 @@
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
     position: relative;
     width: 393px;
-    margin: -350px -30px 0 0;
+    margin: -297px -30px 0 0;
 
     @include breakpoint($screen-default) {
       margin-top: -76px;
       margin-right: 0px;
       width: 251px;
-      height: 505px;
+      height: 620px;
     }
 
     .card-style{
-      height: 230px;
+      height: 290px;
 
       @include breakpoint($screen-default) {
-        height: 280px;
+        height: 412px;
       }
     }
 
     .slidesjs-container{
-      height: 660px !important;
+      height: 702px !important;
       @include breakpoint($screen-default) {
-        height: 530px !important;
+        height: 620px !important;
       }
     }
 
@@ -227,33 +225,31 @@
     .slidesjs-navigation {
       padding: 5px;
       display: inline-block;
-      margin: 15px 0 15px 25px;
+      margin: -10px 0 15px 21px;
     }
   }
 
   .horizontal-box {
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
-    margin-top: 40px;
+    margin-top: 125px;
     position: absolute;
     width: 585px;
     .slidesjs-container{
       height: 370px !important;
     }
     @include breakpoint($screen-default) {
-      width: 281px;
-      height: 670px;
+      margin-top: 583px;
+      width: 251px;
+      height: 680px;
       .slidesjs-container{
-        height: 670px !important;
+        height: 680px !important;
       }
     }
-    @include breakpoint($screen-default) {
-      margin-top: 500px;
-      height: 615px;
-      width: 251px;
-
-      .card-content{
-        padding: 15px;
+    .card-content{
+      @include breakpoint($screen-default) {
+        height: 350px;
       }
+      padding: 20px;
     }
 
 
@@ -276,7 +272,7 @@
       position: absolute;
       padding: 5px;
       display: inline-block;
-      margin: -70px 0 0 310px;
+      margin: -53px 0 0 308px;
       z-index: 100;
     }
 
@@ -297,7 +293,6 @@
       background-color: $grey-light;
       position: relative;
       margin-left: 25%;
-      margin-top: -85px;
       height: 490px;
       width: 75%;
       z-index: -10;
@@ -380,7 +375,7 @@
 .content-parallax-3 {
   margin-top: 700px;
   @include breakpoint($screen-default){
-    margin-top: 1450px;
+    margin-top: 1477px;
   }
   .description {
     margin-top: -55px;
@@ -420,11 +415,18 @@
       width: calc(100% - 172px);
 
       @include breakpoint($screen-default){
-        margin-top: -150px;
+        margin-top: -210px;
         margin-left: 0;
         height: 799px;
         width: 100%;
       }
+
+      .slidesjs-container{
+        @include breakpoint($screen-default){
+          height: 800px !important;
+        }
+      }
+
     }
 
     &:after {
@@ -492,8 +494,10 @@
         size: $font-size-big + 2px;
         weight: 400;
       }
+      width: 70%;
       @include breakpoint($screen-default){
         font-size: $font-size-big - 1px;
+        width: 100%;
       }
     }
   }

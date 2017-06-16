@@ -1,27 +1,25 @@
-<div class="quotes-2 float-right" data-0="top: 200px" data-1300="top: -410px">
+<div class="quotes-2 float-right">
     <img src={{ site.data.links.images.quotes-1 }}  />
 </div>
 
 <div class="content-parallax-2">
-    <section class="description" data-0="top: 0px" data-1000="top: -100px">
+    <section class="description">
         <h3>{{ site.data.main.sections.team.title }}</h3>
         <span>{{ site.data.main.sections.team.text }}</span>
     </section>
 
 
-    <a href="#CVForm" class="button send-cv-position" data-0="top: 0px" data-100="top: -50px">Отправить резюме</a>
+    <a href="#CVForm" class="button send-cv-position">Отправить резюме</a>
 
 
-    <div class="quotes" data-500="top: 0px" data-1000="top: -100px">
+    <div class="quotes">
         <img src={{ site.data.links.images.quotes-2 }} />
     </div>
 
-    <div class="team-img" data-0="top: 0px" data-1000="top: 200px">
-        <img src={{ site.data.links.images.team }} />
-    </div>
+    <div class="team-img">Команда</div>
 
 
-    <section id="slides-vertical" class="vertical-box float-right" data-0="margin-top: 0px" data-1200="margin-top: -850px">
+    <section id="slides-vertical" class="vertical-box float-right">
         {% for c in site.data.main.vertical-cards %}
         <div class="card">
             <div class="card-image">
@@ -33,7 +31,7 @@
                     <span class="all-vertical-num"></span>
                 </p>
                 <p class="text">{{ c.text }}</p>
-                <p class="name">{{ c.name }},</p>
+                <p class="name">{{ c.name }}</p>
                 <p class="job">{{ c.job }}</p>
             </div>
             <a href="#" class="slidesjs-previous slidesjs-navigation"><img src={{ site.data.links.images.left-arrow }} /></a>
@@ -54,7 +52,7 @@
                     <span class="all-horizontal-num"></span>
                 </p>
                 <p class="text">{{ c.text }}</p>
-                <p class="name">{{ c.name }},</p>
+                <p class="name">{{ c.name }}</p>
                 <p class="job">{{ c.job }}</p>
 
 
@@ -64,7 +62,7 @@
         {% endfor %}
 
         <a href="#" class="slidesjs-previous slidesjs-navigation"><img src={{ site.data.links.images.left-arrow }} /></a>
-        <a href="#" class="slidesjs-next slidesjs-navigation" style="margin-left: 340px;" ><img src={{ site.data.links.images.right-arrow }} /></a>
+        <a href="#" class="slidesjs-next slidesjs-navigation" style="margin-left: 338px;" ><img src={{ site.data.links.images.right-arrow }} /></a>
     </section>
 
 
