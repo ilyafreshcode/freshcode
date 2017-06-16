@@ -402,7 +402,10 @@
       z-index: 3;
       font-size: 240.82px;
       margin-left: 13.2rem;
-      top: 19rem;
+      position: relative;
+      top: 19.4rem;
+      left: 3rem;
+      letter-spacing: 4px;
     }
 
     .image-logo {
@@ -410,27 +413,23 @@
       position: relative;
       top: inherit;
       margin-top: -31.5rem;
-      left: -3rem;
+      left: -2rem;
     }
 
     .dote {
       z-index: 1;
       position: relative;
-      margin-top: -33rem;
-      left: 25.5rem;
-
-      img {
-        position: relative;
-        top: -24px;
-        left: -17px;
-        width: 30rem;
-      }
-
+      top: -33.2rem;
+      left: 29.3rem;
+      background-image: url(/images/Paterns/02_patern.jpg);
+      width: 438px;
+      height: 311px;
+      opacity: 0.1;
     }
 
     .image {
       top: -9.5rem;
-      left: 3rem;
+      left: 5rem;
     }
 
     .text-block,
@@ -440,8 +439,9 @@
     }
 
     .text-block {
-      margin-top: -25rem;
+      top: -57rem;
       left: 19.5rem;
+      position: relative;
 
       .title {
         color: $black;

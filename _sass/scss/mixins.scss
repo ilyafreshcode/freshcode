@@ -28,3 +28,10 @@
     }
   }
 }
+
+
+@mixin breakpointDesktop {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+}
