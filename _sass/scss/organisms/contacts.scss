@@ -21,7 +21,7 @@
       height: 748px;
     }
     @include breakpoint($screen-iphone){
-      height: 708px;
+      height: 556px;
     }
     @include breakpoint($screen-iphone-sm){
       margin: 0 0 0 -10px;
@@ -46,7 +46,7 @@
         margin: -672px 1309px 0 0;
       }
       @include breakpoint($screen-iphone){
-        margin: -647px 1248px 0 0;
+        margin: -489px 935px 0 0;
       }
 
       .img-fly-position{
@@ -94,8 +94,8 @@
       height: 700px;
     }
     @include breakpoint($screen-iphone){
-      height: 670px;
-      margin: -645px 0 150px 0;
+      height: 525px;
+      margin: -488px 0 150px 0;
     }
 
     h3 {
@@ -111,7 +111,7 @@
         height: 750px
       }
       @include breakpoint($screen-iphone){
-        height: 735px;
+        height: 510px;
       }
 
     }
@@ -127,7 +127,7 @@
       }
       @include breakpoint($screen-iphone){
         margin: -65px 0 0 -18px;
-        height: 735px;
+        height: 580px;
       }
     }
 
@@ -174,8 +174,11 @@
     @include breakpoint($screen-nexus + 120px){
       margin-top: -1625px;
     }
+    @include breakpoint($screen-iphone-plus){
+      margin-top: -1585px;
+    }
     @include breakpoint($screen-iphone){
-      margin-top: -1562px;
+      margin-top: -1405px;
     }
 
   }
@@ -253,6 +256,9 @@
     }
     @include breakpoint($screen-iphone-plus){
       font-size: 60px;
+    }
+    @include breakpoint($screen-iphone){
+      margin: 115px 0 0 -28px;
     }
     @include breakpoint($screen-iphone-sm){
       font-size: 46px;

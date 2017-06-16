@@ -98,6 +98,9 @@
   .logo {
     height: auto;
     width: 181px;
+    @include breakpoint($screen-iphone){
+      width: 150px;
+    }
   }
 
   .menu-content {
