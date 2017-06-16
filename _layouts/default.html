@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     {% include head.html %}
-    <body style="overflow-x:hidden;">
-    <header>
-        {% include menu.html %}
-    </header>
-        <div id="skrollr-body">
-            {{ content }}
-        </div>
+    <body>
+        <header>
+            {% include menu.html %}
+        </header>
+        {{ content }}
         {% include footer.html %}
     </body>
 </html>

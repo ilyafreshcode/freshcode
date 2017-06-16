@@ -6,17 +6,7 @@
   margin: 0 0 100px -50px;
   width: 100px;
 
-  @include breakpoint($screen-menu-desktop + 200) {
-    margin: 50px 0 100px -15px;
-  }
-  @include breakpoint($screen-sm + 100) {
-    margin: 30px 0 100px -20px;
-    img{
-      height: auto;
-      width: 50%;
-    }
-  }
-  @include breakpoint($screen-iphone-sm) {
+  @include breakpoint($screen-default) {
     margin: 30px 0 100px -13px;
     img{
       height: auto;
@@ -31,26 +21,10 @@
   width: 100px;
   z-index: 700;
 
-  @include breakpoint($screen-sm + 100) {
+  @include breakpoint($screen-default){
     position: absolute;
     float: none !important;
-    margin: 1650px 0 0 253px;
-    img{
-      height: auto;
-      width: 50%;
-    }
-  }
-  @include breakpoint($screen-ipad){
-    margin: 770px 0 0 675px;
-  }
-  @include breakpoint($screen-nexus){
-    margin: 1490px 0 0 280px;
-  }
-  @include breakpoint($screen-iphone-plus){
-    margin: 1660px 0 0 250px;
-  }
-  @include breakpoint($screen-iphone-sm){
-    margin: 1630px 0 0 230px;
+    margin: 1609px 0 0 230px;
     img{
       height: auto;
       width: 35%;
@@ -61,22 +35,8 @@
 .rv-quotes{
   margin: 0 0 -37px -45px;
   z-index: 1000;
-  @include breakpoint($screen-lg){
-    float:left;
-    margin: -735px 0 -37px -45px;
-  }
-  @include breakpoint($screen-ipad){
+  @include breakpoint($screen-default){
     float: right;
-    margin: -1532px 369px 0 0;
-  }
-  @include breakpoint($screen-nexus - 120){
-    margin: -1245px 255px 0 0;
-    img{
-      height: auto;
-      width: 60px;
-    }
-  }
-  @include breakpoint($screen-iphone-sm){
     margin: -1240px 225px 0 0;
     img{
       height: auto;
@@ -87,22 +47,9 @@
 .rv-quotes-2{
   float: right;
   margin: -245px -45px 0 0;
-  @include breakpoint($screen-lg){
-    margin: -278px -45px 0 0;
-  }
-  @include breakpoint($screen-ipad){
-    position: absolute;
+  @include breakpoint($screen-default){
     float: none;
-    margin: -45px 0 0 370px;
-  }
-  @include breakpoint($screen-nexus - 120){
-    margin: -39px 0 0 255px;
-    img{
-      height: auto;
-      width: 60px;
-    }
-  }
-  @include breakpoint($screen-iphone-sm){
+    position: absolute;
     margin: -35px 0 0 225px;
     img{
       height: auto;
