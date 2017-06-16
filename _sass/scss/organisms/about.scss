@@ -549,12 +549,12 @@
   }
 
   .third-section {
-    margin-top: 148px;
+    margin-top: 59px;
     min-height: 1120px;
     position: relative;
 
     @include breakpointDesktop {
-      margin-top: 59px;
+      margin-top: 148px;
       min-height: 755px;
     }
 
