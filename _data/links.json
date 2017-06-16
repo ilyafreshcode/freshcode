@@ -2,6 +2,7 @@
   "images": {
     "menu-logo": "/images/logo_dark.svg",
     "head-img" : "/images/main_pic_1.png",
+    "head-img-mobile" : "/images/img-caption-mobile.png",
     "team" : "/images/Team.png",
     "left-arrow" : "/images/slices/icon_arrow_left.svg",
     "right-arrow" : "/images/slices/icon_arrow_right.svg",

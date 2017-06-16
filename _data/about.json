@@ -46,16 +46,16 @@
       ],
       [
         {
-          "img": "/images/about/about_slider/builds.svg",
-          "text": "-//-"
+          "img": "/images/about/about_slider/icon_celebrate.svg",
+          "text": "Корпоративные праздники"
         },
         {
-          "img": "/images/about/about_slider/сase.svg",
-          "text": "-//-"
+          "img": "/images/about/about_slider/icon_money.svg",
+          "text": "Достойная заработная плата"
         },
         {
-          "img": "/images/about/about_slider/heads.svg",
-          "text": "-//-"
+          "img": "/images/about/about_slider/icon_presentation.svg",
+          "text": "Корпоративные треннинги"
         }
       ]
     ]

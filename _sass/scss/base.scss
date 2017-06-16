@@ -11,6 +11,8 @@ body {
   * {
     font-family: "Roboto", sans-serif;
   }
+  position:relative;
+  overflow-x:hidden;
 }
 
 .overflow {
@@ -49,7 +51,6 @@ body {
 
   @include breakpoint($screen-lg) {
     padding: 0 35px;
-    overflow: hidden;
   }
   @include breakpoint($screen-iphone-sm) {
     padding: 0 20px;
@@ -59,4 +60,13 @@ body {
 
 .hide {
   display: none;
+}
+
+
+.mobile {
+  @include breakpoint(1024px) {
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }

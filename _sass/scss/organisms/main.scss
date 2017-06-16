@@ -1,6 +1,5 @@
 @import "../mixins";
 @import "../variables";
-
 .main-title {
   width: 100%;
 
@@ -23,7 +22,7 @@
       weight: 400;
     }
 
-    @include breakpoint(md) {
+    @include breakpoint($screen-default) {
       margin: 0 auto;
       width: 250px;
     }
@@ -32,61 +31,55 @@
 }
 
 .mobile {
-  @include breakpoint(1024px) {
+  @include breakpoint(1060px) {
     max-width: 280px;
-    margin: 0 auto 0;
+    margin: 0 auto;
     padding: 0;
-    overflow: initial;
   }
 }
 
 .main-img {
-  position: relative;
   img {
     height: auto;
     width: 105%;
-
-    @include breakpoint($screen-nexus){
-      width: 103%;
+    @include breakpoint($screen-default){
+      width: 1%;
     }
-    @include breakpoint($screen-iphone-plus){
-      float: none !important;
-      margin: 0 0 0 -35px;
-      width: 140%;
-    }
-    @include breakpoint($screen-iphone-sm){
-      margin: 0 0 0 -25px;
-    }
-
   }
+
+  @include breakpoint($screen-default){
+    display: none;
+  }
+}
+
+.main-img-mobile{
+  display: none;
+  position: relative;
+  margin-right: -15px;
+
+  @include breakpoint($screen-default){
+    display: block;
+  }
+
+  img {
+    height: auto;
+    width: 108%;
+  }
+
 }
 
 .team-img {
   position: absolute;
   margin: -130px 0 0 -70px;
   z-index: -1;
-
-  @include breakpoint($screen-menu-desktop + 200){
-    margin: -130px 0 0 -5px;
-  }
-  @include breakpoint($screen-nexus){
-    margin: -155px 0 0 -5px;
-  }
-  @include breakpoint($screen-iphone-sm){
+  @include breakpoint($screen-default){
     margin: -125px 0 0 -5px;
   }
 
   img {
     height: auto;
     width: 100%;
-
-    @include breakpoint($screen-menu-desktop + 200){
-      width: 115%;
-    }
-    @include breakpoint($screen-ipad){
-      width: 80%;
-    }
-    @include breakpoint($screen-nexus){
+    @include breakpoint($screen-default){
       width: 100%;
     }
 
@@ -96,7 +89,7 @@
 .description {
   position: absolute;
   margin: {
-    top: -100px;
+    top: -125px;
   }
   width: 620px;
 
@@ -138,11 +131,7 @@
   margin-top: -97%;
   height: 950px;
 
-  @include breakpoint($screen-default) {
-    margin-top: -90%;
-    height: 550px;
-  }
-  @include breakpoint($screen-iphone-plus){
+  @include breakpoint($screen-default){
     margin-top: -135%;
     height: 550px;
   }
@@ -192,8 +181,10 @@
       left: 400px;
     }
     @include breakpoint($screen-default) {
-      margin-top: 330px;
-      margin-left: 0;
+      margin: {
+        top: 310px;
+        left: 0;
+      }
     }
   }
 
@@ -208,8 +199,10 @@
     margin: -350px -30px 0 0;
 
     @include breakpoint($screen-default) {
-      margin-top: -70px;
+      margin-top: -76px;
+      margin-right: 0px;
       width: 251px;
+      height: 505px;
     }
 
     .card-style{
@@ -386,29 +379,14 @@
 
 .content-parallax-3 {
   margin-top: 700px;
-
-  @include breakpoint($screen-ipad){
-    margin-top: 900px;
-  }
-  @include breakpoint($screen-nexus){
-    margin-top: 1350px;
-  }
-  @include breakpoint($screen-iphone-plus){
-    margin-top: 1500px;
-  }
-  @include breakpoint($screen-iphone-sm){
+  @include breakpoint($screen-default){
     margin-top: 1450px;
   }
   .description {
-    @include breakpoint($screen-iphone-sm) {
-      width: 88%;
-    }
-  }
-
-  .description{
     margin-top: -55px;
-    @include breakpoint($screen-nexus){
+    @include breakpoint($screen-default) {
       margin-top: -48px;
+      width: 280px;
     }
   }
 
@@ -441,27 +419,11 @@
       };
       width: calc(100% - 172px);
 
-      @include breakpoint($screen-lg){
-
-      }
-      @include breakpoint($screen-nexus){
-        width: 100%;
-        margin: {
-          top: -250px;
-          left: 0;
-        };
-        height: 965px;
-      }
-      @include breakpoint($screen-iphone-plus){
-        margin: {
-          top: -200px;
-          left: 0;
-        };
-        width: 100%;
-      }
-      @include breakpoint($screen-iphone-sm){
+      @include breakpoint($screen-default){
         margin-top: -150px;
-        height: 665px;
+        margin-left: 0;
+        height: 799px;
+        width: 100%;
       }
     }
 
@@ -473,7 +435,7 @@
       margin-left: 172px;
       height: 50px;
       width: calc(100% - 172px);
-      @include breakpoint($screen-nexus) {
+      @include breakpoint($screen-default) {
         margin-left: 0;
         width: 100%;
       }
@@ -484,6 +446,13 @@
       float: right;
       position: relative;
       width: 100%;
+
+      .team-slider{
+        @include breakpoint($screen-default) {
+          height: 550px;
+        }
+      }
+
     }
   }
 
@@ -492,7 +461,7 @@
 .content-parallax-4 {
   margin-top: 150px;
 
-  @include breakpoint($screen-nexus){
+  @include breakpoint($screen-default){
     margin-top: 100px;
   }
 
@@ -502,7 +471,7 @@
       float: left;
       margin: 0 37px;
 
-      @include breakpoint($screen-nexus){
+      @include breakpoint($screen-default){
         margin: 0;
       }
 
@@ -523,7 +492,7 @@
         size: $font-size-big + 2px;
         weight: 400;
       }
-      @include breakpoint($screen-nexus){
+      @include breakpoint($screen-default){
         font-size: $font-size-big - 1px;
       }
     }
@@ -531,7 +500,7 @@
 
   .all-vacancy-position {
     margin: 10px 0 0 250px;
-    @include breakpoint($screen-nexus){
+    @include breakpoint($screen-default){
       margin: 0 0 0 0;
     }
   }
@@ -553,19 +522,11 @@
       width: calc(100% - 290px);
       z-index: -100;
 
-      @include breakpoint($screen-ipad){
+      @include breakpoint($screen-default){
         float: none;
-        margin: -235px 0 0 0;
-        height: 210px;
-        width: 100%;
-      }
-      @include breakpoint($screen-iphone-plus){
-        margin: -310px 0 0 0;
-        height: 300px;
-      }
-      @include breakpoint($screen-iphone){
         margin: -310px 0 0 0;
         height: 295px;
+        width: 100%;
       }
 
     }
@@ -576,23 +537,14 @@
     margin: -155px 0 0 290px;
     position: relative;
     z-index: -10;
-    @include breakpoint($screen-ipad) {
-      margin: -25px 0 0 -15px;
-    }
-    @include breakpoint($screen-iphone){
-      margin: -20px 0 0 -15px;
-    }
-    @include breakpoint($screen-iphone-sm){
+    @include breakpoint($screen-default){
       margin: -15px 0 0 -15px;
     }
 
     img {
       height: auto;
       width: 108%;
-      @include breakpoint($screen-ipad) {
-        width: 110%;
-      }
-      @include breakpoint($screen-iphone-sm){
+      @include breakpoint($screen-default){
         width: 105%;
       }
 
@@ -608,31 +560,26 @@
     display: block;
     position: relative;
     margin-top: -295px;
-    width: 50%;
-    height: 550px;
+    width: 490px;
+    height: 450px;
     z-index: -20;
     opacity: 0.2;
 
-    @include breakpoint($screen-ipad){
-      margin: -120px 0 0 0;
-      width: 80%;
-      height: calc(100vw - 250px);
-    }
-    @include breakpoint($screen-nexus) {
+    @include breakpoint($screen-default) {
       margin: -70px 0 0 0;
-
       width: 100%;
-      height: calc(100vw - 200px);
-    }
-    @include breakpoint($screen-iphone-sm) {
-      height: calc(100vw - 150px);
+      height: 200px;
     }
 
     .line-bg-tr {
       width: 0;
       height: 0;
-      border-top: 650px solid $white;
-      border-left: 650px solid transparent;
+      border-top: 500px solid $white;
+      border-left: 500px solid transparent;
+      @include breakpoint($screen-default) {
+        border-top: 280px solid $white;
+        border-left: 280px solid transparent;
+      }
     }
 
   }
