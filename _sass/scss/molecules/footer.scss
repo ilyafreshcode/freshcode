@@ -11,7 +11,7 @@ footer {
   height: 200px;
   width: 100%;
 
-  @include breakpoint($screen-default){
+  @include breakpoint($screen-md){
     font-size: $font-size-base - 2px;
     height: 120px;
   }
@@ -21,7 +21,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
 
-    @include breakpoint($screen-ipad){
+    @include breakpoint($screen-md){
       flex-direction: column;
     }
   }
@@ -31,21 +31,22 @@ footer {
     width: 33%;
 
     &:nth-child(2){
-      @include breakpoint($screen-default) {
+      @include breakpoint($screen-md) {
         height: 0;
       }
     }
 
-    @include breakpoint($screen-default){
+    @include breakpoint($screen-md){
       height: 60px;
-      width: 100%;
+      width: 280px;
+      margin: auto;
     }
 
     .copyright{
       display: inline-block;
       width: 100%;
 
-      @include breakpoint($screen-default){
+      @include breakpoint($screen-md){
         text-align: center;
         margin-top: 15px;
         width: 100%;
@@ -56,7 +57,7 @@ footer {
       display: flex;
       justify-content: space-between;
 
-      @include breakpoint($screen-default){
+      @include breakpoint($screen-md){
         width: 100%;
         margin: 0 auto;
       }
@@ -89,7 +90,7 @@ footer {
           background: $white;
         }
       }
-      @include breakpoint($screen-default){
+      @include breakpoint($screen-md){
         margin-left: 0;
         margin-bottom: 15px;
         height: 0;

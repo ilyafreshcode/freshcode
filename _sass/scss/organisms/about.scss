@@ -2,17 +2,17 @@
 @import "../variables";
 
 .about {
-  margin-top: 95px;
-
   * {
     font-family: "Roboto", sans-serif;
   }
 
   .base-section {
+    margin-top: 50px;
     position: relative;
     flex-direction: column;
 
     @include breakpointDesktop {
+      margin-top: 95px;
       flex-direction: row;
     }
 
@@ -526,7 +526,7 @@
     .line-rectangle {
       width: 50%;
       height: 102px;
-      top: -104px;
+      top: -85px;
       opacity: 1;
       position: absolute;
       right: 0;
@@ -549,12 +549,12 @@
   }
 
   .third-section {
-    margin-top: 148px;
+    margin-top: 69px;
     min-height: 1120px;
     position: relative;
 
     @include breakpointDesktop {
-      margin-top: 59px;
+      margin-top: 148px;
       min-height: 755px;
     }
 
@@ -624,7 +624,6 @@
 
       @include breakpointDesktop {
         top: -160px;
-        width: 1170px;
         height: 532px;
       }
     }
@@ -632,15 +631,14 @@
     .line-rectangle {
       background-color: #f9f9f9;
       height: 25px;
-      position: absolute;
       border: 0;
-      bottom: 161px;
       width: 100%;
 
       @include breakpointDesktop {
         width: 998px;
         height: 51px;
         margin-top: 58px;
+        position: absolute;
         margin-left: 172px;
         bottom: 70px;
         right: 0;
@@ -654,7 +652,7 @@
     position: relative;
 
     @include breakpointDesktop {
-      top: -68px;
+      top: -90px;
       height: 445px;
       margin-top: 0;
     }
