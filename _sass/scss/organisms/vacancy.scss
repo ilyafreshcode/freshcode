@@ -104,15 +104,28 @@
     position: relative;
     z-index: 2;
 
-    @include breakpointDesktop {
+    @include tabletVersion {
+      margin-top: 98px;
+      margin-left: -48px;
+      margin-right: 0;
+      width: 100%;
+    }
+
+
+    @include breakpoint(lg-max) {
       margin-top: 73px;
       margin-left: 10px;
     }
 
+
     img {
       width: 100%;
 
-      @include breakpointDesktop {
+      @include tabletVersion {
+        width: 320px;
+      }
+
+      @include breakpoint(lg-max) {
         width: 384px;
       }
     }
@@ -128,7 +141,15 @@
       background-image: url(/images/Paterns/02_patern.jpg);
       opacity: 0.1;
 
-      @include breakpointDesktop {
+      @include tabletVersion {
+        height: 155px;
+        width: 477px;
+        bottom: -60px;
+        right: 0;
+        left: inherit;
+      }
+
+      @include breakpoint(lg-max) {
         width: 585px;
         height: 217px;
         left: -103px;
@@ -156,7 +177,19 @@
   .shadow-triangle {
     display: none;
 
-    @include breakpointDesktop {
+    @include tabletVersion {
+      display: block;
+      position: relative;
+      z-index: 1;
+      width: 0;
+      height: 0;
+      border-top: 295px solid #f9f9f9;
+      border-right: 295px solid transparent;
+      right: -14.8rem;
+      top: -27.5rem;
+    }
+
+    @include breakpoint(lg-max) {
       display: block;
       position: relative;
       z-index: 1;
@@ -228,7 +261,15 @@
       position: relative;
       top: -85px;
 
-      @include breakpointDesktop {
+      @include tabletVersion {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -15px;
+        top: -40px;
+        width: 100%;
+      }
+
+      @include breakpoint(lg-max) {
         flex-direction: row;
         justify-content: center;
         margin-top: -15px;
@@ -266,7 +307,7 @@
         margin-right: 0;
       }
 
-      @include breakpoint(lg-min) {
+      @include breakpoint(lg-max) {
         &:nth-child(2n) {
           margin-right: 80px;
         }
@@ -442,10 +483,17 @@
     .shadow {
       display: none;
 
-      @include breakpointDesktop {
+      @include tabletVersion {
+        display: block;
+        position: relative;
+        top: -27.5rem;
+        left: -75px;
+      }
+
+      @include breakpoint(lg-max) {
         display: block;
         top: -26.5rem;
-        left: -100px;
+        left: -99px;
         position: relative;
       }
     }
@@ -540,7 +588,18 @@
     .subtext {
       display: none;
 
-      @include breakpointDesktop {
+      @include tabletVersion {
+        font-size: 89px;
+        display: block;
+        position: relative;
+        top: 18px;
+        z-index: 2;
+        margin-left: -1.8rem;
+        margin-top: 11rem;
+        letter-spacing: 2px;
+      }
+
+      @include breakpoint(lg-max) {
         display: block;
         position: relative;
         font-size: $font-size-title + 41px;
@@ -563,7 +622,14 @@
       position: relative;
       left: -103px;
 
-      @include breakpointDesktop {
+      @include tabletVersion {
+        width: 585px;
+        min-height: 339px;
+        top: -4rem;
+        left: -11rem;
+      }
+
+      @include breakpoint(lg-max) {
         width: 585px;
         min-height: 339px;
         top: -4rem;
@@ -651,7 +717,15 @@
       letter-spacing: 3px;
       position: relative;
 
-      @include breakpointDesktop {
+      @include tabletVersion {
+        font-size: 186px;
+        top: 20.6rem;
+        margin-left: 13.2rem;
+        left: 3rem;
+        letter-spacing: 4px;
+      }
+
+      @include breakpoint(lg-max) {
         font-size: 240.82px;
         margin-left: 13.2rem;
         top: 19rem;
