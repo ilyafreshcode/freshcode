@@ -161,7 +161,7 @@
   .shadow {
     z-index: 1;
     background-color: #f9f9f9;
-    top: 523px;
+    top: 443px;
     right: 0;
     width: 100%;
     height: 122px;
@@ -176,27 +176,26 @@
 
   .shadow-triangle {
     display: none;
+    z-index: 1;
 
     @include tabletVersion {
       display: block;
-      position: relative;
-      z-index: 1;
+      position: absolute;
+      right: 0;
       width: 0;
       height: 0;
+      top: 35.9rem;
       border-top: 295px solid #f9f9f9;
       border-right: 295px solid transparent;
-      right: -14.8rem;
-      top: -27.5rem;
     }
 
     @include breakpoint(lg-max) {
       display: block;
-      position: relative;
-      z-index: 1;
+      position: absolute;
+      right: 0;
       width: 0;
       height: 0;
-      right: -28.8rem;
-      top: -26.5rem;
+      top: 35.9rem;
       border-top: 295px solid #f9f9f9;
       border-right: 295px solid transparent;
     }
@@ -485,16 +484,16 @@
 
       @include tabletVersion {
         display: block;
-        position: relative;
-        top: -27.5rem;
-        left: -75px;
+        right: 0;
+        position: absolute;
+        top: 21rem;
       }
 
       @include breakpoint(lg-max) {
         display: block;
-        top: -26.5rem;
-        left: -99px;
-        position: relative;
+        right: 0;
+        position: absolute;
+        top: 21rem;
       }
     }
 
@@ -572,16 +571,20 @@
       margin-left: -20px;
 
       @include breakpointDesktop {
+        width: 50%;
         flex-direction: row;
         margin-left: 0;
       }
     }
 
     .block {
+      width: 100%;
       height: 30rem;
+      position: relative;
 
       @include breakpointDesktop {
         height: 40rem;
+        width: 50%;
       }
     }
 
@@ -589,23 +592,23 @@
       display: none;
 
       @include tabletVersion {
-        font-size: 89px;
+        font-size: 100px;
+        line-height: 66px;
         display: block;
-        position: relative;
-        top: 18px;
+        position: absolute;
+        top: 16.4rem;
         z-index: 2;
-        margin-left: -1.8rem;
-        margin-top: 11rem;
-        letter-spacing: 2px;
+        left: -6.5rem;
+        letter-spacing: 1px;
       }
 
       @include breakpoint(lg-max) {
         display: block;
-        position: relative;
+        position: absolute;
         font-size: $font-size-title + 41px;
         z-index: 2;
-        margin-left: -1.8rem;
-        margin-top: 11rem;
+        top: 11rem;
+        left: -14rem;
         letter-spacing: 2px;
       }
     }
@@ -616,7 +619,7 @@
       background-color: #ffffff;
       box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
       width: 248px;
-      height: 292px;
+      height: 267px;
       top: 155px;
       z-index: 4;
       position: relative;
@@ -625,15 +628,15 @@
       @include tabletVersion {
         width: 585px;
         min-height: 339px;
-        top: -4rem;
-        left: -11rem;
+        top: 21rem;
+        left: -17rem;
       }
 
       @include breakpoint(lg-max) {
         width: 585px;
         min-height: 339px;
-        top: -4rem;
-        left: -10rem;
+        top: 21rem;
+        left: -22rem;
       }
 
       .info {
@@ -650,10 +653,23 @@
       }
 
       .info-block {
-        padding: 25px 25px 0 25px;
+       // padding: 25px 25px 0 25px;
 
         @include breakpointDesktop {
-          padding: 49px 49px 0 49px;
+        //  padding: 49px 49px 0 49px;
+        }
+      }
+
+      .align-center  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        margin: auto;
+        height: 100%;
+
+        @include breakpointDesktop {
+          width: 500px;
         }
       }
 
@@ -869,6 +885,7 @@
         width: 215px;
         height: 50px;
         box-shadow: 0 5px 20px 0 rgba(0, 225, 164, 0.4);
+        padding: 15px 0px;
       }
     }
   }
