@@ -37,8 +37,12 @@ body {
   background-color: black;
   border: none;
   margin: 29px 0 0;
-  height: 5px;
+  height: 7px;
   width: 482px;
+
+  @include breakpoint($screen-default){
+    height: 4px;
+  }
 }
 
 .opacity {

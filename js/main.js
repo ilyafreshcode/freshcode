@@ -8,7 +8,7 @@ $(function(){
     var toggleMenuInput =  $("#menuToggle input[type='checkbox']");
     var horizontalBox = $(".horizontal-box").find(".card");
 
-    var mobileMenuValue = 1060;
+    var mobileMenuValue = 1100;
 
     var LINES_NUM = 4;
     var MOB_LINES_NUM = 2;
@@ -89,7 +89,9 @@ $(function(){
         var conteiner = $('.mobile');
 
         var linesWidth = conteiner.width();
-        var linesHeight = conteiner.height() + 100;
+        var linesHeight = conteiner.height() + 190;
+        if(isMobile) linesHeight -= 90;
+        linesHeight = fixLineHeight(linesHeight);
 
         linesConteiner.width(linesWidth);
         linesConteiner.height(linesHeight);
@@ -101,6 +103,12 @@ $(function(){
         line.height(linesHeight);
     }
 
+    function fixLineHeight(height){
+        var newHeight = height;
+        if($('.mobile').has('.contacts').length) newHeight += 250;
+        if($('.mobile').has('.contacts').length && isMobile) newHeight -= 250;
+        return newHeight;
+    }
 
     function hideNav() {
         $("[data-nav-status='toggle']").removeClass("is-visible").addClass("is-hidden");

@@ -3,7 +3,7 @@
 
 .quotes {
   position: relative;
-  margin: 0 0 100px -50px;
+  margin: 100px 0 0 -50px;
   width: 100px;
 
   @include breakpoint($screen-default) {
@@ -17,7 +17,7 @@
 
 .quotes-2 {
   position: relative;
-  margin: 614px -70px 0 0;
+  margin: 667px -70px 0 0;
   width: 100px;
   z-index: 700;
 
@@ -37,7 +37,7 @@
   z-index: 1000;
   @include breakpoint($screen-default){
     float: right;
-    margin: -1240px 225px 0 0;
+    margin: -1299px 225px 0 0;
     img{
       height: auto;
       width: 50px;

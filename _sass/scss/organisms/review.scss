@@ -16,7 +16,7 @@
 
     .title {
       display: inline-block;
-      margin: 210px 0 110px -28px;
+      margin: 155px 0 110px -28px;
       line-height: 1.2;
       font-family: $font-style-caption;
       font-size: $font-size-title - 4px;
@@ -28,8 +28,8 @@
 
       @include breakpoint($screen-default){
         font-size: $font-size-title - 50px;
-        height: 46px;
-        margin-left: -15px;
+        height: 48px;
+        margin: 201px 0 110px -15px;
         overflow: hidden;
       }
 
@@ -47,7 +47,7 @@
   }
 
   .cards-review {
-    margin-top: -450px;
+    margin-top: -454px;
 
     @include breakpoint($screen-default){
       margin-top: -583px;
@@ -100,7 +100,7 @@
 
       @include breakpoint($screen-default){
         float: none;
-        margin: 700px 0 0 0;
+        margin: 765px 0 0 0;
       }
 
 
@@ -114,7 +114,7 @@
     .troian{
       @include breakpoint($screen-default){
         float: right;
-        margin-top: -1220px;
+        margin-top: -1278px;
       }
     }
     .logvinova{
@@ -142,11 +142,11 @@
   }
 
   .send-cv {
-    margin: 67px 0 350px 50%;
+    margin: 46px 0 350px 50%;
 
     @include breakpoint($screen-default){
       float: right;
-      margin: 120px 0 100px 0;
+      margin: 104px 0 100px 0;
     }
 
   }
@@ -160,9 +160,9 @@
     border-right: 370px solid transparent;
     z-index: -10;
     @include breakpoint($screen-default){
-      margin-top: 120px;
-      border-bottom: 200px solid $grey-light;
-      border-right: 200px solid transparent;
+      margin-top: 70px;
+      border-bottom: 180px solid $grey-light;
+      border-right: 180px solid transparent;
     }
   }
   .lines-block {
@@ -175,13 +175,13 @@
     position: relative;
     margin: -150px 0 0 50%;
     width: 25%;
-    height: 1800px;
+    height: 1876px;
     z-index: -20;
     opacity: 0.15;
 
     @include breakpoint($screen-default){
-      margin-top: -163px;
-      height: 2670px;
+      margin-top: -139px;
+      height: 2715px;
       width: 50%;
     }
 
@@ -191,7 +191,7 @@
     font-size: $font-size-title + 170px;
     display: inline-block;
     position: relative;
-    margin: 430px 0 0 -37px;
+    margin: 439px 0 0 -37px;
     line-height: 150px;
     font-weight: 700;
     z-index: -10;
@@ -230,7 +230,7 @@
     }
     display: block;
     position: relative;
-    margin: -777px 0 0 0;
+    margin: -800px 0 0 0;
     width: 50%;
     height: 530px;
     z-index: -20;
@@ -249,7 +249,7 @@
     margin-bottom: 185px;
     @include breakpoint($screen-default){
       float: right;
-      margin: 113px -209px 0 0;
+      margin: 97px -209px 0 0;
     }
   }
 
