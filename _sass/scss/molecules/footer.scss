@@ -58,8 +58,8 @@ footer {
       justify-content: space-between;
 
       @include breakpoint($screen-md){
-        width: 100%;
-        margin: 0 auto;
+        width: 105%;
+        margin: 0 auto 0 -15px;
       }
 
       li{
@@ -73,7 +73,6 @@ footer {
           height: 22px;
           width: 22px;
         }
-
       }
     }
 

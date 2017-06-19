@@ -463,10 +463,6 @@
 .content-parallax-4 {
   margin-top: 61px;
 
-  @include breakpoint($screen-default){
-    margin-top: 100px;
-  }
-
   .vac-description {
     position: relative;
     img {
@@ -475,7 +471,7 @@
 
       @include breakpoint($screen-default){
         margin: 0;
-        width: 150px;
+        width: 120px;
       }
 
     }
@@ -487,6 +483,10 @@
         weight: 700;
       }
       margin: 25px 0;
+
+      @include breakpoint($screen-default){
+        font-size: 30px;
+      }
     }
 
     span {
@@ -549,7 +549,7 @@
       height: auto;
       width: 108%;
       @include breakpoint($screen-default){
-        width: 106%;
+        width: 112%;
       }
 
     }

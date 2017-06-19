@@ -50,7 +50,7 @@
     margin-top: -454px;
 
     @include breakpoint($screen-default){
-      margin-top: -583px;
+      margin-top: -541px;
     }
 
 
@@ -198,7 +198,7 @@
 
     @include breakpoint($screen-default){
       font-size: $font-size-title + 5px;
-      margin: 420px 0 0 -186px;
+      margin: 380px 0 0 -186px;
     }
 
   }

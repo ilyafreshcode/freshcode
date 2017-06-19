@@ -61,7 +61,7 @@
     background-color: $white;
     padding: 15px 35px;
     position: relative;
-    margin: -489px 0 150px 80px;
+    margin: -500px 0 150px 80px;
     width: 65%;
     height: 550px;
     overflow: hidden;
@@ -91,7 +91,7 @@
     .frame{
       margin: -52px 0 0 -18px;
       width: 100%;
-      height: 570px;
+      height: 578px;
       overflow: hidden;
 
       @include breakpoint($screen-default){
@@ -105,8 +105,8 @@
   .gray-block {
     position: relative;
     background-color: $grey-light;
-    margin: -898px 0 300px 0;
-    height: 889px;
+    margin: -887px 0 300px 0;
+    height: 879px;
     width: 50%;
     z-index: -100;
 
@@ -130,7 +130,7 @@
     display: block;
     position: relative;
     float: right;
-    margin-top: -1425px;
+    margin-top: -1426px;
     width: 50%;
     height: 1223px;
     z-index: -20;
@@ -152,7 +152,7 @@
     display: none;
     @include breakpoint($screen-default){
       display: block;
-      margin: -146px 0 86px 0;
+      margin: -136px 0 86px 0;
       opacity: 0.15;
       height: 60px;
       width: 100%;

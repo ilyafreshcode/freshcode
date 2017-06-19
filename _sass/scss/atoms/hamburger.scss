@@ -70,7 +70,7 @@
   input:checked ~ span:nth-last-child(3)
   {
     opacity: 1;
-    transform: rotate(45deg) translate(0, -2px);
+    transform: rotate(45deg) translate(0, -1.7px);
   }
 
   input:checked ~ span:nth-last-child(2)
@@ -82,7 +82,7 @@
   input:checked ~ span:nth-last-child(1)
   {
     opacity: 1;
-    transform: rotate(-45deg) translate(0, -2px);
+    transform: rotate(-45deg) translate(0, -1.7px);
   }
 
 
