@@ -7,20 +7,38 @@
   .base-section {
     position: relative;
     display: flex;
+    flex-direction: column;
+
+    @include breakpointDesktop {
+      flex-direction: row;
+    }
 
     .text-block {
       max-width: 704px;
 
       .intro {
-        line-height: 0;
+        font-size: 13px;
+        width: 200px;
+        line-height: 21px;
+
+        @include breakpointDesktop{
+          width: 100%;
+          font-size: $font-size-big;
+        }
       }
     }
 
     .line {
-      height: 7px;
+      height: 3.5px;
+      width: 220px;
+      margin-top: 10px;
       border: none;
-      margin-top: 16px;
 
+      @include breakpointDesktop {
+        height: 7px;
+        margin-top: 16px;
+        width: 482px;
+      }
     }
 
     .line,
@@ -38,82 +56,143 @@
 
     .title {
       font-family: "helv", sans-serif;
-      margin: 148px 0 0 -28px;
-      width: 510px;
-      line-height: .9;
-      font-size: $font-size-title - 4px;
+      font-size: 44px;
+      margin-left: -14px;
+      margin-bottom: 0;
+      line-height: 38px;
       font-weight: 300;
-      height: 76px;
       text-transform: uppercase;
+
+      @include breakpointDesktop {
+        height: 76px;
+        margin: 148px 0 0 -28px;
+        width: 510px;
+        font-size: $font-size-title - 4px;
+        line-height: .9;
+      }
     }
 
     .subtitle {
-      font-size: $font-size-big * 2;
+      font-size: 28px;
+      width: 201px;
+      line-height: 45px;
+      margin-top: 50px;
+      margin-bottom: 25px;
       font-weight: 700;
-      line-height: 40px;
-      width: 679px;
-      margin: 70px 0 38px 0;
+
+      @include breakpointDesktop {
+        font-size: $font-size-big * 2;
+        line-height: 40px;
+        width: 679px;
+        margin: 50px 0 38px 0;
+      }
     }
   }
 
   .intro {
-    font-size: $font-size-big;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 13px;
     transform: scaleX(1.002);
+
+    @include breakpointDesktop {
+      font-size: $font-size-big;
+    }
   }
 
   .block-image {
-    margin-top: 80px;
-    margin-left: 10px;
+    margin: 27px 30px 0;
     position: relative;
     z-index: 2;
 
+    @include breakpointDesktop {
+      margin-top: 73px;
+      margin-left: 10px;
+    }
+
+    img {
+      width: 100%;
+
+      @include breakpointDesktop {
+        width: 384px;
+      }
+    }
+
     .dote {
-      width: 585px;
-      height: 217px;
+      height: 100px;
+      bottom: -3px;
+      right: 0;
+      width: 280px;
+      left: -30px;
       z-index: -1;
-      right: -117px;
-      bottom: -80px;
       position: absolute;
       background-image: url(/images/Paterns/02_patern.jpg);
       opacity: 0.1;
+
+      @include breakpointDesktop {
+        width: 585px;
+        height: 217px;
+        left: -103px;
+        bottom: -60px;
+      }
     }
   }
 
   .shadow {
     z-index: 1;
     background-color: #f9f9f9;
-    top: 219px;
+    top: 35.2rem;
     right: 0;
     width: 100%;
-    height: 224px;
+    height: 122px;
     max-width: 877px;
     position: absolute;
 
+    @include breakpointDesktop {
+      top: 219px;
+      height: 224px;
+    }
   }
 
   .shadow-triangle {
-    position: relative;
-    z-index: 1;
-    width: 0;
-    height: 0;
-    right: -28.8rem;
-    top: -22.5rem;
-    border-top: 295px solid #f9f9f9;
-    border-right: 295px solid transparent;
+    display: none;
+
+    @include breakpointDesktop {
+      display: block;
+      position: relative;
+      z-index: 1;
+      width: 0;
+      height: 0;
+      right: -28.8rem;
+      top: -22.5rem;
+      border-top: 295px solid #f9f9f9;
+      border-right: 295px solid transparent;
+    }
+
   }
 
   .subtext {
     color: $subtext-color;
-    font-size: ($font-size-title * 2) + 10px;
-    line-height: 210px;
+    font-size: 61px;
+    letter-spacing: 3px;
+    line-height: 64px;
     font-weight: 700;
     text-align: left;
+
+    @include breakpointDesktop {
+      font-size: ($font-size-title * 2) + 10px;
+      line-height: 210px;
+      letter-spacing: 3.5px;
+    }
   }
 
   .first-section {
-    margin-top: 15px;
+    margin-top: -20px;
+    z-index: 2;
+    position: relative;
+
+    @include breakpointDesktop {
+      margin-top: 6px;
+    }
 
     .subtext {
       margin-left: -12px;
@@ -131,34 +210,70 @@
 
     .card-section {
       position: relative;
-      margin-top: -35px;
+      margin-top: 46px;
       width: 100%;
       height: 100%;
       max-width: 1220px;
+
+      @include breakpointDesktop {
+        margin-top: -35px;
+      }
     }
 
     .cards {
       display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
-      margin-top: -15px;
-      width: 106%;
-      top: -40px;
-      margin-left: -20px;
+      width: 100%;
       position: relative;
+      top: -85px;
+
+      @include breakpointDesktop {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -15px;
+        top: -40px;
+        margin-left: -20px;
+        width: 106%;
+      }
     }
 
     .shadow-card {
-      width: 356px;
-      height: 300px;
-      margin: 0 80px 7rem 0;
+      width: 100%;
+      height: 220px;
+      margin: 30px 0;
       background: $white;
       background: linear-gradient(-135deg, transparent 30px, $white 0) top right;
       background-size: 100% 100%;
       background-repeat: no-repeat;
       color: $white;
 
-      &:nth-child(3n){
+      @include breakpointDesktop {
+        width: 356px;
+        height: 300px;
+        margin: 0 80px 7rem 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+
+        @include breakpointDesktop {
+          margin-bottom: 7rem;
+        }
+      }
+
+      &:nth-child(2n) {
         margin-right: 0;
+      }
+
+      @include breakpoint(lg-min) {
+        &:nth-child(2n) {
+          margin-right: 80px;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
       }
 
       .single-card::before {
@@ -177,38 +292,55 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 356px;
-      height: 300px;
+      width: 100%;
+      height: 220px;
+
+      @include breakpointDesktop {
+        width: 356px;
+        height: 300px;
+      }
 
       .top {
         z-index: -1;
         margin: 0;
-        width: 314px;
+        width: 241px;
         color: white;
         border: 0;
         box-shadow: 0px -3px 15px 1.5px rgba(0, 0, 0, 0.15);
+
+        @include breakpointDesktop {
+          width: 314px;
+        }
       }
 
       .right {
         z-index: -1;
-        height: 253px;
+        height: 184px;
         position: absolute;
         right: 0;
         top: 37px;
         color: white;
         border: 0;
-        box-shadow: 0 -3px 15px 1.5px rgba(0,0,0,0.15);
+        box-shadow: 0 -3px 15px 1.5px rgba(0, 0, 0, 0.15);
+
+        @include breakpointDesktop {
+          height: 253px;
+        }
       }
 
       .left {
         z-index: -1;
-        height: 300px;
+        height: 219px;
         position: absolute;
         left: 0;
-        top:-6px;
+        top: -6px;
         color: white;
         border: 0;
-        box-shadow: 0 -3px 15px 1.5px rgba(0,0,0,0.15);
+        box-shadow: 0 -3px 15px 1.5px rgba(0, 0, 0, 0.15);
+
+        @include breakpointDesktop {
+          height: 300px;
+        }
       }
 
       .angle {
@@ -220,49 +352,72 @@
         top: 10px;
         color: transparent;
         border: 0;
-        box-shadow: 3px -3px 15px 1.5px rgba(0,0,0,0.15);
+        box-shadow: 3px -3px 15px 1.5px rgba(0, 0, 0, 0.15);
       }
 
       .bottom {
         z-index: -1;
         position: absolute;
         bottom: 0;
-        width: 356px;
+        width: 100%;
         color: white;
         border: 0;
-        box-shadow: 0 5px 15px 1.5px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 10px 15px 1.5px rgba(0, 0, 0, 0.15);
+
+        @include breakpointDesktop {
+          width: 356px;
+        }
       }
     }
 
-    .developer,
     .status-block {
       width: 240px;
       margin: 0 auto;
     }
 
     .developer {
+      width: 160px;
+      margin-left: 20px;
       min-height: 135px;
       display: flex;
       align-items: center;
       color: $black;
-      padding-top: 40px;
-      font-size: $font-size-big + 4px;
+      padding-top: 20px;
+      font-size: 18px;
       font-weight: 700;
       text-align: left;
+
+      @include breakpointDesktop {
+        font-size: $font-size-big + 4px;
+        width: 240px;
+        margin: 0 auto;
+        padding-top: 40px;
+      }
     }
 
     .status-block {
-      padding-bottom: 66px;
+      width: 240px;
+      margin-left: 20px;
+      padding-bottom: 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @include breakpointDesktop {
+        margin: 0 auto;
+        padding-bottom: 66px;
+      }
     }
 
     .status {
       color: $black;
-      font-size: $font-size-base;
+      font-size: 11px;
       font-weight: 700;
       text-align: left;
+
+      @include breakpointDesktop {
+        font-size: $font-size-base;
+      }
     }
 
     .link {
@@ -285,24 +440,36 @@
 
   .second-section {
     .shadow {
-      top: -22.5rem;
-      left: -100px;
-      position: relative;
+      display: none;
+
+      @include breakpointDesktop {
+        display: block;
+        top: -22.5rem;
+        left: -100px;
+        position: relative;
+      }
     }
 
     .image-with-text {
       display: flex;
       margin-top: -19px;
-      margin-left: 87px;
+
+      @include breakpointDesktop {
+        margin-left: 87px;
+      }
     }
 
     .line {
       border: 0;
       background-color: #f1f1f1;
       max-width: 586px;
-      height: 7px;
+      height: 3.5px;
       margin: 0;
       width: 100%;
+
+      @include breakpointDesktop {
+        height: 7px;
+      }
     }
 
     .text {
@@ -312,38 +479,76 @@
       text-align: start;
       transform: rotate(180deg);
 
+      .name,
+      .position {
+        margin: 0;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 17px;
+
+        @include breakpointDesktop {
+          font-size: $font-size-big;
+          line-height: 24px;
+        }
+      }
+
       .name {
         color: $black;
-        margin: 0;
-        font-size: $font-size-big;
-        font-weight: 400;
-        line-height: 24px;
+        margin-right: 5px;
+
+        @include breakpointDesktop {
+          margin-right: 0;
+        }
       }
 
       .position {
         color: $grey;
-        margin: 0;
-        font-size: $font-size-big;
-        font-weight: 400;
-        line-height: 24px;
       }
     }
 
     .img {
       z-index: 3;
+
+      img {
+        width: 155px;
+
+        @include breakpointDesktop {
+          width: 310px;
+        }
+      }
+    }
+
+    .candidate {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-left: -20px;
+
+      @include breakpointDesktop {
+        flex-direction: row;
+        margin-left: 0;
+      }
     }
 
     .block {
-      height: 40rem;
+      height: 30rem;
+
+      @include breakpointDesktop {
+        height: 40rem;
+      }
     }
 
     .subtext {
-      position: relative;
-      font-size: $font-size-title + 41px;
-      z-index: 2;
-      margin-left: -1.8rem;
-      margin-top: 11rem;
-      letter-spacing: 2px;
+      display: none;
+
+      @include breakpointDesktop {
+        display: block;
+        position: relative;
+        font-size: $font-size-title + 41px;
+        z-index: 2;
+        margin-left: -1.8rem;
+        margin-top: 11rem;
+        letter-spacing: 2px;
+      }
     }
 
     .white-block {
@@ -351,86 +556,164 @@
       box-sizing: border-box;
       background-color: #ffffff;
       box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
-      width: 585px;
-      min-height: 339px;
-      margin-top: -4rem;
-      margin-left: -10rem;
+      width: 248px;
+      height: 292px;
+      top: 155px;
       z-index: 4;
       position: relative;
+      left: -103px;
+
+      @include breakpointDesktop {
+        width: 585px;
+        min-height: 339px;
+        top: -4rem;
+        left: -10rem;
+      }
 
       .info {
         color: $black;
-        font-size: $font-size-big;
+        font-size: 13px;
         font-weight: 400;
-        line-height: 26px;
+        line-height: 18px;
         text-align: left;
+
+        @include breakpointDesktop {
+          line-height: 26px;
+          font-size: $font-size-big;
+        }
       }
 
       .info-block {
-        padding: 49px 49px 0 49px;
+        padding: 25px 25px 0 25px;
+
+        @include breakpointDesktop {
+          padding: 49px 49px 0 49px;
+        }
       }
 
       .number {
-        margin-top: 46px;
         align-items: center;
         display: flex;
         color: $black;
-        font-size: $font-size-big + 4px;
+        font-size: 18px;
         font-weight: 700;
         line-height: 26px;
         text-align: left;
 
+        @include breakpointDesktop {
+          margin-top: 46px;
+           font-size: $font-size-big + 4px;
+        }
+
         .number-line {
-          background-color: $black;
-          width: 49px;
-          height: 3px;
-          margin: 0;
+          display: none;
+
+          @include breakpointDesktop {
+            display: block;
+            background-color: $black;
+            width: 49px;
+            height: 3px;
+            margin: 0;
+          }
+
         }
 
         p {
-          margin: 0 0 0 20px;
+          margin: 10px 0 0;
+
+          @include breakpointDesktop {
+            margin: 0 0 0 20px;
+          }
         }
       }
     }
   }
 
   .third-section {
-    margin-top: 200px;
-    height: 755px;
+    margin-top: 70px;
+    min-height: 400px;
+    margin-bottom: 40px;
     position: relative;
+
+    @include breakpointDesktop {
+      margin-top: 200px;
+      height: 755px;
+      top: 0;
+      margin-bottom: 0;
+    }
 
     .subtext {
       z-index: 3;
-      font-size: 240.82px;
-      margin-left: 13.2rem;
+      font-size: 82px;
+      margin: 0;
+      top: 29rem;
+      left: -17px;
+      letter-spacing: 3px;
       position: relative;
-      top: 19rem;
-      left: 3rem;
-      letter-spacing: 4px;
+
+      @include breakpointDesktop {
+        font-size: 240.82px;
+        margin-left: 13.2rem;
+        top: 19rem;
+        left: 3rem;
+        letter-spacing: 4px;
+      }
     }
 
     .image-logo {
       z-index: 2;
       position: relative;
-      top: inherit;
-      margin-top: -31.5rem;
-      left: -2rem;
+      top: -165px;
+      left: -10px;
+
+      @include breakpointDesktop {
+        margin-top: -31.5rem;
+        top: inherit;
+        left: -2rem;
+      }
+
+      img {
+        width: 300px;
+
+        @include breakpointDesktop {
+          width: 645px;
+        }
+      }
     }
 
     .dote {
       z-index: 1;
       position: absolute;
-      top: 9.5rem;
-      left: 28.5rem;
+      top: 220px;
       background-image: url(/images/Paterns/02_patern.jpg);
-      width: 450px;
-      height: 330px;
+      width: 100%;
+      height: 203px;
       opacity: 0.1;
+
+      @include breakpointDesktop {
+        width: 450px;
+        height: 330px;
+        top: 9.5rem;
+        left: 28.5rem;
+      }
     }
 
     .image {
-      top: -9.5rem;
-      left: 5rem;
+      left: 35px;
+      top: -10px;
+
+      @include breakpointDesktop {
+        top: -9.5rem;
+        left: 5rem;
+      }
+
+      img {
+        width: 70px;
+
+        @include breakpointDesktop {
+          width: 125px;
+        }
+      }
     }
 
     .text-block,
@@ -440,28 +723,44 @@
     }
 
     .text-block {
-      top: -37.1rem;
-      left: 19.5rem;
-      position: relative;
+      position: absolute;
+      top: 230px;
+
+      @include breakpointDesktop {
+        position: relative;
+        top: -37.1rem;
+        left: 19.5rem;
+      }
 
       .title {
         color: $black;
-        font-size: 39.94px;
+        font-size: 28px;
         line-height: 34px;
         font-weight: 700;
         text-align: left;
         transform: scaleX(1.002);
+
+        @include breakpointDesktop {
+          font-size: 39.94px;
+        }
       }
 
       .subtitle {
         color: $black;
-        font-size: $font-size-big;
+        font-size: 13px;
         font-weight: 400;
-        line-height: 26px;
         text-align: left;
         transform: scaleX(1.002);
-        width: 547px;
-        margin: 51px 0 51px;
+        margin: 17px 0 30px;
+        width: 243px;
+        line-height: 20px;
+
+        @include breakpointDesktop {
+          font-size: $font-size-big;
+          margin: 51px 0 51px;
+          line-height: 26px;
+          width: 547px;
+        }
       }
 
       .button {
