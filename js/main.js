@@ -8,7 +8,7 @@ $(function(){
     var toggleMenuInput =  $("#menuToggle input[type='checkbox']");
     var horizontalBox = $(".horizontal-box").find(".card");
 
-    var mobileMenuValue = 1024;
+    var mobileMenuValue = 1060;
 
     var LINES_NUM = 4;
     var MOB_LINES_NUM = 2;
@@ -86,10 +86,10 @@ $(function(){
     function lines(){
         var linesConteiner = $('.lines');
         var line = linesConteiner.find("div");
-        var conteiner = $('#skrollr-body .container');
+        var conteiner = $('.mobile');
 
         var linesWidth = conteiner.width();
-        var linesHeight = conteiner.height() + 50;
+        var linesHeight = conteiner.height() + 100;
 
         linesConteiner.width(linesWidth);
         linesConteiner.height(linesHeight);
@@ -187,5 +187,5 @@ $(function(){
 
     toggleMenuWhenResize();
     generateSlides();
-
+    lines();
 });

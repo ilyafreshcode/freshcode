@@ -17,14 +17,14 @@
 
 .quotes-2 {
   position: relative;
-  margin: 622px -70px 0 0;
+  margin: 614px -70px 0 0;
   width: 100px;
   z-index: 700;
 
   @include breakpoint($screen-default){
     position: absolute;
     float: none !important;
-    margin: 1609px 0 0 230px;
+    margin: 1669px 0 0 230px;
     img{
       height: auto;
       width: 35%;
