@@ -1,0 +1,9 @@
+
+<div>
+  <div>
+    <div>{{site.data.single[0].offer_title}}</div>
+    {% for item in site.data.single[0].offer_body %}
+    <p>- {{item.title}}</p>
+    {% endfor %}
+  </div>
+</div>

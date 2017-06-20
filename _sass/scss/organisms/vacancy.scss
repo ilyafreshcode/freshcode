@@ -84,7 +84,7 @@
         font-size: $font-size-big * 2;
         line-height: 40px;
         width: 679px;
-        margin: 50px 0 38px 0;
+        margin: 50px 0 46px 0;
       }
     }
   }
@@ -653,10 +653,10 @@
       }
 
       .info-block {
-       // padding: 25px 25px 0 25px;
+        // padding: 25px 25px 0 25px;
 
         @include breakpointDesktop {
-        //  padding: 49px 49px 0 49px;
+          //  padding: 49px 49px 0 49px;
         }
       }
 
@@ -684,7 +684,7 @@
 
         @include breakpointDesktop {
           margin-top: 46px;
-           font-size: $font-size-big + 4px;
+          font-size: $font-size-big + 4px;
         }
 
         .number-line {
@@ -885,7 +885,7 @@
         width: 215px;
         height: 50px;
         box-shadow: 0 5px 20px 0 rgba(0, 225, 164, 0.4);
-        padding: 15px 0px;
+        padding: 15px 0;
       }
     }
   }

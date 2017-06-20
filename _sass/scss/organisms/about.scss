@@ -141,7 +141,7 @@
         }
 
         @include breakpoint(lg) {
-          bottom: -113px;
+          bottom: -120px;
           max-width: 934px;
           height: 41vw;
           width: 80vw;
@@ -241,6 +241,7 @@
 
       @include breakpointDesktop {
         font-size: 239.63px;
+        line-height: 210px;
         top: -27rem;
         letter-spacing: 1px;
         bottom: 0;
