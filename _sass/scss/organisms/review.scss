@@ -9,7 +9,7 @@
   }
 
   .title-section {
-    margin-top: -2131px;
+    margin-top: -2157px;
     @include breakpoint($screen-default) {
       margin-top: -2932px;
     }
@@ -175,13 +175,13 @@
     position: relative;
     margin: -150px 0 0 50%;
     width: 25%;
-    height: 1876px;
+    height: 1901px;
     z-index: -20;
     opacity: 0.15;
 
     @include breakpoint($screen-default){
       margin-top: -139px;
-      height: 2715px;
+      height: 2735px;
       width: 50%;
     }
 
