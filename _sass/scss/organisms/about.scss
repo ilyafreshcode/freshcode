@@ -12,13 +12,27 @@
     font-family: "Roboto", sans-serif;
   }
 
+  .subtext {
+    color: $subtext-color;
+    font-weight: 700;
+    text-align: left;
+  }
+
   .base-section {
+    display: flex;
     position: relative;
     flex-direction: column;
 
     @include breakpointDesktop {
       margin-top: 95px;
       flex-direction: row;
+    }
+
+    .line,
+    .subtitle,
+    .intro {
+      z-index: 2;
+      position: relative;
     }
 
     .text-block {
@@ -32,12 +46,13 @@
     }
 
     .title {
-      margin-top: 40px;
       max-width: 510px;
       font-family: "helv", sans-serif;
       font-size: 44px;
       height: 35px;
-      margin-left: -15px;
+      margin: 40px 0 0 -15px;
+      line-height: .9;
+      text-transform: uppercase;
 
       @include breakpointDesktop {
         margin: 128px 0 0 -35px;
@@ -60,6 +75,7 @@
     .subtitle {
       font-size: 28px;
       line-height: 35px;
+      font-weight: 700;
       max-width: 489px;
       width: 100%;
       margin: 40px 0 29px 0;
@@ -116,6 +132,7 @@
       display: inline-block;
       max-width: 600px;
       overflow: hidden;
+      position: relative;
 
       @include breakpointDesktop {
         width: 100%;
@@ -135,23 +152,25 @@
         left: 0;
         background-image: url(/images/Paterns/patern_04.png);
         bottom: 0;
+        position: absolute;
 
         @include breakpointDesktop {
           left: -49%;
-          bottom: -319px;
+          bottom: -335px;
           max-width: 934px;
           height: 59vw;
           width: 80vw;
           max-height: 601px;
           opacity: 0.9;
+          z-index: 1;
         }
 
         @include breakpoint(lg) {
-          bottom: -120px;
+          bottom: -137px;
           max-width: 934px;
-          height: 47vw;
+          height: 55vw;
           width: 80vw;
-          max-height: 581px;
+          max-height: 599px;
         }
 
       }
@@ -199,8 +218,8 @@
       @include breakpointDesktop {
         background-color: $white;
         width: 587px;
-        height: 225px;
-        top: -15px;
+        height: 220px;
+        top: -25px;
         position: absolute;
       }
     }
@@ -248,7 +267,7 @@
       @include breakpointDesktop {
         font-size: 239.63px;
         line-height: 210px;
-        top: -27rem;
+        top: -26rem;
         letter-spacing: 1px;
         bottom: 0;
       }
@@ -328,6 +347,7 @@
 
       @include breakpointDesktop {
         left: 22.2rem;
+        top: 70px;
       }
 
       p {
@@ -402,7 +422,7 @@
   }
 
   .second-section {
-    margin: 20px auto;
+    margin: 60px auto;
     position: relative;
     max-width: 520px;
 

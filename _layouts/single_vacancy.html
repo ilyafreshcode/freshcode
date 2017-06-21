@@ -4,17 +4,29 @@ layout: default
 <div class="container mobile">
   {% include lines.html %}
 
-  <div class="single-section" style=" margin-top: 200px;">
+  <div class="single-section">
+
   <div class="experience">
+    <div class="rectangle"></div>
     <div class="vacancy-title">
       {{ page.title}}
     </div>
-    {% include single/experience.html %}
-    {% include single/plus.html %}
-    {% include single/offer.html  %}
+    <div class="demands-blocks">
+      {% include single/experience.html %}
+      {% include single/plus.html %}
+      {% include single/offer.html  %}
+    </div>
+
   </div>
- <div class="form">
-   contacts
- </div>
+
+   <div class="form">
+     <div class="form-content">
+       <div class="iframe-border">
+         <iframe class="frame" scrolling="no" src="{{site.data.contacts.iframe}}" frameborder="0"></iframe>
+       </div>
+     </div>
+   </div>
+
   </div>
+
 </div>
