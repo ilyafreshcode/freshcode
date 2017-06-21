@@ -33,3 +33,9 @@ sass:
 
 markdown: kramdown
 permalink: pretty
+
+page_gen:
+  - data: 'single'
+    template: 'single_vacancy'
+    name: 'title_page'
+    dir: 'vacancies'

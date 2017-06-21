@@ -1,6 +1,6 @@
 [
   {
-    "key": "1",
+    "title_page": "c_developer",
     "title": "Вакансия С++ developer",
     "experience_title": "Требуемый опыт работы:",
     "experience_body": [
@@ -78,11 +78,11 @@
       },
       {
         "title": "Конкурентная заработная плата."
-      },
+      }
     ]
   },
   {
-    "key": "2",
+    "title_page": "sales_manager",
     "title": "Вакансия IT Sales manager/Менеджер по продажам IT услуг",
     "experience_title": "Требуемый опыт работы:",
     "experience_body": [
@@ -124,7 +124,7 @@
     ]
   },
   {
-    "key": "3",
+    "title_page": "product_manager",
     "title": "Вакансия Product manager/Продакт менеджер",
     "experience_title": "Требуемый опыт работы:",
     "experience_body": [
@@ -166,7 +166,7 @@
     ]
   },
   {
-    "key": "4",
+    "title_page": "project_manager",
     "title": "Вакансия Project manager/Business analyst",
     "experience_title": "Требуемый опыт работы:",
     "experience_body": [
@@ -208,7 +208,7 @@
     ]
   },
   {
-    "key": "5",
+    "title_page": "ppc_manager",
     "title": "Вакансия PPC manager/ Специалист по контекстной рекламе",
     "experience_title": "Требуемый опыт работы:",
     "experience_body": [
@@ -250,7 +250,7 @@
     ]
   },
   {
-    "key": "6",
+    "title_page": "seo_specialist",
     "title": "Вакансия SEO specialist",
     "experience_title": "Требуемый опыт работы:",
     "experience_body": [
