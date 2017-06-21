@@ -34,20 +34,6 @@
         "link": "contacts",
         "text": "Контакты"
       }
-    ],
-    "vacancies" : [
-      {
-        "value" : "1",
-        "text" : "Вакансия 1"
-      },
-      {
-        "value" : "2",
-        "text" : "Вакансия 2"
-      },
-      {
-        "value" : "3",
-        "text" : "Вакансия 3"
-      }
     ]
   },
   "footer" : {

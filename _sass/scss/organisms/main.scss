@@ -30,14 +30,6 @@
   }
 }
 
-.mobile {
-  @include breakpoint(1024px) {
-    max-width: 280px;
-    margin: 0 auto;
-    padding: 0;
-  }
-}
-
 .main-img {
   img {
     height: auto;
@@ -70,10 +62,10 @@
 
 .team-img {
   position: absolute;
-  margin: -39px 0 0 -70px;
+  margin: -38px 0 0 -94px;
   z-index: -1;
   color: $subtext-color;
-  font-size: 236px;
+  font-size: 242px;
   line-height: 168px;
   font-weight: 700;
   width: 120%;
@@ -313,7 +305,7 @@
       display: block;
       position: relative;
       height: 510px;
-      opacity: 0.2;
+      opacity: $opacity-bg;
       margin: -390px 0 0 285px;
       width: calc(100% - 285px);
     }
@@ -401,7 +393,7 @@
       width: 100%;
       height: 500px;
       z-index: -20;
-      opacity: 0.2;
+      opacity: $opacity-bg;
     }
 
     .why-freshcode-slides {
@@ -522,7 +514,7 @@
       display: block;
       position: relative;
       height: 343px;
-      opacity: 0.2;
+      opacity: $opacity-bg;
       margin: -185px 0 0 290px;
       width: calc(100% - 290px);
       z-index: -100;
@@ -538,7 +530,7 @@
   }
 
   .vacancy-img-text {
-    margin: -155px 0 0 290px;
+    margin: -157px 0 0 290px;
     position: relative;
     z-index: -10;
     @include breakpoint($screen-default){
@@ -567,7 +559,7 @@
     width: 490px;
     height: 450px;
     z-index: -20;
-    opacity: 0.2;
+    opacity: $opacity-bg;
 
     @include breakpoint($screen-default) {
       margin: -70px 0 0 0;

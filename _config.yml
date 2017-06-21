@@ -29,7 +29,9 @@ include:
 sass:
      sass_dir: _sass/scss
      style: compressed
-
+defaults:
+  - values:
+      layout: "default"
 
 markdown: kramdown
 permalink: pretty
