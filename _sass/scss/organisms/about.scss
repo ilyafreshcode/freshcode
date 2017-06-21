@@ -138,6 +138,7 @@
           height: 54vw;
           width: 80vw;
           max-height: 581px;
+          opacity: 0.9;
         }
 
         @include breakpoint(lg) {
@@ -193,8 +194,8 @@
       @include breakpointDesktop {
         background-color: $white;
         width: 587px;
-        height: 212px;
-        top: -13px;
+        height: 225px;
+        top: -15px;
         position: absolute;
       }
     }
@@ -636,12 +637,10 @@
       width: 100%;
 
       @include breakpointDesktop {
-        width: 998px;
+        width: 999px;
         height: 51px;
-        margin-top: 58px;
         position: absolute;
-        margin-left: 172px;
-        bottom: 70px;
+        bottom: 50px;
         right: 0;
       }
     }
@@ -668,9 +667,9 @@
       opacity: 0.1;
 
       @include breakpointDesktop {
-        top: 0;
+        top: 18px;
         width: 876px;
-        height: 400px;
+        height: 378px;
       }
     }
 
@@ -884,6 +883,11 @@
 
     .block {
 
+      @include breakpointDesktop {
+        position: relative;
+        top: 20px;
+      }
+
       .title {
         color: $black;
         font-size: 28px;
@@ -897,7 +901,7 @@
         @include breakpointDesktop {
           font-size: 40px;
           line-height: 40px;
-          margin: 0 0 43px 0;
+          margin: 0 0 35px 0;
         }
       }
 
@@ -933,7 +937,7 @@
       @include breakpointDesktop {
         position: absolute;
         flex-direction: row;
-        top: 110px;
+        top: 100px;
         right: -48px;
         width: 700px;
         max-width: none;
