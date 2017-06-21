@@ -530,11 +530,16 @@
     }
 
     .text {
-      bottom: 5px;
-      position: relative;
-      writing-mode: vertical-rl;
-      text-align: start;
-      transform: rotate(180deg);
+      height: 50px;
+      transform: rotate(270deg);
+      position: absolute;
+      bottom: -70px;
+      left: -15px;
+
+      @include breakpointDesktop {
+        bottom: 55px;
+        left: -30px;
+      }
 
       .name,
       .position {
@@ -579,17 +584,24 @@
       display: flex;
       flex-direction: column-reverse;
       margin-left: -20px;
+      position: relative;
 
       @include breakpointDesktop {
         width: 50%;
         flex-direction: row;
         margin-left: 0;
       }
+
+      img {
+        @include breakpointDesktop {
+          margin-left: 60px;
+        }
+      }
     }
 
     .block {
       width: 100%;
-      height: 30rem;
+      height: 23rem;
       position: relative;
 
       @include breakpointDesktop {
@@ -629,7 +641,7 @@
       background-color: #ffffff;
       box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
       width: 248px;
-      height: 267px;
+      height: 195px;
       top: 155px;
       z-index: 4;
       position: relative;
