@@ -1,9 +1,8 @@
-
-<div>
-  <div>
-    <div>{{site.data.single[0].experience_title}}</div>
-    {% for item in site.data.single[0].experience_body %}
-    <p>- {{item.title}}</p>
+  <div class="job">
+    <div class="title">{{page.experience_title}}</div>
+    {% for item in page.experience_body %}
+    <div class="inline">
+      <hr><p>{{item.title}}</p>
+    </div>
     {% endfor %}
   </div>
-</div>

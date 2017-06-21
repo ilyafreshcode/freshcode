@@ -7,11 +7,14 @@ layout: default
   <div class="single-section">
 
   <div class="experience">
-    <div class="rectangle"></div>
-    <div class="vacancy-title">
-      {{ page.title}}
+    <div class="top-title">
+      <div class="vacancy-title">
+        {{ page.title}}
+      </div>
     </div>
+
     <div class="demands-blocks">
+      <div class="bckg-line"></div>
       {% include single/experience.html %}
       {% include single/plus.html %}
       {% include single/offer.html  %}
@@ -20,6 +23,9 @@ layout: default
   </div>
 
    <div class="form">
+
+
+     <div class="bckg-form"></div>
      <div class="form-content">
        <div class="iframe-border">
          <iframe class="frame" scrolling="no" src="{{site.data.contacts.iframe}}" frameborder="0"></iframe>

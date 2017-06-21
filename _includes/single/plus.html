@@ -1,9 +1,8 @@
-
-<div>
-  <div>
-    <div>{{site.data.single[0].plus_title}}</div>
-    {% for item in site.data.single[0].plus_body %}
-    <p>- {{item.title}}</p>
+  <div class="plus">
+    <div class="title">{{page.plus_title}}</div>
+    {% for item in page.plus_body %}
+    <div class="inline">
+      <hr><p>{{item.title}}</p>
+    </div>
     {% endfor %}
   </div>
-</div>
