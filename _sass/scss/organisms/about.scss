@@ -2,12 +2,17 @@
 @import "../variables";
 
 .about {
+  @include breakpoint(1024px) {
+    display: inline-block;
+    width: 280px;
+    margin-top: 60px;
+  }
+
   * {
     font-family: "Roboto", sans-serif;
   }
 
   .base-section {
-    margin-top: 50px;
     position: relative;
     flex-direction: column;
 
@@ -133,18 +138,18 @@
 
         @include breakpointDesktop {
           left: -49%;
-          bottom: -303px;
+          bottom: -319px;
           max-width: 934px;
-          height: 54vw;
+          height: 59vw;
           width: 80vw;
-          max-height: 581px;
+          max-height: 601px;
           opacity: 0.9;
         }
 
         @include breakpoint(lg) {
           bottom: -120px;
           max-width: 934px;
-          height: 41vw;
+          height: 47vw;
           width: 80vw;
           max-height: 581px;
         }
@@ -297,16 +302,23 @@
     }
 
     .bottom {
-      bottom: 55px;
+      bottom: 35px;
       left: 52px;
       width: 80px;
       z-index: 2;
 
-      @include breakpointDesktop {
+      @include tabletVersion {
+        left: 21.5rem;
+        width: 123px;
+        top: 34rem;
+      }
+
+      @include breakpoint(lg-max) {
         left: 21.5rem;
         width: 123px;
         top: 33rem;
       }
+
     }
 
     .right-text {

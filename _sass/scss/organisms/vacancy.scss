@@ -4,6 +4,12 @@
 .vacancy {
   margin-top: 95px;
 
+  @include breakpoint(1024px) {
+    display: inline-block;
+    width: 280px;
+    margin-top: 60px;
+  }
+
   .base-section {
     position: relative;
     display: flex;
