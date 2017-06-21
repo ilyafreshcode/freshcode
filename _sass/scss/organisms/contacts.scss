@@ -25,7 +25,7 @@
       }
       @include breakpoint($screen-default){
         padding-right: 0;
-        margin: -489px 935px 0 0;
+        margin: -477px 935px 0 0;
 
         -moz-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
@@ -67,9 +67,9 @@
     overflow: hidden;
 
     @include breakpoint($screen-default){
-      margin: -489px 0 150px 0;
-      padding: 15px 0 0 15px;
-      height: 525px;
+      margin: -479px 0 150px 0;
+      padding: 17px 0 0 23px;
+      height: 500px;
       width: 100%;
     }
 
@@ -80,7 +80,7 @@
     .iframe-border{
       width: 104%;
       overflow: hidden;
-      height: 530px;
+      height: 535px;
 
       @include breakpoint($screen-default){
         height: 510px;
@@ -89,13 +89,13 @@
     }
 
     .frame{
-      margin: -52px 0 0 -18px;
+      margin: -53px 0 0 -18px;
       width: 100%;
-      height: 578px;
+      height: 589px;
       overflow: hidden;
 
       @include breakpoint($screen-default){
-        margin: -65px 0 0 -18px;
+        margin: -70px 0 0 -18px;
         height: 580px;
       }
     }

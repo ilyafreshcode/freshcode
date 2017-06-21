@@ -32,15 +32,15 @@
     "slider": [
       [
         {
-          "img": "/images/about/about_slider/heads.svg",
+          "img": "/images/about/about_slider/icon_heads.svg",
           "text": "Профессиональная команда"
         },
         {
-          "img": "/images/about/about_slider/builds.svg",
+          "img": "/images/about/about_slider/icon_building.svg",
           "text": "Проекты ведущих компаний"
         },
         {
-          "img": "/images/about/about_slider/сase.svg",
+          "img": "/images/about/about_slider/icon_bag.svg",
           "text": "Успешная карьера и развитие"
         }
       ],

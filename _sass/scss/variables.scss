@@ -36,7 +36,7 @@ $screen-xs-max: ($screen-sm-min - 1);
 $screen-sm-max: ($screen-md-min - 1);
 $screen-md-max: ($screen-lg-min - 1);
 $screen-menu-desktop: 1150px;
-$screen-default: 1100px;
+$screen-default: 1024px;
 $screen-ipad: 870px;
 $screen-nexus: 712px;
 $screen-iphone-plus: 427px;
@@ -50,3 +50,5 @@ $screen-iphone-sm: 337px;
   font-style: normal;
 }
 $font-style-caption: 'helv', sans-serif;
+
+$opacity-bg: 0.1;

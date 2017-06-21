@@ -29,7 +29,7 @@
       @include breakpoint($screen-default){
         font-size: $font-size-title - 50px;
         height: 48px;
-        margin: 201px 0 110px -15px;
+        margin: 182px 0 110px -15px;
         overflow: hidden;
       }
 
@@ -50,7 +50,7 @@
     margin-top: -454px;
 
     @include breakpoint($screen-default){
-      margin-top: -541px;
+      margin-top: -561px;
     }
 
 
@@ -177,7 +177,7 @@
     width: 25%;
     height: 1901px;
     z-index: -20;
-    opacity: 0.15;
+    opacity: $opacity-bg;
 
     @include breakpoint($screen-default){
       margin-top: -139px;
@@ -234,7 +234,7 @@
     width: 50%;
     height: 530px;
     z-index: -20;
-    opacity: 0.15;
+    opacity: $opacity-bg;
 
     @include breakpoint($screen-default){
       display: none;
