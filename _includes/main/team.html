@@ -1,9 +1,9 @@
-<div class="quotes-2 float-right">
-    <img src={{ site.data.links.images.quotes-1 }}  />
-</div>
-
 <div class="content-parallax-2">
-    <section class="description">
+    <div class="quotes-2 float-right begin-position-qopen transition-animation">
+        <img src={{ site.data.links.images.quotes-1 }}  />
+    </div>
+
+    <section class="description begin-position-text transition-animation">
         <h3>{{ site.data.main.sections.team.title }}</h3>
         <span>{{ site.data.main.sections.team.text }}</span>
     </section>
@@ -12,14 +12,14 @@
     <a href="#CVForm" class="button send-cv-position">Отправить резюме</a>
 
 
-    <div class="quotes">
+    <div class="quotes begin-position-qclose transition-animation">
         <img src={{ site.data.links.images.quotes-2 }} />
     </div>
 
-    <div class="team-img">Команда</div>
+    <div class="team-img begin-position-team transition-animation-slow">Команда</div>
 
 
-    <section id="slides-vertical" class="vertical-box float-right">
+    <section id="slides-vertical" class="vertical-box float-right begin-position-box transition-animation">
         {% for c in site.data.main.vertical-cards %}
         <div class="card">
             <div class="card-image">
@@ -41,7 +41,7 @@
     </section>
 
 
-    <section id="slides-horizontal" class="horizontal-box" data-0="margin-top: 0px" data-1000="margin-top: -50px">
+    <section id="slides-horizontal" class="horizontal-box begin-position-box transition-animation">
         {% for c in site.data.main.horizontal-cards %}
         <div class="card horizontal">
             <div class="card-image">

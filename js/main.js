@@ -17,6 +17,12 @@ $(function(){
 
 
     function generateSlides(){
+        var slideSpeed = 1000;
+
+        var showCurrentSlide = function(number, applyTo){
+            $(applyTo).text(number);
+        };
+
         $('#slides-vertical').slidesjs({
             width: 381,
             height: 579,
@@ -24,21 +30,19 @@ $(function(){
             pagination: false,
             callback: {
                 loaded: function(number) {
-                    $('.slider-number-vertical').text(number);
+                    showCurrentSlide(number, '.slider-number-vertical');
                 },
-                start: function(number) {
-
-                },
+                start: function(number) {},
                 complete: function(number) {
-                    $('.slider-number-vertical').text(number);
+                    showCurrentSlide(number, '.slider-number-vertical');
                 }
             },
             effect: {
                 slide: {
-                    speed: 1000
+                    speed: slideSpeed
                 },
                 fade: {
-                    speed: 1000,
+                    speed: slideSpeed,
                     crossfade: true
                 }
             }
@@ -51,7 +55,7 @@ $(function(){
             pagination: false,
             callback: {
                 loaded: function(number) {
-                    $('.slider-number-horizontal').text(number);
+                    showCurrentSlide(number, '.slider-number-horizontal');
                 },
                 start: function(number) {
                     $('#slides-horizontal .slidesjs-navigation').hide();
@@ -59,15 +63,15 @@ $(function(){
                 },
                 complete: function(number) {
                     $('#slides-horizontal .slidesjs-navigation').show();
-                    $('.slider-number-horizontal').text(number);
+                    showCurrentSlide(number, '.slider-number-horizontal');
                 }
             },
             effect: {
                 slide: {
-                    speed: 1000
+                    speed: slideSpeed
                 },
                 fade: {
-                    speed: 1000,
+                    speed: slideSpeed,
                     crossfade: true
                 }
             }
@@ -82,27 +86,26 @@ $(function(){
             pagination: false,
             callback: {
                 loaded: function(number) {
-                    $('.slider-number-horizontal-1').text(number * IMG_NUM);
+                    showCurrentSlide(number * IMG_NUM, '.slider-number-horizontal-1');
                 },
                 start: function(number) {
 
                 },
                 complete: function(number) {
-                    $('.slider-number-horizontal-1').text(number * IMG_NUM);
+                    showCurrentSlide(number * IMG_NUM, '.slider-number-horizontal-1');
                     $('.top-navigation').css("lest", "0");
                 }
             },
             effect: {
                 slide: {
-                    speed: 1000
+                    speed: slideSpeed + 500
                 },
                 fade: {
-                    speed: 1000,
+                    speed: slideSpeed + 500,
                     crossfade: false
                 }
             }
         });
-
 
         $('.all-vertical-num').text($('#slides-vertical .card').length);
         $('.all-horizontal-num').text($('#slides-horizontal .card').length);
@@ -183,6 +186,13 @@ $(function(){
     }
 
 
+    function animation(){
+        var animation = new Animation();
+        animation.init();
+    }
+
+
+
     $('.modal').modal(
         {
             dismissible: true,
@@ -213,4 +223,53 @@ $(function(){
     toggleMenuWhenResize();
     generateSlides();
     lines();
+    animation();
 });
+
+
+var Animation = function(){
+
+    this.init = function(){
+      mainPage();
+    };
+
+    var mainPage = function(){
+        var options = [
+            {selector: '.content-parallax-2', offset: 50, callback: function(){
+                $(".content-parallax-2 .description").addClass("text-animation");
+            } },
+            {selector: '.content-parallax-2', offset: 150, callback: function(){
+                $(".content-parallax-2 .team-img").addClass("team-animation");
+            } },
+            {selector: '.content-parallax-2', offset: 350, callback: function(){
+                $(".content-parallax-2 .vertical-box").addClass("box-animation")
+            } },
+            {selector: '.content-parallax-2', offset: 450, callback: function(){
+                $(".content-parallax-2 .horizontal-box").addClass("box-animation")
+            } },
+            {selector: '.content-parallax-2', offset: 250, callback: function(){
+                $(".content-parallax-2 .quotes").addClass("qclose-animation")
+            } },
+            {selector: '.content-parallax-2', offset: 550, callback: function(){
+                $(".content-parallax-2 .quotes-2").addClass("qopen-animation")
+            } },
+            {selector: '.content-parallax-3', offset: 50, callback: function(){
+                $(".content-parallax-3 .description").addClass("textnext-animation");
+            } },
+            {selector: '.content-parallax-4', offset: 100, callback: function(){
+                $(".content-parallax-4 .begin-position-img").addClass("eye-animation");
+            } },
+            {selector: '.content-parallax-4', offset: 150, callback: function(){
+                $(".content-parallax-4 .begin-position-vac-text").addClass("vac-text-animation");
+            } },
+            {selector: '.content-parallax-4', offset: 350, callback: function(){
+                $(".content-parallax-4 .begin-position-triangle").addClass("triangle-animation");
+            } },
+            {selector: '.content-parallax-4', offset: 400, callback: function(){
+                $(".content-parallax-4 .begin-position-vacSubtitble").addClass("vacSubtitble-animation");
+            } }
+        ];
+        Materialize.scrollFire(options);
+    }
+
+};
