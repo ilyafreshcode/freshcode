@@ -127,11 +127,6 @@
     height: 550px;
   }
 
-  @keyframes fadeInTitle {
-    from {transform: translate3d(0, 24%, 0);}
-    to {transform: none;}
-  }
-
   .title-animation{
     animation-name: fadeInTitle;
   }
@@ -147,27 +142,12 @@
     margin-top: -60px;
   }
 
-  @keyframes fadeInText {
-    from {transform: translate3d(24%, 0, 0);}
-    to {transform: none;}
-  }
-
-  @keyframes fadeInQuotesClose {
-    from {transform: translate3d(0, -120%, 0);}
-    to {transform: none;}
-  }
-
-  @keyframes fadeInQuotesOpen {
-    from {transform: translate3d(0, 250%, 0);}
-    to {transform: none;}
-  }
-
   .qopen-animation {
     animation-name: fadeInQuotesOpen;
   }
 
   .begin-position-qopen {
-    transform: translate3d(0, 250%, 0);
+    @include beginPosition(0, 250%);
   }
 
   .qclose-animation {
@@ -175,7 +155,7 @@
   }
 
   .begin-position-qclose {
-    transform: translate3d(0, -120%, 0);
+    @include beginPosition(0, -120%);
   }
 
   .text-animation{
@@ -187,11 +167,11 @@
   }
 
   .begin-position-text{
-    transform: translate3d(24%, 0, 0);
+    @include beginPosition(24%, 0);
   }
 
   .begin-position-team{
-    transform: translate3d(24%, 0, 0);
+    @include beginPosition(24%, 0);
   }
 
   .card-style {
@@ -200,10 +180,17 @@
       weight: 500;
     }
 
+    @include breakpoint($screen-default){
+      font-size: $font-size-base - 2px;
+    }
+
     .text {
       font: {
         size:  $font-size-base;
         weight: 400;
+      }
+      @include breakpoint($screen-default){
+        font-size: $font-size-base - 2px;
       }
     }
 
@@ -217,6 +204,9 @@
         size: 20px;
         weight: 400;
       }
+      @include breakpoint($screen-default){
+        font-size: $font-size-base;
+      }
     }
 
   }
@@ -229,7 +219,7 @@
     }
     @include breakpoint($screen-default) {
       margin: {
-        top: 260px;
+        top: 270px;
         left: 0;
       }
     }
@@ -246,10 +236,10 @@
     margin: -297px -30px 0 0;
 
     @include breakpoint($screen-default) {
-      margin-top: -76px;
+      margin-top: -66px;
       margin-right: 0px;
       width: 251px;
-      height: 620px;
+      height: 575px;
     }
 
     .card-style{
@@ -287,11 +277,11 @@
       height: 370px !important;
     }
     @include breakpoint($screen-default) {
-      margin-top: 583px;
+      margin-top: 560px;
       width: 251px;
-      height: 680px;
+      height: 608px;
       .slidesjs-container{
-        height: 680px !important;
+        height: 608px !important;
       }
     }
     .card-content{
@@ -334,17 +324,12 @@
 
   }
 
-  @keyframes fadeInBox {
-    from {transform: translate3d(0, 15%, 0);}
-    to {transform: none;}
-  }
-
   .box-animation{
     animation-name: fadeInBox;
   }
 
   .begin-position-box{
-    transform: translate3d(0, 15%, 0);
+    @include beginPosition(0, 15%);
   }
 
   .video-team{
@@ -360,7 +345,7 @@
       z-index: -10;
 
       @include breakpoint($screen-default){
-        margin-top: -76px;
+        margin-top: -66px;
         margin-left: 0;
         height: 400px;
       }
@@ -447,17 +432,13 @@
     }
   }
 
-  @keyframes fadeInTextNext {
-    from {transform: translate3d(51%, 0, 0);}
-    to {transform: none;}
-  }
 
   .textnext-animation{
     animation-name: fadeInTextNext;
   }
 
   .begin-position-text-next{
-    transform: translate3d(51%, 0, 0);
+    @include beginPosition(51%, 0);
   }
 
 
@@ -578,16 +559,6 @@
       }
     }
 
-    @keyframes fadeInEye {
-      from {transform: translate3d(0, -50%, 0);}
-      to {transform: none;}
-    }
-
-    @keyframes fadeInVactext {
-      from {transform: translate3d(12%, 0, 0);}
-      to {transform: none;}
-    }
-
     .eye-animation {
       animation-name: fadeInEye;
     }
@@ -597,11 +568,11 @@
     }
 
     .begin-position-img {
-      transform: translate3d(0, -50%, 0);
+      @include beginPosition(0, -50%);
     }
 
     .begin-position-vac-text {
-      transform: translate3d(12%, 0, 0);
+      @include beginPosition(12%, 0);
     }
 
   }
@@ -691,32 +662,20 @@
 
   }
 
-
-  @keyframes fadeInTriagle {
-    from {transform: translate3d(-20%, 0, 0);}
-    to {transform: none;}
-  }
-
   .triangle-animation {
     animation-name: fadeInTriagle;
   }
 
   .begin-position-triangle {
-    transform: translate3d(-20%, 0, 0);
+    @include beginPosition(-20%, 0);
   }
 
-  @keyframes fadeInVacSubtitle {
-    from {transform: translate3d(0, 20%, 0);}
-    to {transform: none;}
-  }
 
   .vacSubtitble-animation {
     animation-name: fadeInVacSubtitle;
   }
 
   .begin-position-vacSubtitble{
-    transform: translate3d(0, 20%, 0);
+    @include beginPosition(0, 20%);
   }
 }
-
-

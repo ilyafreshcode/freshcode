@@ -98,10 +98,10 @@ $(function(){
             },
             effect: {
                 slide: {
-                    speed: slideSpeed + 500
+                    speed: slideSpeed + 250
                 },
                 fade: {
-                    speed: slideSpeed + 500,
+                    speed: slideSpeed + 250,
                     crossfade: false
                 }
             }
@@ -180,11 +180,10 @@ $(function(){
         } else {
             showNav();
         }
-        menuOpacity(currentScroll);
+        menuOpacity();
         previousScroll = currentScroll;
 
     }
-
 
     function animation(){
         var animation = new Animation();
@@ -209,9 +208,9 @@ $(function(){
         }
         else {
             menu.fadeOut();
-            if($(this).scrollTop() < fixIphoneBugValue)
-                menuBar.removeClass("scroll-menu");
+            menuOpacity();
         }
+
     });
 
 

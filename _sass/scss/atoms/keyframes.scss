@@ -1,0 +1,51 @@
+/**----------------  main page -------------------*/
+
+@keyframes fadeInTitle {
+  from {opacity: 0; transform: translate3d(0, 24%, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+@keyframes fadeInText {
+  from {opacity: 0; transform: translate3d(24%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+@keyframes fadeInQuotesClose {
+  from {opacity: 0; transform: translate3d(0, -120%, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+@keyframes fadeInQuotesOpen {
+  from {opacity: 0; transform: translate3d(0, 250%, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+@keyframes fadeInBox {
+  from {opacity: 0; transform: translate3d(0, 15%, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+@keyframes fadeInTextNext {
+  from {opacity: 0; transform: translate3d(51%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+@keyframes fadeInEye {
+  from {opacity: 0; transform: translate3d(0, -50%, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+@keyframes fadeInVactext {
+  from {opacity: 0; transform: translate3d(12%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+@keyframes fadeInTriagle {
+  from {opacity: 0; transform: translate3d(-20%, 0, 0);}
+  to {opacity: .1; transform: none;}
+}
+
+@keyframes fadeInVacSubtitle {
+  from {opacity: 0; transform: translate3d(0, 20%, 0);}
+  to {opacity: 1; transform: none;}
+}

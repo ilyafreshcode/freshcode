@@ -43,7 +43,7 @@
     overflow: hidden;
 
     @include breakpoint($screen-default){
-      height: 101vh;
+      height: 75vh;
       max-height: 535px;
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
@@ -61,7 +61,7 @@
     height: 588px;
     @include breakpoint($screen-default){
       margin: -72px 0 0 -12px;
-      height: 580px;
+      height: 100vh;
     }
   }
 

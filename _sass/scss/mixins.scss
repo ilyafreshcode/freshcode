@@ -65,3 +65,10 @@
     animation-timing-function: cubic-bezier(.4,0,.2,1);
   }
 }
+
+@mixin beginPosition($left, $top){
+ @include breakpointDesktop{
+   opacity: 0;
+   transform: translate3d($left, $top, 0);
+ }
+}
