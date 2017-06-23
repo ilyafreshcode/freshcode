@@ -49,3 +49,35 @@
   from {opacity: 0; transform: translate3d(0, 20%, 0);}
   to {opacity: 1; transform: none;}
 }
+
+/**----------------  review page -------------------*/
+@keyframes reviewTitle {
+  from {opacity: 0; transform: translate3d(17%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes reviewSubtext {
+  from {opacity: 0; margin-top: 500px;}
+  to {opacity: 1; margin-top: 439px;}
+}
+@keyframes reviewCards {
+  from {opacity: 0; transform: translate3d(0, 15%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes reviewQClose{
+  from {opacity: 0; transform: translate3d(0, -230%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes reviewQOpen {
+  from {opacity: 0; transform: translate3d(0, 200%, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+/**----------------  contact page -------------------*/
+@keyframes contactsPlain {
+  from {opacity: 0; transform: translate3d(0, 45%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes contactsSubtitle {
+  from {opacity: 0; transform: translate3d(7%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}

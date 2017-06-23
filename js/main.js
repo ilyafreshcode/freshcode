@@ -222,18 +222,21 @@ $(function(){
     toggleMenuWhenResize();
     generateSlides();
     lines();
-    animation();
+    setTimeout(animation, 300);
 });
 
 
 var Animation = function(){
 
     this.init = function(){
-      mainPage();
+        mainPage();
     };
 
     var mainPage = function(){
         var options = [
+            {selector: '.content-parallax-1', offset: 50, callback: function(){
+                $(".content-parallax-1 .caption-text").addClass("title-animation");
+            } },
             {selector: '.content-parallax-2', offset: 50, callback: function(){
                 $(".content-parallax-2 .description").addClass("text-animation");
             } },
@@ -252,7 +255,7 @@ var Animation = function(){
             {selector: '.content-parallax-2', offset: 550, callback: function(){
                 $(".content-parallax-2 .quotes-2").addClass("qopen-animation")
             } },
-            {selector: '.content-parallax-3', offset: 50, callback: function(){
+            {selector: '.content-parallax-3', offset: -150, callback: function(){
                 $(".content-parallax-3 .description").addClass("textnext-animation");
             } },
             {selector: '.content-parallax-4', offset: 100, callback: function(){
@@ -266,9 +269,44 @@ var Animation = function(){
             } },
             {selector: '.content-parallax-4', offset: 400, callback: function(){
                 $(".content-parallax-4 .begin-position-vacSubtitble").addClass("vacSubtitble-animation");
+            } },
+
+
+
+            {selector: '.review', offset: 50, callback: function(){
+                $(".review .title-section").addClass("title-animation");
+            } },
+            {selector: '.cards-review', offset: 50, callback: function(){
+                $(".cards-review .krasnogor").removeClass("begin-position-cards").addClass("cards-animation");
+            } },
+            {selector: '.cards-review', offset: 50, callback: function(){
+                $(".cards-review .troian").removeClass("begin-position-cards").addClass("cards-animation");
+            } },
+            {selector: '.cards-review', offset: 900, callback: function(){
+                $(".cards-review .logvinova").removeClass("begin-position-cards").addClass("cards-animation");
+            } },
+            {selector: '.cards-review', offset: 1100, callback: function(){
+                $(".cards-review .gonchar").removeClass("begin-position-cards").addClass("cards-animation");
+            } },
+            {selector: '.cards-review', offset: 50, callback: function(){
+                $(".cards-review .rv-quotes").removeClass("begin-position-rvqclose").addClass("rv-qclose-animation");
+            } },
+            {selector: '.cards-review', offset: 1100, callback: function(){
+                $(".cards-review .rv-quotes-2").removeClass("begin-position-rvqopen").addClass("rv-qopen-animation");
+            } },
+
+
+            {selector: '.contacts', offset: 50, callback: function(){
+                $(".contacts .title-section").addClass("title-animation");
+            } },
+            {selector: '.contacts', offset: 50, callback: function(){
+                $(".contacts .img-fly-position").addClass("img-plain-animation");
+            } },
+            {selector: '.contacts', offset: 1200, callback: function(){
+                $(".contacts .subtext").addClass("subtext-animation");
             } }
         ];
         Materialize.scrollFire(options);
-    }
+    };
 
 };

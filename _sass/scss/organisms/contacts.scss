@@ -1,5 +1,13 @@
 .contacts {
 
+  .title-section{
+    @include beginPosition(17%, 0);
+  }
+
+  .title-animation{
+    animation-name: reviewTitle;
+  }
+
   .send-form {
     background-color: $green;
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
@@ -34,13 +42,18 @@
         transform: rotate(90deg);
       }
 
+      .img-plain-animation{
+        animation-name: contactsPlain;
+      }
+
       .img-fly-position{
         float: right;
+
+        @include beginPosition(0, 45%);
 
         @include breakpoint($screen-default){
           float: none;
         }
-
       }
 
     }
@@ -167,6 +180,10 @@
     border-right: 650px solid transparent;
   }
 
+  .subtext-animation{
+    animation-name: contactsSubtitle;
+  }
+
   .subtext {
     color: $subtext-color;
     font-size: $font-size-title + 85px;
@@ -178,6 +195,8 @@
     margin-right: -15px;
     width: 120%;
     z-index: 10;
+
+    @include beginPosition(7%, 0);
     
     @include breakpoint($screen-lg){
       float: none;

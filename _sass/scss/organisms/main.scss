@@ -122,13 +122,26 @@
   margin-top: -97%;
   height: 950px;
 
+  @-moz-document url-prefix() {
+    margin-top: -1140px;
+    @include tabletVersion{
+      margin-top: -1050px;
+    }
+  }
+
   @include breakpoint($screen-default){
     margin-top: -135%;
     height: 550px;
+    @-moz-document url-prefix() {
+      margin-top: -380px;
+    }
   }
 
   .title-animation{
     animation-name: fadeInTitle;
+  }
+  .caption-text{
+    @include beginPosition(0, 24%);
   }
 
 }

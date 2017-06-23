@@ -57,14 +57,15 @@
 }
 
 
-@mixin transition($speed) {
+@mixin transition($speed, $delay) {
   @include breakpointDesktop {
     animation-duration: $speed;
-    animation-delay: 0.2s;
+    animation-delay: $delay;
     animation-fill-mode: both;
     animation-timing-function: cubic-bezier(.4,0,.2,1);
   }
 }
+
 
 @mixin beginPosition($left, $top){
  @include breakpointDesktop{
