@@ -11,6 +11,7 @@
       weight: 300;
     }
 
+
     @include breakpoint($screen-default) {
       font-size: 45px;
     }
@@ -121,9 +122,26 @@
   margin-top: -97%;
   height: 950px;
 
+  @-moz-document url-prefix() {
+    margin-top: -1140px;
+    @include tabletVersion{
+      margin-top: -1050px;
+    }
+  }
+
   @include breakpoint($screen-default){
     margin-top: -135%;
     height: 550px;
+    @-moz-document url-prefix() {
+      margin-top: -380px;
+    }
+  }
+
+  .title-animation{
+    animation-name: fadeInTitle;
+  }
+  .caption-text{
+    @include beginPosition(0, 24%);
   }
 
 }
@@ -137,16 +155,55 @@
     margin-top: -60px;
   }
 
+  .qopen-animation {
+    animation-name: fadeInQuotesOpen;
+  }
+
+  .begin-position-qopen {
+    @include beginPosition(0, 250%);
+  }
+
+  .qclose-animation {
+    animation-name: fadeInQuotesClose;
+  }
+
+  .begin-position-qclose {
+    @include beginPosition(0, -120%);
+  }
+
+  .text-animation{
+    animation-name: fadeInText;
+  }
+
+  .team-animation{
+    animation-name: fadeInText;
+  }
+
+  .begin-position-text{
+    @include beginPosition(24%, 0);
+  }
+
+  .begin-position-team{
+    @include beginPosition(24%, 0);
+  }
+
   .card-style {
     font: {
       size: $font-size-big;
       weight: 500;
     }
 
+    @include breakpoint($screen-default){
+      font-size: $font-size-base - 2px;
+    }
+
     .text {
       font: {
         size:  $font-size-base;
         weight: 400;
+      }
+      @include breakpoint($screen-default){
+        font-size: $font-size-base - 2px;
       }
     }
 
@@ -160,6 +217,9 @@
         size: 20px;
         weight: 400;
       }
+      @include breakpoint($screen-default){
+        font-size: $font-size-base;
+      }
     }
 
   }
@@ -172,7 +232,7 @@
     }
     @include breakpoint($screen-default) {
       margin: {
-        top: 260px;
+        top: 270px;
         left: 0;
       }
     }
@@ -189,10 +249,10 @@
     margin: -297px -30px 0 0;
 
     @include breakpoint($screen-default) {
-      margin-top: -76px;
+      margin-top: -66px;
       margin-right: 0px;
       width: 251px;
-      height: 620px;
+      height: 575px;
     }
 
     .card-style{
@@ -230,11 +290,11 @@
       height: 370px !important;
     }
     @include breakpoint($screen-default) {
-      margin-top: 583px;
+      margin-top: 560px;
       width: 251px;
-      height: 680px;
+      height: 608px;
       .slidesjs-container{
-        height: 680px !important;
+        height: 608px !important;
       }
     }
     .card-content{
@@ -277,6 +337,14 @@
 
   }
 
+  .box-animation{
+    animation-name: fadeInBox;
+  }
+
+  .begin-position-box{
+    @include beginPosition(0, 15%);
+  }
+
   .video-team{
     z-index: 1000;
 
@@ -290,7 +358,7 @@
       z-index: -10;
 
       @include breakpoint($screen-default){
-        margin-top: -76px;
+        margin-top: -66px;
         margin-left: 0;
         height: 400px;
       }
@@ -376,6 +444,16 @@
       width: 280px;
     }
   }
+
+
+  .textnext-animation{
+    animation-name: fadeInTextNext;
+  }
+
+  .begin-position-text-next{
+    @include beginPosition(51%, 0);
+  }
+
 
   .why-freshcode {
     position: relative;
@@ -493,6 +571,23 @@
         width: 100%;
       }
     }
+
+    .eye-animation {
+      animation-name: fadeInEye;
+    }
+
+    .vac-text-animation {
+      animation-name: fadeInVactext;
+    }
+
+    .begin-position-img {
+      @include beginPosition(0, -50%);
+    }
+
+    .begin-position-vac-text {
+      @include beginPosition(12%, 0);
+    }
+
   }
 
   .all-vacancy-position {
@@ -580,6 +675,20 @@
 
   }
 
+  .triangle-animation {
+    animation-name: fadeInTriagle;
+  }
+
+  .begin-position-triangle {
+    @include beginPosition(-20%, 0);
+  }
+
+
+  .vacSubtitble-animation {
+    animation-name: fadeInVacSubtitle;
+  }
+
+  .begin-position-vacSubtitble{
+    @include beginPosition(0, 20%);
+  }
 }
-
-

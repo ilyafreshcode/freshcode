@@ -13,5 +13,10 @@
       display: none;
     }
   }
+}
 
+.lines-fix{
+  .lines{
+    margin-top: -200px;
+  }
 }

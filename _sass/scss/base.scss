@@ -6,18 +6,17 @@ body {
   height: 100%;
   width: 100%;
 }
-
-html { overflow-x: hidden; }
-
 body {
   position:relative;
-  overflow-x:hidden;
 
   * {
     font-family: "Roboto", sans-serif;
   }
 }
 
+#skrollr-body{
+  overflow-x: hidden;
+}
 .overflow {
   overflow: hidden;
 }
@@ -89,4 +88,11 @@ body {
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+}
+
+.transition-animation{
+  @include transition(.5s, .3s);
+}
+.transition-animation-slow{
+  @include transition(.4s, 2s);
 }

@@ -55,3 +55,21 @@
     @content;
   }
 }
+
+
+@mixin transition($speed, $delay) {
+  @include breakpointDesktop {
+    animation-duration: $speed;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.4,0,.2,1);
+  }
+}
+
+
+@mixin beginPosition($left, $top){
+ @include breakpointDesktop{
+   opacity: 0;
+   transform: translate3d($left, $top, 0);
+ }
+}

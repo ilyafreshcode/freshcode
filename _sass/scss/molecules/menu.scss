@@ -19,6 +19,7 @@
   }
 
 
+
   &.is-hidden {
     opacity: 0;
     -webkit-transform: translate(0, -60px);
@@ -76,9 +77,10 @@
 
       @include breakpoint($screen-default) {
         font: {
-          size: $font-size-base;
+          size: $font-size-base - 3px;
         }
         display: block;
+        padding: 15px 7px;
       }
 
 

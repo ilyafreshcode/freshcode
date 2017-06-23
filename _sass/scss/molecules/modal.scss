@@ -6,12 +6,13 @@
   background-color: $green;
   overflow: visible;
   margin-top: -40px;
-  height: 567px;
+  height: 530px;
   max-width: 800px;
 
   @include breakpoint($screen-default){
     height: 90%;
     max-height: 550px;
+    margin-top: -30px;
   }
   @include breakpoint($screen-iphone){
     max-height: 515px;
@@ -37,12 +38,12 @@
   }
 
   .iframe-border{
-    height: 538px;
+    height: 501px;
     width: 100%;
     overflow: hidden;
 
     @include breakpoint($screen-default){
-      height: 101vh;
+      height: 75vh;
       max-height: 535px;
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
@@ -55,12 +56,12 @@
   }
 
   .frame{
-    margin: -50px 0 0 -15px;
+    margin: -87px 0 0 -15px;
     width: 100%;
-    height: 589px;
+    height: 595px;
     @include breakpoint($screen-default){
-      margin: -64px 0 0 -12px;
-      height: 580px;
+      margin: -72px 0 0 -12px;
+      height: 100vh;
     }
   }
 
