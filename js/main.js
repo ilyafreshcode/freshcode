@@ -337,6 +337,9 @@ var Animation = function(){
                 $(".about .target-block").addClass("target-block-animation");
                 $(".about .target-section .subtext").addClass("subtext-animation");
             } },
+            {selector: '.progress-section', offset: 150, callback: function(){
+                $(".about .progress-img-current").addClass("progress-img-animation");
+            } },
             {selector: '.white-block', offset: 150, callback: function(){
                 $(".about .white-block .text").addClass("white-block-text-animation");
                 $(".about .about-triangle").addClass("about-triangle-animation");
