@@ -111,3 +111,49 @@
   from {opacity: 0;transform: translate3d(12%, 0, 0);}
   to {opacity: 1; transform: none;}
 }
+
+/**----------------  about page -------------------*/
+@keyframes aboutTitle {
+  from {opacity: 0; transform: translate3d(0, 30%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutBgImg {
+  from {opacity: 0; transform: translate3d(36%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutLeftText {
+  from {opacity: 0; transform: translate3d(0, 90%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutArrow {
+  from {opacity: 0; transform: translate3d(48%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutNext {
+  from {opacity: 0; transform: translate3d(-11%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutTextBlock {
+  from {opacity: 0; transform: translate3d(0, 15%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutTargetImg {
+  from {opacity: 0; transform: translate3d(0, 104%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutTargetText {
+  from {opacity: 0; transform: translate3d(45%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutTargetSubtext {
+  from {opacity: 0; transform: translate3d(5%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutProgressImg {
+  from {opacity: 0; transform: translate3d(30%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutTriangle {
+  from {opacity: 0; transform: translate3d(-7%, 0, 0);}
+  to {opacity: 0.15; transform: none;}
+}

@@ -35,6 +35,14 @@
       position: relative;
     }
 
+    .about-title{
+      @include beginPosition(0, 30%);
+    }
+
+    .about-title-animation{
+      animation-name: aboutTitle;
+    }
+
     .text-block {
       width: 100%;
       max-width: none;
@@ -109,6 +117,14 @@
           max-height: none;
         }
       }
+    }
+
+    .about-bg-img{
+      @include beginPosition(36%, 0);
+    }
+
+    .about-bg-img-animation{
+      animation-name: aboutBgImg;
     }
 
     .logo {
@@ -241,6 +257,10 @@
       }
     }
 
+    .left-text-animation{
+      animation-name: aboutLeftText;
+    }
+
     .left-text {
       color: $black;
       font-size: 28px;
@@ -248,6 +268,8 @@
       line-height: 35px;
       width: 256px;
       text-align: left;
+
+      @include beginPosition(0, 90%);
 
       @include breakpointDesktop {
         font-size: $font-size-big * 2;
@@ -286,6 +308,14 @@
       @include breakpointDesktop {
         display: none;
       }
+    }
+
+    .about-arrow{
+      @include beginPosition(48%, 0);
+    }
+
+    .about-arrow-animation{
+      animation-name: aboutArrow;
     }
 
     .absolute-img {
@@ -387,6 +417,10 @@
         }
       }
 
+      .next-animation{
+        animation-name: aboutNext;
+      }
+
       .next {
         color: $black;
         position: relative;
@@ -395,6 +429,8 @@
         left: -12px;
         font-size: 28px;
         margin-top: 65px;
+
+        @include beginPosition(-11%, 0);
 
         @include breakpointDesktop {
           margin-top: 215px;
@@ -457,8 +493,14 @@
         }
       }
 
+      .text-block-animation{
+        animation-name: aboutTextBlock;
+      }
+
       .text-block {
         padding: 29px 23px;
+
+        @include beginPosition(0, 15%);
 
         @include breakpointDesktop {
           padding: 59px 58px;
@@ -610,6 +652,14 @@
       height: 577px;
     }
 
+    .about-why-section{
+     @include beginPosition(24%, 0);
+    }
+
+    .about-why-section-animation{
+      animation-name: fadeInText;
+    }
+
     .why-text {
       font-size: 28px;
       margin-bottom: 23px;
@@ -705,7 +755,14 @@
       }
     }
 
+    .target-block-animation{
+      animation-name: aboutTargetText;
+    }
+
     .target-block {
+
+      @include beginPosition(45%, 0);
+
       @include breakpointDesktop {
         margin-top: -40px;
       }
@@ -725,10 +782,16 @@
         margin-left: 42px;
       }
 
+      .target-img-animation{
+        animation-name: aboutTargetImg;
+      }
+
       .target-img {
         margin-right: 68px;
         width: 140px;
         margin-top: 0;
+
+        @include beginPosition(0, 104%);
 
         @include breakpointDesktop {
           width: 180px;
@@ -792,6 +855,10 @@
       }
     }
 
+    .subtext-animation{
+      animation-name: aboutTargetSubtext;
+    }
+
     .subtext {
       font-size: 80px;
       right: -20px;
@@ -800,6 +867,8 @@
       bottom: 0;
       letter-spacing: 4.3px;
       line-height: 59px;
+
+      @include beginPosition(5%, 0);
 
       @include breakpointDesktop {
         right: -60px;
@@ -979,6 +1048,14 @@
         width: 858px;
       }
 
+      .progress-img-current{
+        @include beginPosition(30%, 0);
+      }
+
+      .progress-img-animation{
+        animation-name: aboutProgressImg;
+      }
+
       .image-cycle {
         width: 100%;
         position: relative;
@@ -1119,6 +1196,11 @@
       }
     }
 
+
+    .white-block-text-animation{
+      animation-name: vacancyCards;
+    }
+
     .text {
       max-width: 430px;
       height: 100%;
@@ -1127,6 +1209,8 @@
       justify-content: center;
       align-items: center;
       margin-bottom: 50px;
+
+      @include beginPosition(0, 20%);
 
       @include breakpointDesktop {
         margin-bottom: 0;
@@ -1149,6 +1233,14 @@
         margin-top: 0;
       }
     }
+  }
+
+  .about-triangle{
+    @include beginPosition(-7%, 0);
+  }
+
+  .about-triangle-animation{
+    animation-name: aboutTriangle;
   }
 
   .lines-bg {
