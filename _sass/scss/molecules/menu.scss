@@ -10,6 +10,10 @@
   width: 100%;
   z-index: 1001;
 
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
   @include breakpoint($screen-lg){
     padding: 0 35px;
     overflow: hidden;

@@ -16,6 +16,7 @@ body {
 
 #skrollr-body{
   overflow-x: hidden;
+  cursor: default;
 }
 .overflow {
   overflow: hidden;
@@ -94,5 +95,5 @@ body {
   @include transition(.5s, .3s);
 }
 .transition-animation-slow{
-  @include transition(.4s, 2s);
+  @include transition(.5s, .7s);
 }

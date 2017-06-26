@@ -81,3 +81,33 @@
   from {opacity: 0; transform: translate3d(7%, 0, 0);}
   to {opacity: 1; transform: none;}
 }
+
+/**----------------  vacancy page -------------------*/
+@keyframes vacancyTitle {
+  from {opacity: 0; transform: translate3d(25%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes vacancyLine {
+  from {opacity: 0; transform: translate3d(45%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes vacancyIntro {
+  from {opacity: 0; transform: translate3d(30%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes vacancyBaseSubtext{
+  from {opacity: 0; transform: translate3d(19%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes vacancyCards{
+  from {opacity: 0; transform: translate3d(0, 20%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes vacancyText{
+  from {opacity: 0; bottom: 170px;}
+  to {opacity: 1; bottom: 55px;}
+}
+@keyframes vacancyToUsTitle{
+  from {opacity: 0;transform: translate3d(12%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}

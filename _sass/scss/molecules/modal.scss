@@ -56,12 +56,12 @@
   }
 
   .frame{
-    margin: -87px 0 0 -15px;
+    margin: -84px 0 0 -15px;
     width: 100%;
     height: 595px;
     @include breakpoint($screen-default){
       margin: -72px 0 0 -12px;
-      height: 100vh;
+      height: 105vh;
     }
   }
 

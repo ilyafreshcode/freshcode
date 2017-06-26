@@ -34,11 +34,17 @@
       }
     }
 
+    .line-animation{
+      animation-name: vacancyLine;
+    }
+
     .line {
       height: 3.5px;
       width: 220px;
       margin-top: 10px;
       border: none;
+
+      @include beginPosition(45%, 0);
 
       @include breakpointDesktop {
         height: 7px;
@@ -60,6 +66,12 @@
       color: $black;
     }
 
+
+    .title-animation{
+      animation-name: vacancyTitle;
+    }
+
+
     .title {
       font-family: "helv", sans-serif;
       font-size: 44px;
@@ -69,6 +81,8 @@
       font-weight: 300;
       text-transform: uppercase;
 
+      @include beginPosition(25%, 0);
+
       @include breakpointDesktop {
         height: 76px;
         margin: 148px 0 0 -28px;
@@ -76,6 +90,14 @@
         font-size: $font-size-title - 4px;
         line-height: .9;
       }
+    }
+
+    .baseintro-animation{
+      animation-name: vacancyIntro;
+    }
+
+    .baseintro-position{
+      @include beginPosition(30%, 0);
     }
 
     .subtitle {
@@ -232,10 +254,17 @@
       margin-top: -5px;
     }
 
+    .subtext-animation{
+      animation-name: vacancyBaseSubtext;
+    }
+
     .subtext {
       margin-left: -12px;
       z-index: -1;
       position: relative;
+
+      @include beginPosition(19%, 0);
+
     }
 
     .bckg-line {
@@ -259,6 +288,9 @@
         margin-top: -35px;
       }
     }
+    .cards-animation{
+      animation-name: vacancyCards;
+    }
 
     .cards {
       display: flex;
@@ -267,6 +299,8 @@
       width: 100%;
       position: relative;
       top: -85px;
+
+      @include beginPosition(0, 20%);
 
       @include tabletVersion {
         flex-direction: row;
@@ -493,6 +527,15 @@
   }
 
   .second-section {
+
+    .text-rotation{
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+
     .shadow {
       display: none;
 
@@ -535,15 +578,19 @@
       }
     }
 
+    .text-animation{
+      animation-name: vacancyText;
+    }
+
     .text {
       height: 50px;
-      transform: rotate(270deg);
       position: absolute;
       bottom: -70px;
       left: -15px;
+      opacity: 0;
 
       @include breakpointDesktop {
-        bottom: 55px;
+        bottom: 170px;
         left: -30px;
       }
 
@@ -752,6 +799,15 @@
       margin-bottom: 0;
     }
 
+
+    .title-animation{
+      animation-name: vacancyToUsTitle;
+    }
+
+    .subtext-animation{
+      animation-name: vacancyToUsTitle;
+    }
+
     .subtext {
       z-index: 3;
       font-size: 82px;
@@ -760,6 +816,8 @@
       left: -17px;
       letter-spacing: 3px;
       position: relative;
+
+      @include beginPosition(12%, 0);
 
       @include tabletVersion {
         font-size: 186px;
@@ -886,6 +944,8 @@
         text-align: left;
         transform: scaleX(1.002);
 
+        @include beginPosition(12%, 0);
+
         @include breakpointDesktop {
           font-size: 39.94px;
         }
@@ -901,19 +961,14 @@
         width: 243px;
         line-height: 20px;
 
+        @include beginPosition(12%, 0);
+
         @include breakpointDesktop {
           font-size: $font-size-big;
           margin: 51px 0 51px;
           line-height: 26px;
           width: 547px;
         }
-      }
-
-      .button {
-        width: 215px;
-        height: 50px;
-        box-shadow: 0 5px 20px 0 rgba(0, 225, 164, 0.4);
-        padding: 15px 0;
       }
     }
   }
