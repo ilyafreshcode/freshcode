@@ -68,12 +68,13 @@
   color: $subtext-color;
   font-size: 242px;
   line-height: 168px;
+  letter-spacing: 0.2px;
   font-weight: 700;
   width: 120%;
 
   @include breakpoint($screen-default){
     font-size: 82px;
-    margin: -177px 0 0 -14px;
+    margin: -177px 0 0 -16px;
   }
 }
 
@@ -117,7 +118,7 @@
 
 }
 
-.content-parallax-1 {
+.main-caption-content {
   position: relative;
   margin-top: -97%;
   height: 950px;
@@ -146,7 +147,7 @@
 
 }
 
-.content-parallax-2 {
+.main-team-content {
   position: relative;
   height: 550px;
   margin-top: -100px;
@@ -432,7 +433,7 @@
 
 }
 
-.content-parallax-3 {
+.main-vacancy-content {
   margin-top: 700px;
   @include breakpoint($screen-default){
     margin-top: 1477px;
@@ -530,7 +531,7 @@
 
 }
 
-.content-parallax-4 {
+.main-whysection-content {
   margin-top: 61px;
 
   .vac-description {
@@ -616,8 +617,8 @@
 
       @include breakpoint($screen-default){
         float: none;
-        margin: -310px 0 0 0;
-        height: 295px;
+        margin: -312px 0 0 0;
+        height: 301px;
         width: 100%;
       }
     }

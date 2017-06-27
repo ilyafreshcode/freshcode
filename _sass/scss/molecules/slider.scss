@@ -157,6 +157,14 @@
         width: 60%;
       }
     }
+
+    .slider-card-img{
+      @include beginPosition(0, 30%);
+    }
+
+    .slider-card-img-animation{
+      animation-name: cardImgSlider;
+    }
   }
 
   .slide-num {

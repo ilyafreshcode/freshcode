@@ -165,7 +165,7 @@
     display: none;
     @include breakpoint($screen-default){
       display: block;
-      margin: -136px 0 86px 0;
+      margin: -137px 0 86px 0;
       opacity: 0.15;
       height: 60px;
       width: 100%;
@@ -207,7 +207,7 @@
     }
     @include breakpoint($screen-default){
       font-size: 67px;
-      margin: -214px 0 0 -13px;
+      margin: -212px 0 0 -13px;
       width: 115%;
     }
     

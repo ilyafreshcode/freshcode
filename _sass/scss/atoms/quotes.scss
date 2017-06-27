@@ -7,7 +7,7 @@
   width: 100px;
 
   @include breakpoint($screen-default) {
-    margin: 50px 0 100px -15px;
+    margin: 50px 0 102px -15px;
     img{
       height: auto;
       width: 37%;
@@ -24,7 +24,7 @@
   @include breakpoint($screen-default){
     position: absolute;
     float: none !important;
-    margin: 1663px 0 0 230px;
+    margin: 1667px 0 0 230px;
     img{
       height: auto;
       width: 37%;
