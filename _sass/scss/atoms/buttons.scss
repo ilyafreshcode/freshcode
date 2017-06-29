@@ -16,6 +16,16 @@
     weight: 700;
   }
   -webkit-transition: all 0.3s;
+  overflow: hidden;
+
+  span{
+    display: inline-block;
+    font: {
+      size: $font-size-base !important;
+      weight: 700 !important;
+      family: Roboto;
+    }
+  }
 }
 
 .button:hover {

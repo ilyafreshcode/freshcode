@@ -457,6 +457,10 @@
       margin: 0 auto;
     }
 
+    .btn-arrow{
+      display: inline-block;
+    }
+
     .developer {
       width: 160px;
       margin-left: 20px;
@@ -508,11 +512,17 @@
       box-shadow: 0 5px 20px 0 rgba(0, 225, 164, 0.4);
       width: 50px;
       height: 50px;
+      overflow: hidden;
 
       &:hover {
         background-color: $green-tint;
         box-shadow: 0 5px 20px 0 rgba(0,225,164,0.7);
         -webkit-transition: all 0.3s;
+      }
+
+
+      &:hover .btn-arrow {
+        animation-name: buttonArrow;
       }
 
       span {
@@ -701,14 +711,14 @@
       left: -103px;
 
       @include tabletVersion {
-        width: 585px;
+        width: 576px;
         min-height: 311px;
         top: 21rem;
         left: -17rem;
       }
 
       @include breakpoint(lg-max) {
-        width: 585px;
+        width: 578px;
         min-height: 311px;
         top: 21rem;
         left: -22rem;

@@ -229,7 +229,7 @@
     }
 
     .form-content {
-      padding: 17px 0 0 23px;
+      padding: 15px 0 0 23px;
       height: 485px;
       width: 100%;
       box-shadow: -5px 5px 40px 0 rgba(0, 0, 0, 0.15);
@@ -238,13 +238,17 @@
       overflow: hidden;
 
       @include tabletVersion {
+        padding: 30px 12px 0 35px;
         margin-right: -20%;
+        margin-top: -12px;
         height: 722px;
         width: 427px;
       }
 
       @include breakpoint(lg-max) {
-        margin-right: -50%;
+        padding: 30px 12px 0 35px;
+        margin-right: -45%;
+        margin-top: -19px;
         height: 722px;
         width: 427px;
       }

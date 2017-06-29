@@ -66,6 +66,7 @@
 
       &:last-child{
         padding-right: 0;
+        margin-bottom: 12px;
       }
 
       @include breakpoint($screen-lg){
@@ -85,7 +86,7 @@
           size: $font-size-base - 3px;
         }
         display: block;
-        padding: 15px 7px;
+        padding: 13px 7px;
       }
 
 

@@ -63,7 +63,7 @@
 
 .team-img {
   position: absolute;
-  margin: -38px 0 0 -94px;
+  margin: -33px 0 0 -94px;
   z-index: -1;
   color: $subtext-color;
   font-size: 242px;
@@ -276,6 +276,7 @@
       margin: 0 0 15px 0;
     }
     .slidesjs-navigation {
+      height: 34px;
       padding: 5px;
       display: inline-block;
       margin: -10px 0 15px 21px;
@@ -284,7 +285,7 @@
 
   .horizontal-box {
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
-    margin-top: 125px;
+    margin-top: 133px;
     position: absolute;
     width: 585px;
     .slidesjs-container{
@@ -347,6 +348,7 @@
   }
 
   .video-team{
+    margin-top: 6px;
     z-index: 1000;
 
     .grey-block{
@@ -630,7 +632,7 @@
     position: relative;
     z-index: -10;
     @include breakpoint($screen-default){
-      margin: -15px 0 0 -15px;
+      margin: -12px 0 0 -15px;
     }
 
     img {

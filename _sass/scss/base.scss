@@ -100,3 +100,25 @@ body {
 .transition-animation-slower{
   @include transition(.3s, .7s);
 }
+.transition-animation-btn{
+  @include transition(.7s, 0s);
+}
+
+.show-mobile{
+  display: none !important;
+
+  @include breakpoint($screen-default){
+    display: inline-block !important;
+  }
+}
+.hide-mobile{
+  display: inline-block !important;
+
+  @include breakpoint($screen-default){
+    display: none !important;
+  }
+}
+
+a:hover .btn-animation{
+  animation-name: buttonRegularAnimation;
+}
