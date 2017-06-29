@@ -322,6 +322,10 @@
       position: absolute;
     }
 
+    .about-arrow-big{
+      @include beginPosition(48%, 0);
+    }
+
     .top {
       z-index: 2;
       width: 65px;
@@ -351,7 +355,7 @@
     }
 
     .bottom {
-      bottom: 82px;
+      bottom: 76px;
       left: 62px;
       width: 80px;
       z-index: 2;
@@ -359,7 +363,7 @@
       @include tabletVersion {
         left: 21.5rem;
         width: 123px;
-        top: 34rem;
+        top: 33rem;
       }
 
       @include breakpoint(lg-max) {
@@ -1049,6 +1053,9 @@
       }
 
       .progress-img-current{
+        height: auto;
+        width: 230px;
+
         @include beginPosition(30%, 0);
       }
 
@@ -1167,6 +1174,7 @@
       max-width: 427px;
       width: 100%;
       min-height: 425px;
+      max-height: 509px;
       right: 0;
       bottom: 77px;
       position: relative;
@@ -1185,7 +1193,7 @@
         width: 100%;
         max-width: 427px;
         right: 0;
-        margin-top: -20%;
+        margin-top: -57px;
 
         @include breakpointDesktop {
           position: absolute;
@@ -1203,12 +1211,12 @@
 
     .text {
       max-width: 430px;
-      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin-bottom: 50px;
+      height: 490px;
 
       @include beginPosition(0, 20%);
 

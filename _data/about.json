@@ -70,13 +70,13 @@
     "subtitle": "Наши разработки приносят успех заказчикам по всему миру.",
     "progress": [
       {
-        "img": "/images/about/progress/rocks.svg"
+        "img": "/images/about/logo_outdor.svg"
       },
       {
-        "img": "/images/about/progress/play_attention.svg"
+        "img": "/images/about/logo_play_attention.svg"
       },
       {
-        "img": "/images/about/progress/educadio.svg"
+        "img": "/images/about/logo_educadio.svg"
       }
     ]
   },

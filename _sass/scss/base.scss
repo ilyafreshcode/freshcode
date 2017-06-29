@@ -97,3 +97,6 @@ body {
 .transition-animation-slow{
   @include transition(.5s, .7s);
 }
+.transition-animation-slower{
+  @include transition(.3s, .7s);
+}
