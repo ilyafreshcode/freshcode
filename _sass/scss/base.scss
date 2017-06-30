@@ -101,7 +101,7 @@ body {
   @include transition(.3s, .7s);
 }
 .transition-animation-btn{
-  @include transition(.7s, 0s);
+  @include transition(.55s, 0s);
 }
 
 .show-mobile{

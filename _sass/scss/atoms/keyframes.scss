@@ -165,8 +165,8 @@
 /**----------------  buttons -------------------*/
 @keyframes buttonArrow {
   0% {opacity: 1; transform: none;}
-  50% {opacity: 0; transform: translate3d(70%, 0, 0);}
-  55% {opacity: 0; transform: translate3d(-70%, 0, 0);}
+  50% {opacity: 0; transform: translate3d(30%, 0, 0);}
+  55% {opacity: 0; transform: translate3d(-30%, 0, 0);}
   100% {opacity: 1; transform: none;}
 }
 
